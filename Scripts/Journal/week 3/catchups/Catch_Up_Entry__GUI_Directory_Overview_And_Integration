@@ -1,0 +1,232 @@
+# Project Journal Entry
+
+**Catch_Up_Entry__GUI_Directory_Overview_And_Integration**
+
+---
+
+## Session Prompt
+"Utilize this conversation to make a project journal entry following the standards and guides of the template below. Base the title of the entry off of the conversation."
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:** 
+  - Review and document the `fetcher_gui.py` script and related files in the GUI directory.
+  - Provide a comprehensive overview and integrate this information into the project journal for TradingRobotPlug.
+
+- **Actions Taken:** 
+  - Analyzed the `fetcher_gui.py` script, which provides a graphical user interface (GUI) for fetching data using Alpha Vantage and Polygon data fetchers.
+  - Identified key components and functionalities, including the use of `tkinter` for the GUI, integration of asynchronous data fetching, and logging setup.
+  - Summarized how the GUI script interacts with other parts of the project and its role in data fetching.
+
+- **Challenges and Breakthroughs:** 
+  - No major technical challenges were encountered. The primary challenge was ensuring all relevant details from the script were accurately captured and integrated into the project overview.
+  - A significant breakthrough was creating a detailed account of how the GUI integrates with data fetchers and handles asynchronous operations, enhancing the project's documentation and understanding.
+
+- **Results and Impact:** 
+  - The comprehensive documentation of the GUI directory provides clarity on how user interaction is managed and how data fetching processes are triggered from the GUI.
+  - This documentation will improve project maintainability and help new team members understand the role of the GUI within the TradingRobotPlug project.
+
+---
+
+## Skills and Technologies Used
+
+- **Python Programming:** Applied for GUI development using `tkinter`, asynchronous operations with `asyncio`, and integration with data fetchers.
+- **Logging:** Utilized for tracking GUI operations and data fetching processes.
+- **Asynchronous Programming:** Implemented to handle data fetching efficiently without blocking the GUI.
+- **User Interface Design:** Used `tkinter` to create a user-friendly interface for interacting with data fetchers.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:** 
+  - Gained a deeper understanding of integrating GUI components with asynchronous data fetching in Python.
+  - Recognized the importance of logging in GUI applications to track operations and debug issues effectively.
+
+- **Unexpected Challenges:** 
+  - No unexpected challenges were encountered. The focus was on capturing and documenting the existing functionalities of the GUI script.
+
+- **Future Application:** 
+  - The insights gained will aid in further development of GUI components, especially in ensuring smooth user interactions and efficient data processing.
+
+---
+
+## To-Do
+
+- **Finalize Documentation:** Complete the documentation for all GUI-related components and their interactions with data fetchers.
+- **Enhance GUI Features:** Consider adding additional features or improvements based on user feedback and testing.
+- **Testing:** Conduct thorough testing of the GUI to ensure robustness and usability.
+
+---
+
+## Code Snippets and Context
+
+### `fetcher_gui.py`
+
+```python
+# C:\TheTradingRobotPlug\Scripts\GUI\concepts\fetcher_gui.py
+# Provides a GUI for fetching data using Alpha Vantage and Polygon data fetchers.
+
+import tkinter as tk
+from tkinter import ttk, messagebox
+import asyncio
+import os
+import sys
+import logging
+from pathlib import Path
+
+# Add project root to the Python path
+script_dir = Path(__file__).resolve().parent
+project_root = script_dir.parents[2]
+sys.path.append(str(project_root))
+
+from Scripts.GUI.concepts.two_tabs import BaseGUI
+from Scripts.Data_Fetchers.alpha_vantage_fetcher import AlphaVantageDataFetcher
+from Scripts.Data_Fetchers.polygon_fetcher import PolygonDataFetcher
+
+# Set up logging
+log_file_path = os.path.join(project_root, 'logs', 'fetcher_gui.log')
+logging.basicConfig(level=logging.DEBUG, filename=log_file_path, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+class FetcherGUI(tk.Tk):
+    def __init__(self):
+        super().__init__()
+
+        self.title("Data Fetcher")
+        self.geometry("400x300")
+
+        self.notebook = ttk.Notebook(self)
+        self.notebook.pack(fill='both', expand=True)
+
+        self.create_alpha_vantage_tab()
+        self.create_polygon_tab()
+
+    def create_alpha_vantage_tab(self):
+        tab = ttk.Frame(self.notebook)
+        self.notebook.add(tab, text="AlphaVantage Fetcher")
+
+        ttk.Label(tab, text="AlphaVantage Data Fetcher").grid(row=0, column=0, padx=10, pady=10)
+        ttk.Label(tab, text="Ticker Symbols (comma separated):").grid(row=1, column=0, padx=10, pady=5)
+        self.alpha_tickers_entry = ttk.Entry(tab)
+        self.alpha_tickers_entry.grid(row=1, column=1, padx=10, pady=5)
+
+        ttk.Button(tab, text="Fetch Data", command=self.fetch_alpha_data).grid(row=2, column=0, columnspan=2, pady=10)
+
+    def fetch_alpha_data(self):
+        tickers = self.alpha_tickers_entry.get()
+        if not tickers:
+            messagebox.showwarning("Input Error", "Please enter ticker symbols.")
+            return
+
+        tickers_list = [ticker.strip() for ticker in tickers.split(",")]
+        self.run_async_fetch(AlphaVantageDataFetcher(), tickers_list)
+
+    def create_polygon_tab(self):
+        tab = ttk.Frame(self.notebook)
+        self.notebook.add(tab, text="Polygon Fetcher")
+
+        ttk.Label(tab, text="Polygon Data Fetcher").grid(row=0, column=0, padx=10, pady=10)
+        ttk.Label(tab, text="Ticker Symbols (comma separated):").grid(row=1, column=0, padx=10, pady=5)
+        self.polygon_tickers_entry = ttk.Entry(tab)
+        self.polygon_tickers_entry.grid(row=1, column=1, padx=10, pady=5)
+
+        ttk.Button(tab, text="Fetch Data", command=self.fetch_polygon_data).grid(row=2, column=0, columnspan=2, pady=10)
+
+    def fetch_polygon_data(self):
+        tickers = self.polygon_tickers_entry.get()
+        if not tickers:
+            messagebox.showwarning("Input Error", "Please enter ticker symbols.")
+            return
+
+        tickers_list = [ticker.strip() for ticker in tickers.split(",")]
+        self.run_async_fetch(PolygonDataFetcher(), tickers_list)
+
+    def run_async_fetch(self, fetcher, tickers_list):
+        """
+        Runs the data fetching process asynchronously using asyncio.
+        """
+        try:
+            asyncio.run(self.fetch_data_async(fetcher, tickers_list))
+        except RuntimeError as e:
+            messagebox.showerror("Runtime Error", str(e))
+            logger.error(f"Runtime error during async fetch: {e}")
+
+    async def fetch_data_async(self, fetcher, tickers_list):
+        start_date = "2022-01-01"
+        end_date = "2022-12-31"
+        try:
+            logger.debug(f"Starting data fetch for tickers: {tickers_list}")
+            data = await fetcher.fetch_data(tickers_list, start_date, end_date)
+            if data:
+                messagebox.showinfo("Success", f"Data fetched for: {', '.join(data.keys())}")
+                logger.info(f"Data successfully fetched for: {', '.join(data.keys())}")
+            else:
+                messagebox.showerror("Error", "Failed to fetch data.")
+                logger.error("Failed to fetch data.")
+        except Exception as e:
+            messagebox.showerror("Error", str(e))
+            logger.error(f"Error fetching data: {e}")
+
+if __name__ == "__main__":
+    app = FetcherGUI()
+    app.mainloop()
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** Consider adding features like data visualization or export options in the GUI to enhance user experience.
+- **Reflection:** Documenting the GUI directory helps in understanding how users interact with data fetchers and ensures smooth integration with the overall project.
+- **Feedback:** Ensure that any feedback from users regarding the GUI is incorporated to improve usability and functionality.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** GUI Directory Documentation - Completed
+- **Milestone 2:** Integration Testing for GUI - Pending
+- **Milestone 3:** User Feedback Implementation - Pending
+- **Milestone 4:** Final Review and Deployment - Pending
+
+---
+
+## Resource Links
+
+- [Tkinter Documentation](https://docs.python.org/3/library/tkinter.html)
+- [Asyncio Documentation](https://docs.python.org/3/library/asyncio.html)
+- [Logging Documentation](https://docs.python.org/3/library/logging.html)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to document the GUI directory in detail to improve project tracking and team understanding.
+- **Action Items:** 
+  - Self: Complete integration testing and gather user feedback on the GUI.
+
+---
+
+## Risk Management
+
+- **Risk:** Potential issues with GUI responsiveness due to asynchronous operations.
+  - **Mitigation Strategy:** Ensure thorough testing and optimization of asynchronous data fetching to maintain GUI responsiveness.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully documented the GUI directory and integrated it into the project overview.
+- **What Could Be Improved:** Future sessions should focus on user feedback and enhancing GUI features based on practical use.
+- **Actionable Insights:** Continue to refine the GUI based on user interactions and ensure that it integrates seamlessly with data fetching components.
+
+---
+
+This entry reflects the work completed and provides a comprehensive overview of the GUI directory, aligning with the project's goals and
+
+ standards.
+

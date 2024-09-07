@@ -1,0 +1,113 @@
+---
+
+# Catch_Up_Entry__Troubleshooting_PowerShell_Scripts_for_USB_Organization_and_Recovery
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:**
+  - Troubleshoot and resolve errors encountered while running a PowerShell script intended for organizing a USB drive for Tails Linux setup.
+  - Ensure correct file types and extensions are used in PowerShell scripts.
+  
+- **Actions Taken:**
+  - Identified the error related to PowerShell not recognizing the file type 'quick,ps1' due to an incorrect file extension.
+  - Provided guidance on verifying and correcting file extensions to ensure compatibility with PowerShell.
+  - Suggested running the script manually and adjusting PowerShell’s execution policy if needed.
+  
+- **Challenges and Breakthroughs:**
+  - **Challenge:** PowerShell was unable to debug the script due to incorrect file type recognition.
+  - **Breakthrough:** Recognizing that file extensions must be correct for PowerShell to run scripts, leading to the resolution of the issue by correcting the file extension.
+
+- **Results and Impact:**
+  - The troubleshooting process highlighted the importance of proper file naming conventions and execution policy settings in PowerShell. Ensuring these aspects are correct will streamline script execution and prevent similar issues in the future.
+
+---
+
+## Skills and Technologies Used
+
+- **PowerShell Scripting:** Used for automating tasks related to USB organization and file management.
+- **Troubleshooting:** Applied problem-solving skills to identify and resolve errors related to file type recognition in PowerShell.
+- **File Management:** Managed directories and file organization on a USB drive for secure and efficient usage with Tails Linux.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:**
+  - Understanding the importance of correct file extensions in PowerShell scripts to ensure proper execution.
+  - Gained insight into the execution policy settings in PowerShell, which can impact the ability to run or debug scripts.
+
+- **Unexpected Challenges:**
+  - The error encountered due to an incorrect file extension was unexpected but quickly resolved by correcting the file naming convention.
+
+- **Future Application:**
+  - Moving forward, ensure all scripts have the correct file extensions and consider setting a default execution policy that supports script debugging.
+
+---
+
+## To-Do
+
+- **Review PowerShell Scripts:** Double-check all PowerShell scripts in the project to ensure they have the correct `.ps1` extension.
+- **Set Execution Policy:** Adjust the PowerShell execution policy as needed to allow for script debugging.
+- **Continue USB Setup:** Complete the organization of the USB drive for Tails Linux, ensuring all sensitive files are appropriately encrypted and scripts are correctly placed.
+
+---
+
+## Code Snippets and Context
+
+```powershell
+# Example PowerShell command to create directories on a USB drive
+New-Item -Path $tailsSetupDir -ItemType Directory -Force
+
+# Example command to move files to the appropriate directory
+Move-Item -Path (Join-Path $usbDrive "mlrobot extras") -Destination $toolsDir -Force
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** Consider implementing a standard checklist for verifying file types and execution policies when creating or running PowerShell scripts in the future.
+- **Reflection:** This session reinforced the importance of meticulous attention to detail in file management and script execution, particularly when working with secure setups like Tails Linux.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Initial setup and configuration - Completed
+- **Milestone 2:** USB drive organization for Tails Linux setup - In Progress
+- **Milestone 3:** Secure encryption of sensitive files - Pending
+- **Milestone 4:** Final testing and deployment of the USB setup - Pending
+
+---
+
+## Resource Links
+
+- Not applicable for this session, as the focus was on internal troubleshooting and file management.
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to verify file extensions and execution policies for all PowerShell scripts moving forward.
+- **Action Items:** 
+  - Self: Continue with the USB drive setup and ensure all scripts and sensitive files are correctly organized and encrypted.
+
+---
+
+## Risk Management
+
+- **Risk:** Incorrect file extensions or execution policy settings could lead to script failures.
+  - **Mitigation Strategy:** Implement a standard checklist for verifying these aspects before running scripts.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully identified and resolved the issue related to incorrect file extensions in PowerShell.
+- **What Could Be Improved:** Future sessions should include a pre-run checklist to prevent similar errors from occurring.
+- **Actionable Insights:** Establish a routine for checking file extensions and execution policies to ensure smooth script execution.
+
+---

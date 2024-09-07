@@ -1,0 +1,10 @@
+2024-09-06 17:34:48,112 [INFO] Test message
+2024-09-06 17:34:48,112 [INFO] Additional log data.
+2024-09-06 17:34:48,113 [INFO] This is an INFO level message.
+2024-09-06 17:34:48,113 [WARNING] This is a WARNING level message.
+2024-09-06 17:34:48,113 [ERROR] This is an ERROR level message.
+2024-09-06 18:20:07,026 [INFO] Test message
+2024-09-06 18:20:07,026 [INFO] Additional log data.
+2024-09-06 18:20:07,026 [INFO] This is an INFO level message.
+2024-09-06 18:20:07,027 [WARNING] This is a WARNING level message.
+2024-09-06 18:20:07,027 [ERROR] This is an ERROR level message.

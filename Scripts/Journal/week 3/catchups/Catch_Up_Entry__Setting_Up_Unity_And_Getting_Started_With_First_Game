@@ -1,0 +1,107 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Setting_Up_Unity_And_Getting_Started_With_First_Game**
+
+---
+
+## Work Completed
+- **Objectives and Goals:**
+  - Successfully install Unity Hub and sign in to begin working on the first game development project, which blends elements from "Overcooked," "Diner Dash," and a bartender game into one cohesive multiplayer experience.
+  - Understand how to start a new project in Unity and get familiar with the basic Unity interface and workflow.
+
+- **Actions Taken:**
+  - Installed Unity Hub on a Linux system by following the appropriate commands and steps.
+  - Signed in to Unity Hub and prepared to create a new project.
+  - Received guidance on choosing the right Unity template (2D or 3D) based on the game concept.
+
+- **Challenges and Breakthroughs:**
+  - The installation process was mostly smooth, with a minor issue regarding the `chrome-sandbox` file, which was identified as non-impactful.
+  - Gained clarity on the decision between using a 2D or 3D template for the game, with a recommendation to start with a 3D template for better flexibility in gameplay dynamics.
+
+- **Results and Impact:**
+  - Unity Hub is successfully installed and operational, setting the stage for the development of the first-ever game project.
+  - A solid understanding of the next steps required to start creating the game, including creating a new project, familiarizing with the Unity interface, and choosing the right template for the game.
+
+---
+
+## Skills and Technologies Used
+- **Unity Hub Installation:** Successfully installed and set up Unity Hub on a Linux system.
+- **Game Development Basics:** Acquired basic knowledge about starting a game project in Unity, including template selection and interface navigation.
+- **Decision-Making:** Evaluated the pros and cons of using a 2D vs. 3D template for the project, ultimately leaning towards a 3D approach.
+
+---
+
+## Lessons Learned
+- **Learning Outcomes:**
+  - Learned how to install and set up Unity Hub on a Linux system.
+  - Gained a basic understanding of Unity’s interface and the importance of selecting the right project template based on game design goals.
+  
+- **Unexpected Challenges:**
+  - Encountered a minor issue with the `chrome-sandbox` during installation, which was not impactful but highlighted the need to monitor installation logs carefully.
+
+- **Future Application:**
+  - Moving forward, will apply the knowledge gained in Unity’s interface and template selection to build the game efficiently.
+  - Will continue to follow structured guidance to ensure that the project is built on a solid foundation.
+
+---
+
+## To-Do
+- **Create New Project:** Start a new project in Unity using the 3D template, naming the project "Nightshift."
+- **Familiarize with Unity Interface:** Spend time exploring the Unity interface, focusing on key panels like the Scene View, Game View, Hierarchy, Project Window, and Inspector.
+- **Begin Basic Game Setup:** Add basic game objects and experiment with movement, camera angles, and lighting to get a feel for building the game environment.
+- **Follow Tutorials:** Engage with beginner Unity tutorials to reinforce learning and practice the basics of game development.
+- **Set Up Version Control:** Consider setting up Git for version control to track changes and collaborate more effectively in the future.
+
+---
+
+## Code Snippets and Context
+Not applicable for this session as the focus was on setting up the environment and planning the project.
+
+---
+
+## Additional Notes and Reflections
+- **Improvement:** Consider breaking down the game development process into smaller, manageable tasks to ensure steady progress.
+- **Reflection:** The initial setup process has been smooth, and the project is off to a good start. The choice to use a 3D template aligns well with the vision for the "Nightshift" game, allowing for more dynamic gameplay and richer visual experiences.
+
+---
+
+## Project Milestones
+- **Milestone 1:** Install Unity Hub and sign in - Completed
+- **Milestone 2:** Start a new project and set up the basic game environment - Pending
+- **Milestone 3:** Implement basic gameplay mechanics - Pending
+- **Milestone 4:** Develop and refine the game’s core features - Pending
+
+---
+
+## Resource Links
+- [Unity Learn - Beginner Tutorials](https://learn.unity.com/)
+- [Unity 3D Game Kit](https://assetstore.unity.com/packages/templates/tutorials/3d-game-kit-115747)
+- [GitHub - Unity Version Control](https://github.com/topics/unity3d)
+
+---
+
+## Collaboration and Communication
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to use the 3D template for the "Nightshift" game project, focusing on an isometric view to align with the gameplay goals.
+- **Action Items:**
+  - Self: Create a new Unity project and explore the interface.
+  - Self: Follow beginner tutorials to build a foundational understanding of Unity.
+
+---
+
+## Risk Management
+- **Risk:** Overwhelm due to the complexity of game development for a first-time project.
+  - **Mitigation Strategy:** Start with simple tasks and build up complexity gradually. Use online resources and tutorials to guide the process.
+
+---
+
+## Retrospective
+- **What Went Well:** The installation and setup of Unity Hub were successful, and the decision-making process for choosing a template was well-informed.
+- **What Could Be Improved:** Future sessions should focus on creating actionable steps and breaking down tasks to avoid feeling overwhelmed by the learning curve.
+- **Actionable Insights:** Establish a routine of following structured tutorials and practice regularly to build confidence and skills in Unity.
+
+---
+
+This entry provides a detailed overview of the session, reflecting on the initial steps taken to start the "Nightshift" game project in Unity.

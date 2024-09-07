@@ -1,0 +1,7 @@
+{
+    "api_key": "your-api-key-here",
+    "wordpress_url": "https://yourwordpresssite.com",
+    "default_journal_template": "journal_entry_template.html",
+    "publish_status": "publish"
+  }
+  

@@ -1,0 +1,114 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Cloning_Repository_Overcoming_SSL_Connection_Issue**
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:** 
+  - Resolve the SSL connection issue encountered while attempting to clone the `TradingRobotPlug` repository from GitHub.
+  
+- **Actions Taken:** 
+  - Investigated the cause of the SSL error that occurred during the `git clone` operation.
+  - Explored various solutions, including checking the internet connection, updating Git, and configuring the SSL backend to use `schannel`.
+  - Temporarily disabled SSL verification to bypass the issue and successfully clone the repository.
+
+- **Challenges and Breakthroughs:** 
+  - **Challenges:** Encountered an SSL connection error, which was initially unclear in its origin and required troubleshooting at multiple levels.
+  - **Breakthroughs:** Successfully resolved the issue by reconfiguring the SSL backend in Git, demonstrating an understanding of how to manage SSL configurations in version control systems.
+
+- **Results and Impact:** 
+  - Successfully cloned the `TradingRobotPlug` repository, enabling continued development and project updates. The resolution of the SSL issue improved my understanding of managing Git configurations and handling SSL errors.
+
+---
+
+## Skills and Technologies Used
+
+- **Git:** Used for version control and managing the project's code repository. Addressed SSL issues specific to Git.
+- **Troubleshooting:** Applied problem-solving techniques to diagnose and resolve SSL connection errors.
+- **Command Line:** Utilized the command line interface to execute Git commands and adjust configurations.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:** 
+  - Gained a deeper understanding of Git's SSL configuration and how to troubleshoot SSL-related issues during repository cloning.
+  - Learned how to configure Git to use the Windows certificate store (`schannel`) to resolve SSL verification errors.
+
+- **Unexpected Challenges:** 
+  - The SSL error was unexpected and required more in-depth troubleshooting than initially anticipated.
+
+- **Future Application:** 
+  - This experience will be useful for future situations where SSL or other connectivity issues arise in Git operations, particularly in environments with strict security configurations.
+
+---
+
+## To-Do
+
+- **Re-enable SSL Verification:** After ensuring that the repository is correctly cloned, re-enable SSL verification in Git to maintain secure operations.
+- **Update Documentation:** Document the steps taken to resolve the SSL issue to aid future troubleshooting.
+- **Proceed with Development:** Continue with the planned development tasks now that the repository is successfully cloned.
+
+---
+
+## Code Snippets and Context
+
+- Not applicable for this session as the work focused on resolving a Git configuration issue rather than writing or modifying code.
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** Consider setting up a Git configuration guide for the project to help others avoid similar issues.
+- **Reflection:** Handling SSL issues in Git was a valuable learning experience, reinforcing the importance of being prepared for unexpected technical challenges in development workflows.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Initial setup and configuration - Completed
+- **Milestone 2:** Cloning the repository - Completed
+- **Milestone 3:** Data fetch module implementation - In Progress
+- **Milestone 4:** Unit testing and validation - Pending
+- **Milestone 5:** Final integration and deployment - Pending
+
+---
+
+## Resource Links
+
+- [Git SSL Configuration Documentation](https://git-scm.com/book/en/v2/Git-Internals-Transfer-Protocols)
+- [Troubleshooting Git SSL Issues](https://confluence.atlassian.com/gitkb/troubleshooting-git-ssl-issues-828781820.html)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to modify the SSL backend configuration to resolve the connection issue.
+- **Action Items:** 
+  - Self: Document the resolution process for future reference and re-enable SSL verification.
+
+---
+
+## Risk Management
+
+- **Risk:** Disabling SSL verification temporarily reduces the security of Git operations.
+  - **Mitigation Strategy:** Re-enable SSL verification after resolving the initial cloning issue to maintain security best practices.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully identified and resolved the SSL connection issue, enabling the continuation of project development.
+- **What Could Be Improved:** Could improve by creating a standardized troubleshooting guide for common Git issues to streamline future problem-solving.
+- **Actionable Insights:** Ensure that SSL verification is re-enabled promptly after resolving connectivity issues to maintain security protocols.
+
+---
+
+This journal entry documents the steps taken to resolve an SSL connection issue while cloning a GitHub repository, ensuring the project can move forward without further connectivity problems.
+
+---

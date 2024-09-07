@@ -1,0 +1,239 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Creating_A_Flexible_And_Portable_ConfigManager_with_Dynamic_Logging**
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:**
+  - Develop a `ConfigManager` that can dynamically load configurations from `.env`, `config.ini`, and `config.yaml` files.
+  - Implement dynamic log file naming based on the script’s filename to ensure each script in the project has its own log file.
+  - Enhance the `ConfigManager` to facilitate setting up logging and adjusting the Python path dynamically to maintain the portability of the application.
+
+- **Actions Taken:**
+  - Created a new `ConfigManager` class that loads configuration settings from `.env`, `config.ini`, and `config.yaml` files, prioritizing the files based on availability.
+  - Implemented a logging setup that names log files dynamically based on the current script's filename.
+  - Added functionality to adjust the Python path dynamically, ensuring that the project remains portable across different environments.
+  - Integrated the `ConfigManager` into the `data_fetch_tab.py` script, demonstrating its usage in a real project scenario.
+
+- **Challenges and Breakthroughs:**
+  - **Challenge:** Initially, the `ConfigManager` was searching for configuration files in the wrong directory, causing confusion and misconfiguration issues.
+  - **Breakthrough:** By recreating the `ConfigManager` from scratch, we were able to ensure it correctly locates and loads configuration files from the specified directory, resolving the issue.
+
+- **Results and Impact:**
+  - The new `ConfigManager` is now fully functional and provides a centralized way to manage configuration, logging, and portability across all scripts in the project.
+  - Dynamic log file naming enhances the clarity and organization of logs, making it easier to debug and maintain the project.
+  - The ability to adjust the Python path dynamically ensures that the project can be moved or deployed without breaking module imports, contributing to the overall portability and robustness of the application.
+
+---
+
+## Skills and Technologies Used
+
+- **Python Programming:** Utilized for developing the `ConfigManager` and enhancing the logging and path management functionalities.
+- **Logging:** Implemented advanced logging techniques, including dynamic log file naming and multi-handler logging configurations.
+- **Configuration Management:** Managed configuration data from multiple file formats (`.env`, `config.ini`, `config.yaml`), improving the flexibility of the application.
+- **Project Portability:** Ensured the application’s portability by dynamically adjusting the Python path to include the project root.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:**
+  - Gained a deeper understanding of configuration management across different file formats and how to prioritize them based on availability.
+  - Learned the importance of organizing and dynamically naming log files for better project maintenance and debugging.
+  - Recognized the value of making a project portable by dynamically managing the Python path, which prevents issues related to module imports when the project is moved.
+
+- **Unexpected Challenges:**
+  - The initial setup of the `ConfigManager` led to issues with finding the correct configuration files, which required a complete overhaul of the approach to ensure accuracy and reliability.
+
+- **Future Application:**
+  - This approach to configuration and logging management will be applied across all scripts in the project, ensuring consistency and reducing the likelihood of errors.
+  - The dynamic path adjustment method will be used to maintain portability in future projects, especially those that need to be deployed in different environments.
+
+---
+
+## To-Do
+
+- **Integrate ConfigManager:** Continue integrating the `ConfigManager` into other scripts within the project to standardize configuration and logging across the entire codebase.
+- **Test Logging and Portability:** Conduct tests to ensure that the dynamic log naming and path adjustment work correctly across different scripts and deployment environments.
+- **Documentation:** Update project documentation to include instructions on using the `ConfigManager` and the benefits of its new features.
+
+---
+
+## Code Snippets and Context
+
+### ConfigManager Implementation
+
+```python
+import os
+import configparser
+import yaml
+from dotenv import load_dotenv
+from pathlib import Path
+import logging
+import sys
+
+class ConfigManager:
+    def __init__(self, config_dir="C:/TheTradingRobotPlug/config"):
+        self.config_dir = Path(config_dir)
+        self.config_data = {}
+        self.logger = None
+        self._load_all_configs()
+
+    def _load_all_configs(self):
+        env_file = self.config_dir / ".env"
+        if env_file.exists():
+            load_dotenv(dotenv_path=env_file)
+            print(f".env file loaded from {env_file}")
+        ini_file = self.config_dir / "config.ini"
+        if ini_file.exists():
+            self._load_ini_file(ini_file)
+        yaml_file = self.config_dir / "config.yaml"
+        if yaml_file.exists():
+            self._load_yaml_file(yaml_file)
+
+    def _load_ini_file(self, ini_file):
+        config = configparser.ConfigParser()
+        config.read(ini_file)
+        for section in config.sections():
+            self.config_data[section.lower()] = dict(config.items(section))
+        print(f"INI configuration loaded from {ini_file}")
+
+    def _load_yaml_file(self, yaml_file):
+        try:
+            with open(yaml_file, 'r') as file:
+                yaml_config = yaml.safe_load(file)
+                self.config_data.update(yaml_config)
+            print(f"YAML configuration loaded from {yaml_file}")
+        except Exception as e:
+            print(f"Failed to load YAML config file {yaml_file}: {e}")
+
+    def get(self, key, section='default'):
+        section = section.lower()
+        key = key.lower()
+        env_value = os.getenv(key.upper())
+        if env_value:
+            return env_value
+        if section in self.config_data and key in self.config_data[section]:
+            return self.config_data[section][key]
+        print(f"Config value for '{key}' not found in section '{section}'.")
+        return None
+
+    def setup_logging(self, log_dir=None, log_level=logging.INFO):
+        script_name = Path(sys.argv[0]).stem
+        log_file = f"{script_name}.log"
+        log_dir = log_dir or self.get('log_folder', section='Logging') or "logs"
+        log_dir = Path(log_dir)
+        log_dir.mkdir(parents=True, exist_ok=True)
+        log_file_path = log_dir / log_file
+        logging.basicConfig(
+            level=log_level,
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            handlers=[
+                logging.FileHandler(log_file_path),
+                logging.StreamHandler(sys.stdout)
+            ]
+        )
+        self.logger = logging.getLogger(script_name)
+        self.logger.info(f"Logging initialized. Log file: {log_file_path}, Level: {logging.getLevelName(log_level)}")
+
+    def adjust_python_path(self):
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        project_root = os.path.abspath(os.path.join(script_dir, os.pardir, os.pardir))
+        if project_root not in sys.path:
+            sys.path.append(project_root)
+            if self.logger:
+                self.logger.info(f"Added {project_root} to Python path.")
+        return project_root
+```
+
+### Integration Example
+
+```python
+# File: data_fetch_tab.py
+# Location: C:\TheTradingRobotPlug\Scripts\GUI
+import os
+import sys
+import tkinter as tk
+from tkinter import ttk, messagebox
+from datetime import datetime, timedelta
+import asyncio
+import pandas as pd
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import logging
+import threading
+
+from Scripts.Utilities.config_handling import ConfigManager
+from Scripts.Utilities.data_fetch_utils import DataFetchUtils
+from Scripts.Utilities.data_store import DataStore
+from Scripts.Data_Fetchers.data_fetch_main import main as fetch_data_main
+
+config_manager = ConfigManager(config_dir="C:/TheTradingRobotPlug/config")
+config_manager.setup_logging()
+project_root = config_manager.adjust_python_path()
+
+log_file_path = config_manager.get('log_file', section='Logging')
+utils = DataFetchUtils(log_file=log_file_path, config_manager=config_manager)
+data_store = DataStore(config_manager=config_manager)
+
+# GUI implementation...
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Future Enhancements:** Consider extending the `ConfigManager` to support additional configuration file formats (e.g., JSON) for even greater flexibility.
+- **Reflection:** The process of building and integrating the `ConfigManager` highlighted the importance of modular and flexible configuration management in large projects. This will significantly streamline future development and debugging efforts.
+- **Improvement:** Adding detailed error handling for configuration loading could further enhance the robustness of the `ConfigManager`.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Initial setup and configuration - Completed
+- **Milestone 2:** Data fetch module implementation - In Progress
+- **Milestone 3:** Unit testing and validation - Pending
+- **Milestone 4:** Final integration and deployment - Pending
+
+---
+
+## Resource Links
+
+- [Python Logging Documentation](https://docs.python.org/3/library/logging.html)
+- [YAML Specification](https://yaml.org/spec/1.2/spec.html)
+- [Python configparser Documentation](https://docs.python.org/3/library/configparser.html)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to implement the dynamic log file naming convention across all scripts to standardize logging and improve debugging.
+- **Action Items:** 
+  - Self: Implement and test the `ConfigManager` in other scripts within the project to ensure consistency.
+
+---
+
+## Risk Management
+
+- **Risk:** Inconsistent logging setup across different environments could lead to issues in debugging.
+  - **Mitigation Strategy:** Test the logging setup in various environments to ensure consistent behavior.
+
+---
+
+## Retrospective
+
+-
+
+ **What Went Well:** Successfully created a flexible `ConfigManager` that significantly enhances project organization and portability.
+- **What Could Be Improved:** Explore additional configuration formats (e.g., JSON) for greater flexibility in future projects.
+- **Actionable Insights:** Standardizing logging across all scripts ensures better debugging and project maintenance, which will be a priority in future development.
+
+---
+
+This entry encapsulates the work done to enhance the `ConfigManager`, focusing on dynamic logging and project portability. The improvements made are expected to streamline the overall project management and ease the deployment process across different environments.

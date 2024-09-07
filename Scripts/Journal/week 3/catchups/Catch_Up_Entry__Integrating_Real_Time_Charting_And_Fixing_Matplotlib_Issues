@@ -1,0 +1,145 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Integrating_Real_Time_Charting_And_Fixing_Matplotlib_Issues**
+
+---
+
+## Session Prompt
+"Use this conversation to make a project journal entry following the standards and guides of the template below. Base the title of the entry off of the conversation."
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:** 
+  - Integrate real-time data visualization using Plotly to create dynamic charts similar to TradingView.
+  - Resolve issues related to the deprecated Dash components and Matplotlib errors.
+
+- **Actions Taken:** 
+  - Updated import statements to use the latest Dash package conventions (`from dash import dcc` and `from dash import html`).
+  - Refactored the `update_candlestick_chart` method to use Plotly for dynamic real-time charting.
+  - Attempted to use Matplotlib for embedding charts in a Tkinter-based application but encountered an `AttributeError` due to version incompatibilities.
+
+- **Challenges and Breakthroughs:** 
+  - **Challenge:** Encountered deprecation warnings for Dash components and an error in Matplotlib related to setting the canvas.
+  - **Breakthrough:** Successfully updated the code to use the new Dash import paths, ensuring compatibility with the latest version. Identified that the error with Matplotlib was due to version mismatch and determined the need to use Plotly exclusively for charting.
+
+- **Results and Impact:** 
+  - The update to Dash components ensures that the application remains functional with the latest libraries. The decision to use Plotly for charting will streamline the visualization process and avoid conflicts with Matplotlib. This improves the application's ability to display real-time financial data dynamically.
+
+---
+
+## Skills and Technologies Used
+
+- **Dash:** Updated to use new import conventions to comply with the latest library versions.
+- **Plotly:** Utilized for creating dynamic, real-time candlestick charts.
+- **Matplotlib:** Investigated for alternative charting methods but encountered compatibility issues.
+- **WebSocket Programming:** Used for real-time data fetching and processing.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:** 
+  - Gained insight into managing library updates and handling deprecation warnings effectively.
+  - Learned how to integrate Plotly for dynamic charting, providing a more robust solution for real-time data visualization.
+
+- **Unexpected Challenges:** 
+  - The `AttributeError` with Matplotlib was unexpected and highlighted the importance of ensuring library compatibility. The need to switch to Plotly for charting was a crucial adjustment.
+
+- **Future Application:** 
+  - Future work will focus on leveraging Plotly's capabilities for all charting needs to avoid compatibility issues and simplify the visualization process.
+
+---
+
+## To-Do
+
+- **Finalize Integration:** Complete the integration of Plotly for all real-time charting requirements.
+- **Documentation:** Update project documentation to reflect the changes in charting libraries and their usage.
+- **Testing:** Test the real-time charting features thoroughly to ensure they meet project requirements.
+
+---
+
+## Code Snippets and Context
+
+### Real-Time Data Handling and Charting
+
+```python
+# Conversion of real-time data to DataFrame and updating Plotly chart
+def update_candlestick_chart(self):
+    # Convert data_for_chart to DataFrame
+    df = pd.DataFrame(self.data_for_chart)
+    df['Date'] = pd.to_datetime(df['timestamp'], unit='ms')  # Convert timestamp to datetime
+
+    # Create the candlestick chart using Plotly
+    fig = go.Figure(data=[go.Candlestick(
+        x=df['Date'],
+        open=df['price'],
+        high=df['price'],
+        low=df['price'],
+        close=df['price']
+    )])
+
+    # Customize the chart
+    fig.update_layout(
+        title='Candlestick Chart for AAPL Stock',
+        xaxis_title='Date',
+        yaxis_title='Price',
+        xaxis_rangeslider_visible=False
+    )
+
+    # Show the chart
+    fig.show()
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** To enhance functionality, consider integrating a real-time data update mechanism that refreshes the chart without recreating it entirely.
+- **Reflection:** Switching to Plotly aligns with the project's goals of dynamic and interactive visualizations, and it simplifies the development process by avoiding compatibility issues with other libraries.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Integration of real-time data handling and Plotly charting - In Progress
+- **Milestone 2:** Resolution of Matplotlib and Dash compatibility issues - Completed
+- **Milestone 3:** Testing and final validation - Pending
+- **Milestone 4:** Deployment and user feedback collection - Pending
+
+---
+
+## Resource Links
+
+- [Plotly Documentation](https://plotly.com/python/)
+- [Dash Documentation](https://dash.plotly.com/)
+- [Matplotlib Documentation](https://matplotlib.org/stable/contents.html)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings were held during this session.
+- **Decisions Made:** Decided to standardize on Plotly for all charting needs to ensure compatibility and streamline development.
+- **Action Items:** 
+  - Implement and test Plotly-based charting solutions in the next development cycle.
+
+---
+
+## Risk Management
+
+- **Risk:** Potential issues with library compatibility and updates.
+  - **Mitigation Strategy:** Regularly review and update dependencies to stay aligned with current library versions and avoid deprecation issues.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully updated Dash imports and identified a more suitable charting library (Plotly) for real-time data.
+- **What Could Be Improved:** Future integration efforts should include more comprehensive testing for library compatibility.
+- **Actionable Insights:** Maintain up-to-date documentation and conduct periodic reviews of library versions to mitigate compatibility risks.
+
+---

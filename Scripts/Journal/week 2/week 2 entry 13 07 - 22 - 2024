@@ -1,0 +1,169 @@
+### Project Journal Entry
+
+**Date:** July 22, 2024
+
+### Work Completed:
+
+1. **File Path Error Resolution:**
+   - Corrected the file path to ensure the correct location for the data file was used (`C:\TheTradingRobotPlug\data\alpha_vantage\tsla_data.csv`).
+   - Added functionality to browse for the data file using `tkinter`, setting the default directory to `C:\TheTradingRobotPlug\data\alpha_vantage`.
+
+2. **Integration of ARIMA Model Training:**
+   - Wrapped the ARIMA model training code into a class `ARIMAModelTrainer`.
+   - Integrated `ARIMAModelTrainer` into the `ModelTraining` class to handle the training process.
+   - Added functionality to save predictions to a CSV file.
+
+3. **Code Refactoring:**
+   - Improved the structure of the main script to allow for dynamic file selection.
+   - Ensured proper error handling and logging throughout the process.
+
+4. **Data Preprocessing Enhancements:**
+   - Ensured the data preprocessing script handled NaN values and feature engineering efficiently.
+   - Modified the `DataPreprocessing` class as necessary to integrate seamlessly with the ARIMA model.
+
+5. **Training Process:**
+   - Successfully executed the ARIMA model training, achieving the following steps:
+     - Training steps from 558/566 to 565/566.
+     - Final performance metrics recorded: Test MSE = 97042.73.
+     - Results saved to `arima_predictions.csv`.
+     - Logged information on the completion of the training process, including recommendations for better forecasting accuracy.
+
+6. **Modularization and Execution:**
+   - Modularized the code into separate files for better readability and maintainability:
+     - `data_preprocessing.py`
+     - `model_training.py`
+     - `main.py`
+   - Successfully ran the modularized code with the following outcomes:
+     - Data preprocessing steps handled efficiently.
+     - LSTM model training completed successfully with 50 epochs.
+     - Final validation metrics for LSTM: MSE = 15469.76, RMSE = 124.38, R² = 0.81.
+     - Model saved at `models/LSTM_20240722_070936.pkl`.
+
+### Skills Used:
+
+- **Python Programming:**
+  - Writing and refactoring Python scripts.
+  - Handling file paths and dynamic imports using `os` and `sys`.
+
+- **Data Handling:**
+  - Reading and preprocessing data using `pandas`.
+  - Feature engineering and handling missing values.
+
+- **Machine Learning:**
+  - Implementing and training ARIMA models.
+  - Integrating ARIMA model training into a larger training pipeline.
+
+- **Error Handling and Logging:**
+  - Using the `logging` module to track script progress and errors.
+  - Implementing try-except blocks to catch and handle exceptions.
+
+- **GUI Development:**
+  - Using `tkinter` to create a file browsing dialog for selecting data files.
+
+- **Documentation:**
+  - Organizing and documenting project progress.
+  - Structuring and presenting information clearly and consistently.
+
+### Lessons Learned:
+
+1. **Dynamic File Handling:**
+   - Using `tkinter` for file browsing enhances user experience and flexibility in selecting input files.
+
+2. **Modular Code Design:**
+   - Wrapping functionalities into classes (`ARIMAModelTrainer`, `DataPreprocessing`, `ModelTraining`) improves code maintainability and readability.
+   - Ensuring proper integration between different parts of the codebase is crucial for seamless functionality.
+
+3. **Error Handling:**
+   - Robust error handling and logging are essential for identifying and resolving issues quickly.
+   - Ensuring that all possible error points are covered helps in making the script more resilient.
+
+4. **Data Preprocessing:**
+   - Handling missing values and creating new features are critical steps that can significantly impact the performance of machine learning models.
+
+### To-Do:
+
+1. **Improve ARIMA Model Accuracy:**
+   - Experiment with different ARIMA parameters to improve forecasting accuracy.
+   - Consider integrating other time series forecasting models.
+
+2. **Enhance Data Preprocessing:**
+   - Implement additional feature engineering techniques.
+   - Optimize the handling of missing values.
+
+3. **Extend Model Training Pipeline:**
+   - Integrate more machine learning models for comparison.
+   - Implement hyperparameter tuning for all models.
+
+4. **User Interface Improvements:**
+   - Enhance the file browsing interface to be more intuitive.
+   - Add more options for user inputs and configurations.
+
+5. **Documentation and Testing:**
+   - Document the changes and new functionalities.
+   - Write and execute tests to ensure code reliability and accuracy.
+
+### Project Journal Entry
+
+**Date:** July 23, 2024
+
+### Accomplishments:
+
+1. **LSTM Model Training:**
+   - Successfully trained the LSTM model multiple times, ensuring the training process is robust and stable.
+   - Achieved the following metrics:
+     - Validation MSE: 0.08, RMSE: 0.29, R²: -0.00
+     - Test MSE: 0.09, RMSE: 0.30, R²: -0.25
+
+2. **Identified Next Steps for Model Improvement:**
+   - Focus on refining hyperparameters.
+   - Experiment with different model architectures.
+   - Implement learning rate scheduling.
+
+### Lessons Learned:
+
+1. **Hyperparameter Tuning:**
+   - Importance of systematically optimizing hyperparameters to improve model performance.
+   - Utilization of tools like Optuna can automate and streamline the hyperparameter tuning process.
+
+2. **Model Architecture:**
+   - Exploring different architectures, such as adding more layers, using GRU layers, or Bidirectional LSTM, can potentially lead to performance improvements.
+   - Keeping the architecture flexible allows for iterative experimentation and fine-tuning.
+
+3. **Learning Rate Scheduling:**
+   - Dynamic adjustment of the learning rate during training can help achieve better convergence and prevent overfitting.
+   - Implementing schedulers like `ReduceLROnPlateau` can automatically adjust the learning rate based on validation performance.
+
+### To-Do List:
+
+1. **Refine Hyperparameters:**
+   - Integrate Optuna for automated hyperparameter optimization.
+   - Define the search space for key hyperparameters (e.g., learning rate, number of LSTM units, batch size, number of layers).
+   - Run Optuna to find the optimal hyperparameters.
+
+2. **Experiment with Model Architectures:**
+   - Modify the current model architecture to include different configurations (e.g., additional LSTM layers, GRU layers, Bidirectional LSTM).
+   - Evaluate the performance of each modified architecture to identify the best-performing model.
+
+3. **Implement Learning Rate Scheduling:**
+   - Choose a suitable learning rate scheduler (e.g., `ReduceLROnPlateau`).
+   - Integrate the scheduler into the training process and monitor its impact on model performance.
+
+4. **Monitor and Iterate:**
+   - Continuously monitor the performance metrics (MSE, RMSE, R²) during training and validation.
+   - Make necessary adjustments based on the results and iterate on the model architecture and hyperparameters.
+
+### Action Plan:
+
+1. **Update the Training Script:**
+   - Integrate hyperparameter optimization using Optuna.
+   - Experiment with different model architectures and learning rate scheduling.
+
+2. **Run Experiments:**
+   - Conduct multiple training sessions with different configurations.
+   - Record and analyze the results to determine the best approach.
+
+3. **Document Findings:**
+   - Keep detailed notes on the performance of each model configuration.
+   - Document any challenges encountered and how they were addressed.
+
+By following this structured approach, we aim to improve the LSTM model's performance and achieve better predictive accuracy. This iterative process will help refine our model and optimize its parameters for the best results.

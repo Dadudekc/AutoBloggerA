@@ -1,0 +1,237 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Catch_Up_Entry__Expanding_Google_Dorking_Script_for_Security_Notifications**
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:**
+  - The goal of this session was to expand and refine the Google Dorking script to include additional queries targeting the exposure of sensitive information such as private keys, usernames, passwords, and API details. The primary objective was to enhance the script's effectiveness in identifying vulnerable sites and notifying administrators.
+
+- **Actions Taken:**
+  - Added new search queries to the script, specifically targeting:
+    - Private keys (`intitle:"index of" /"privatekey.txt" OR "private key.txt"`)
+    - Passwords exposed in SharePoint pages (`inurl:/_layouts/userdisp.aspx?id= intext:password`)
+    - API directories with index listings (`inurl:"/includes/api/" intext:"index of /"`)
+  - Expanded the search functionality to include a broader range of potentially exposed sensitive files, such as `.env`, `.sql`, `.bak`, `.zip`, and more.
+  - Implemented a loop within the script to iterate through multiple search results pages, ensuring a more comprehensive search.
+
+- **Challenges and Breakthroughs:**
+  - **Challenges:**
+    - Ensuring that the expanded queries provided relevant results without overwhelming the search with false positives.
+    - Managing Google API rate limits while maintaining the effectiveness of the search.
+  - **Breakthroughs:**
+    - The inclusion of targeted queries resulted in a more robust script capable of detecting a wider range of vulnerabilities, increasing the likelihood of identifying critical security issues.
+
+- **Results and Impact:**
+  - The script was successfully enhanced to search for additional types of vulnerabilities. This expansion is expected to improve the detection of sensitive files and help notify more website administrators of potential security risks, contributing to overall web security.
+
+---
+
+## Skills and Technologies Used
+
+- **Python Programming:** Used to enhance and expand the functionality of the existing script, handling API requests, and processing search results.
+- **Google Custom Search API:** Integrated to perform targeted searches for potentially exposed sensitive files across the web.
+- **WHOIS Lookup:** Employed to retrieve contact information for domain administrators, aiding in the responsible disclosure of vulnerabilities.
+- **Security Practices:** Applied ethical hacking principles to identify vulnerabilities without exploiting them, ensuring responsible and legal actions.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:**
+  - Gained deeper insight into the use of Google Dorking for security purposes, particularly in identifying a wider range of vulnerabilities.
+  - Recognized the importance of balancing query specificity with the need to capture relevant results, avoiding unnecessary noise in search outputs.
+  
+- **Unexpected Challenges:**
+  - Navigating Google’s API rate limits required strategic delays in the script to avoid hitting those limits, ensuring smooth and continuous operation.
+
+- **Future Application:**
+  - Future improvements could include adding more sophisticated filtering mechanisms to reduce false positives and incorporating additional notification methods to ensure administrators are informed promptly.
+
+---
+
+## To-Do
+
+- **Test and Validate:** Run extensive tests on the updated script to validate the effectiveness of the new queries and ensure accurate identification of vulnerabilities.
+- **Error Handling:** Improve error handling to manage any issues arising from API limits or unexpected results more gracefully.
+- **Expand Notifications:** Explore additional methods for notifying administrators, such as integrating with third-party services like Slack or using secure forms of communication.
+- **Documentation:** Update project documentation to reflect the changes made to the script, ensuring clear instructions for future use and development.
+
+---
+
+## Code Snippets and Context
+
+### Updated Google Dorking Script
+
+```python
+# Script to identify and notify administrators of potential vulnerabilities
+import os
+import time
+import requests
+import whois
+from googleapiclient.discovery import build
+
+# Set up your Google Custom Search API
+API_KEY = 'YOUR_GOOGLE_API_KEY'
+CSE_ID = 'YOUR_CSE_ID'
+
+def google_search(query, api_key, cse_id, start_index=1):
+    service = build("customsearch", "v1", developerKey=api_key)
+    try:
+        res = service.cse().list(q=query, cx=cse_id, start=start_index).execute()
+        return res.get('items', [])
+    except Exception as e:
+        print(f"Error during Google Search API call: {e}")
+        return []
+
+def find_vulnerable_sites():
+    queries = [
+        'intitle:"index of/" "db.sql"',
+        'intitle:"index of/" "backup.sql"',
+        'intitle:"index of/" "*.sql"',
+        'intitle:"index of/" "*.bak"',
+        'intitle:"index of/" "*.zip"',
+        'intitle:"index of/" "*.env"',
+        'intitle:"index of/" "config.php"',
+        'intitle:"index of/" "wp-config.php"',
+        'intitle:"index of/" "credentials"',
+        'intitle:"index of/" "user.sql"',
+        'intitle:"index of/" "password.sql"',
+        'intitle:"index of/" "credentials.txt"',
+        'intitle:"index of/" "passwd"',
+        'intitle:"index of/" "shadow"',
+        'intitle:"index of/" "htpasswd"',
+        'intitle:"index of" /"privatekey.txt" OR "private key.txt"',
+        'inurl:/_layouts/userdisp.aspx?id= intext:password',
+        'inurl:"/includes/api/" intext:"index of /"',
+    ]
+    
+    vulnerable_sites = []
+    for query in queries:
+        print(f"Searching for: {query}")
+        start_index = 1
+        while True:
+            try:
+                results = google_search(query, API_KEY, CSE_ID, start_index)
+                if not results:
+                    break
+                
+                for result in results:
+                    url = result['link']
+                    title = result['title']
+                    print(f"Found: {title} - {url}")
+                    vulnerable_sites.append(url)
+                
+                start_index += 10  # Google Custom Search returns 10 results per page
+                if start_index > 90:
+                    print("Reached maximum results page for this query.")
+                    break
+                time.sleep(1)  # Sleep to avoid hitting rate limits
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                break
+    
+    return vulnerable_sites
+
+def get_admin_contact(domain):
+    try:
+        w = whois.whois(domain)
+        if isinstance(w.email, list):
+            return w.email[0]
+        return w.email
+    except Exception as e:
+        print(f"Could not retrieve WHOIS info for {domain}: {e}")
+        return None
+
+def notify_admin(url, email):
+    subject = "Potential Security Vulnerability Found on Your Website"
+    message = f"""
+    Dear Admin,
+
+    I have found what appears to be a publicly accessible sensitive file on your website at {url}.
+    This could potentially expose sensitive information such as usernames, passwords, or private keys.
+
+    Please secure your website by removing or protecting the file.
+
+    Best regards,
+    [Your Name]
+    """
+    
+    # Here you would send an email, for now, we'll just print it
+    print(f"Notifying {email} about {url}...")
+    print(f"Subject: {subject}")
+    print(f"Message: {message}")
+
+def main():
+    vulnerable_sites = find_vulnerable_sites()
+    for site in vulnerable_sites:
+        domain = site.split('/')[2]
+        email = get_admin_contact(domain)
+        if email:
+            notify_admin(site, email)
+        else:
+            print(f"No contact info found for {domain}")
+
+if __name__ == "__main__":
+    main()
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Feature Idea:** Consider adding a database to log all found vulnerabilities and their respective notifications. This would allow tracking of repeated issues and could be used to build a more comprehensive report for website administrators.
+- **Improvement:** Add a mechanism to verify if the reported vulnerability has been resolved, and possibly send a follow-up notification to ensure the issue has been addressed.
+- **Reflection:** The project is progressing well, with the script becoming more robust. Regular updates and refinements will help maintain its effectiveness in identifying and reporting vulnerabilities.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Initial setup and configuration - Completed
+- **Milestone 2:** Expansion of Google Dorking script - Completed
+- **Milestone 3:** Testing and validation of new queries - In Progress
+- **Milestone 4:** Integration with notification system - Pending
+
+---
+
+## Resource Links
+
+- [Google Custom Search JSON API Documentation](https://developers.google.com/custom-search/v1/overview)
+- [Python WHOIS Library](https://pypi.org/project/python-whois/)
+- [WHOIS Lookup Service](https://whois.domaintools.com/)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings held during this session.
+- **Decisions Made:** Decided to expand the range of search queries in the Google Dorking script to cover a wider array of potential vulnerabilities.
+- **Action Items:** 
+  - Begin testing the script with the new queries.
+  - Refine the notification process to ensure effective communication with website administrators.
+
+---
+
+## Risk Management
+
+- **Risk:** The expanded queries may return a high volume of false positives, reducing the script's effectiveness.
+  - **Mitigation Strategy:** Implement additional filtering mechanisms to refine search results and reduce noise.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully expanded the Google Dorking script to identify a broader range of vulnerabilities, potentially increasing its effectiveness.
+- **What Could Be Improved:** Additional work is needed to refine the notification process and improve the accuracy of the search results.
+- **Actionable Insights:** Regular updates and refinement of the
+
+ script will help maintain its effectiveness. Implementing a feedback loop with administrators could help verify the impact of the notifications.
+
+---
+
+This entry provides a comprehensive overview of the session, capturing the progress made, the skills utilized, and the next steps for further development of the project.

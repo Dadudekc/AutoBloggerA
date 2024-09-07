@@ -1,0 +1,96 @@
+{
+  "agents": [
+    {
+      "name": "Debugger",
+      "role": "Debugging",
+      "personality": "You are a skilled debugger who can solve traceback errors quickly and efficiently.",
+      "task_keyword": "debug",
+      "task_function": "debug_task_function",
+      "tools": ["Python traceback analyzer", "error logger"],
+      "priority": 1,
+      "max_attempts": 5
+    },
+    {
+      "name": "Journalist",
+      "role": "Journalist",
+      "personality": "You are a creative and detail-oriented journalist who documents project progress and trading results.",
+      "task_keyword": "journal",
+      "task_function": "journal_task_function",
+      "content_type": "Project Journals",
+      "format": "markdown",
+      "publish_method": "WordPress API",
+      "priority": 3
+    },
+    {
+      "name": "Fetcher",
+      "role": "Data Fetching",
+      "personality": "You are responsible for fetching financial data from APIs like Alpha Vantage and Polygon.io.",
+      "task_keyword": "fetch",
+      "task_function": "fetch_data_function",
+      "api_keys": {
+        "alpha_vantage": "C6AG9NZX6QIPYTX4",
+        "polygon_io": "ruqNOBWgLAXuiUM0ugL5WmxbkIdlELp4"
+      },
+      "data_sources": ["Alpha Vantage", "Polygon.io"],
+      "max_requests_per_day": 500,
+      "priority": 2
+    },
+    {
+      "name": "Strategist",
+      "role": "Trading Strategist",
+      "personality": "You generate trading signals using strategies like MACD crossover, moving averages, and RSI.",
+      "task_keyword": "strategy",
+      "task_function": "strategy_task_function",
+      "strategies": ["MACD Crossover", "RSI", "Moving Averages"],
+      "risk_tolerance": "medium",
+      "max_trades_per_day": 10,
+      "priority": 1
+    },
+    {
+      "name": "RiskManager",
+      "role": "Risk Management",
+      "personality": "You analyze the risk for portfolios and suggest mitigation strategies like stop-loss orders and portfolio diversification.",
+      "task_keyword": "risk",
+      "task_function": "risk_task_function",
+      "tools": ["Sharpe Ratio Calculator", "VaR Analyzer"],
+      "risk_limit": 0.05,
+      "portfolio_size": "large",
+      "priority": 2
+    },
+    {
+      "name": "Backtester",
+      "role": "Backtesting",
+      "personality": "You are an expert at simulating trading strategies on historical data and analyzing the performance.",
+      "task_keyword": "backtest",
+      "task_function": "backtest_strategy_function",
+      "data_sources": ["Historical Price Data"],
+      "backtest_period": "5 years",
+      "metrics": ["ROI", "Max Drawdown", "Sharpe Ratio"],
+      "priority": 1
+    },
+    {
+      "name": "PortfolioManager",
+      "role": "Portfolio Management",
+      "personality": "You manage portfolios, rebalance them regularly, and optimize for returns and risk.",
+      "task_keyword": "manage_portfolio",
+      "task_function": "manage_portfolio_function",
+      "target_allocation": {
+        "stocks": 0.6,
+        "bonds": 0.3,
+        "cash": 0.1
+      },
+      "rebalance_frequency": "monthly",
+      "priority": 1
+    },
+    {
+      "name": "CodeReviewer",
+      "role": "Codebase Review",
+      "personality": "You are a meticulous code reviewer who scans the project for errors and suggests fixes.",
+      "task_keyword": "review_code",
+      "task_function": "review_code_function",
+      "tools": ["pylint", "flake8", "mypy"],
+      "max_files_per_scan": 50,
+      "priority": 1
+    }
+  ]
+}

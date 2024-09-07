@@ -1,0 +1,159 @@
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Addressing_Module_Import_Issues_And_Test_Execution_Failures**
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:**
+  - Resolve module import errors and successfully execute unit tests for the `DataFetcher` module.
+  
+- **Actions Taken:**
+  - Identified and corrected module import paths to match the project structure.
+  - Adjusted the test script to ensure correct importing of the `DataFetcher` module.
+  - Ran multiple tests (`test_data_fetcher.py`, `test_polygon_fetcher.py`, etc.) to verify the correct functionality of the code.
+  
+- **Challenges and Breakthroughs:**
+  - **Challenges:** Encountered repeated `ModuleNotFoundError` issues when attempting to import the `data_fetcher` module.
+  - **Breakthroughs:** Realized that the import paths were incorrect due to mismatches between actual directory names and the import statements. Corrected the import paths, which resolved the errors.
+
+- **Results and Impact:**
+  - Successfully executed the `test_data_fetcher.py` script after resolving import issues. This allowed for validation of the `DataFetcher` module’s functionality.
+  - Identified further issues with test failures related to data processing logic, particularly in handling expected versus actual data formats.
+
+---
+
+## Skills and Technologies Used
+
+- **Python Programming:** Applied skills in Python to troubleshoot and correct import errors, ensuring the proper structure and execution of test scripts.
+- **Unit Testing:** Employed unit testing to validate code correctness and functionality across various modules.
+- **Error Handling:** Improved error handling in the test scripts to capture and address issues related to data processing and API integration.
+- **Path Management:** Utilized Python's `sys.path` to dynamically adjust import paths based on project structure.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:**
+  - Importance of verifying file paths and import statements, especially in complex projects with multiple modules and directories.
+  - Realized the need for consistent naming conventions across directories to avoid import errors.
+  
+- **Unexpected Challenges:**
+  - Encountered discrepancies in expected data formats during test execution, leading to failed assertions. Addressed by improving the understanding of the data pipeline and refining test cases.
+
+- **Future Application:**
+  - Ensure that all project directories follow a consistent naming convention and that import statements are regularly validated when new modules are added.
+  - Refine unit tests to include more detailed checks for data format validation, ensuring that data processing logic is thoroughly tested.
+
+---
+
+## To-Do
+
+- **Fix Test Failures:** Investigate and resolve the test failure in `test_polygon_fetcher.py` related to the empty DataFrame issue.
+- **Review Data Processing Logic:** Revisit the `DataFetcher` module’s data processing logic to ensure compatibility with all expected data formats.
+- **Complete Unit Tests:** Finalize the remaining unit tests for other data fetcher modules by [specific date].
+- **Enhance Error Handling:** Implement more robust error handling in the `DataFetcher` module to gracefully handle unexpected data formats or API errors.
+
+---
+
+## Code Snippets and Context
+
+### Test Case for Data Fetching
+
+```python
+# Test for the fetch_data method in DataFetcher
+
+@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher._async_fetch_data', new_callable=AsyncMock)
+@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher.process_data', autospec=True)
+@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher.store_data', autospec=True)
+def test_fetch_data(self, mock_store_data, mock_process_data, mock_async_fetch_data):
+    # Mock the async fetch data to return a sample dictionary
+    mock_async_fetch_data.return_value = {"Time Series (Daily)": {"2024-01-01": {"close": 150}}}
+    mock_process_data.return_value = pd.DataFrame({"close": [150]})
+
+    # Test the fetch_data method
+    asyncio.run(self.fetcher.fetch_data(['AAPL'], 'daily'))
+
+    # Verify that process_data and store_data were called
+    mock_process_data.assert_called_once()
+    mock_store_data.assert_called_once_with(self.fetcher, mock_process_data.return_value, 'AAPL')
+```
+
+### Test Case for Polygon Fetcher
+
+```python
+# Test for fetching data for a single symbol in PolygonDataFetcher
+
+@patch('Scripts.Data_Fetchers.polygon_fetcher.PolygonDataFetcher.fetch_data', new_callable=AsyncMock)
+def test_fetch_data_for_symbol(self, mock_fetch_data):
+    # Test fetching data for a single symbol
+    symbol = "AAPL"
+    start_date = "2023-01-01"
+    end_date = "2023-12-31"
+    mock_fetch_data.return_value = {
+        'results': [
+            {'t': 1672531199000, 'o': 150, 'h': 155, 'l': 149, 'c': 152, 'v': 1000000}
+        ]
+    }
+
+    # Run the async fetch_data_for_symbol method
+    result_df = asyncio.run(self.fetcher.fetch_data_for_symbol(symbol, start_date, end_date))
+
+    # Check if the DataFrame was created correctly
+    self.assertIsInstance(result_df, pd.DataFrame)
+    self.assertFalse(result_df.empty)
+    self.assertEqual(result_df.iloc[0]['open'], 150)
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** Consider implementing more comprehensive data validation checks within the data processing pipeline to prevent issues related to unexpected data formats.
+- **Reflection:** The exercise highlighted the importance of consistent naming conventions and the need for thorough testing, particularly when dealing with external APIs and varying data sources.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** Initial setup and configuration - Completed
+- **Milestone 2:** Data fetch module implementation - In Progress
+- **Milestone 3:** Unit testing and validation - Ongoing, with some issues identified
+- **Milestone 4:** Final integration and deployment - Pending
+
+---
+
+## Resource Links
+
+- **Python Path Configuration:** [Python sys.path Documentation](https://docs.python.org/3/library/sys.html#sys.path)
+- **Pandas DataFrame Documentation:** [Pandas Documentation](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html)
+- **Unit Testing in Python:** [unittest Documentation](https://docs.python.org/3/library/unittest.html)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** None during this session.
+- **Decisions Made:** Decided to focus on resolving test failures and enhancing data validation in the next work session.
+- **Action Items:**
+  - Self: Address test failures in `test_polygon_fetcher.py` and review data processing logic for potential improvements.
+
+---
+
+## Risk Management
+
+- **Risk:** Inconsistent data formats could lead to failed assertions in tests.
+  - **Mitigation Strategy:** Implement more robust data validation checks in the data fetch and processing modules.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully resolved module import issues and made significant progress in executing unit tests.
+- **What Could Be Improved:** Need to improve handling of unexpected data formats and enhance error reporting in the data fetcher modules.
+- **Actionable Insights:** Implement routine checks for import paths and improve data validation mechanisms in the codebase.
+
+---

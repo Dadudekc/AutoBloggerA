@@ -1,0 +1,176 @@
+Certainly! Here's a project journal entry based on the conversation about modifying the WebSocket script for handling stock market data:
+
+---
+
+# Project Journal Entry
+
+**Catch_Up_Entry__Modifying_WebSocket_Script_For_Stock_Market_Data_Handling**
+
+---
+
+## Work Completed
+
+- **Objectives and Goals:**
+  - Update the WebSocket script to clean and standardize incoming stock market data. Ensure the data is ready for further analysis and visualization, such as creating a candlestick chart.
+
+- **Actions Taken:**
+  - Modified the `on_message` method in the `FinnhubWebSocket` class to handle and clean incoming data.
+  - Implemented the `clean_data` method to standardize the data format and extract relevant fields.
+  - Integrated the cleaned data processing into the WebSocket message handling to ensure it prints clean, structured data.
+
+- **Challenges and Breakthroughs:**
+  - **Challenges:** Handling JSON decoding errors and ensuring the cleaned data format aligns with the requirements.
+  - **Breakthroughs:** Successfully implemented a data cleaning process that standardizes data entries, making it ready for visualization and analysis.
+
+- **Results and Impact:**
+  - The updated WebSocket script now processes incoming stock data more effectively. Cleaned data can be directly used for generating visualizations like candlestick charts, improving overall project functionality and data analysis.
+
+---
+
+## Skills and Technologies Used
+
+- **Python Programming:** Used for scripting, data handling, and WebSocket integration.
+- **JSON Handling:** Applied for parsing and cleaning incoming WebSocket messages.
+- **Data Standardization:** Implemented methods to format and clean data for consistency and usability.
+- **WebSocket Communication:** Managed real-time data streaming and processing.
+
+---
+
+## Lessons Learned
+
+- **Learning Outcomes:**
+  - Gained experience in handling real-time WebSocket data and cleaning it for further use.
+  - Improved understanding of data structure standardization and its importance in data analysis.
+
+- **Unexpected Challenges:**
+  - Encountered issues with inconsistent data formats and JSON parsing errors, which were resolved by adding robust error handling and data cleaning processes.
+
+- **Future Application:**
+  - The skills and methods developed will be applied to other real-time data handling projects, enhancing the capability to process and analyze streaming data effectively.
+
+---
+
+## To-Do
+
+- **Implement Visualization:** Use the cleaned data to generate a candlestick chart using Plotly.
+- **Error Handling Enhancement:** Improve error handling for edge cases in data processing.
+- **Testing:** Thoroughly test the updated WebSocket script with different data scenarios to ensure robustness.
+
+---
+
+## Code Snippets and Context
+
+### WebSocket Script
+
+```python
+import json
+from websocket import WebSocketApp
+import websocket
+import os
+
+class FinnhubWebSocket:
+    def __init__(self, api_key: str):
+        self.api_key = api_key
+        self.ws_url = f"wss://ws.finnhub.io?token={self.api_key}"
+
+    def on_message(self, ws, message):
+        try:
+            data = json.loads(message)
+        except json.JSONDecodeError:
+            print("Error: Invalid JSON data")
+            return
+        
+        if 'data' in data:
+            cleaned_data = self.clean_data(data['data'])
+            print("Cleaned Data:", json.dumps(cleaned_data, indent=2))
+        else:
+            print("No 'data' field found in the message")
+
+    def clean_data(self, raw_data):
+        standardized_data = []
+        
+        for entry in raw_data:
+            cleaned_entry = {
+                "symbol": entry.get("s", ""),
+                "price": entry.get("p", 0),
+                "volume": entry.get("v", 0),
+                "timestamp": entry.get("t", 0),
+                "categories": entry.get("c", [])
+            }
+            standardized_data.append(cleaned_entry)
+        
+        return standardized_data
+
+    def on_error(self, ws, error):
+        print(f"Error: {error}")
+
+    def on_close(self, ws, close_status_code, close_msg):
+        print("Connection closed")
+
+    def on_open(self, ws):
+        print("Connection opened")
+
+    def start(self):
+        ws = WebSocketApp(self.ws_url,
+                          on_message=self.on_message,
+                          on_error=self.on_error,
+                          on_close=self.on_close)
+        ws.on_open = self.on_open
+        ws.run_forever()
+
+if __name__ == "__main__":
+    finnhub_api_key = os.getenv('FINNHUB_API_KEY')
+    if finnhub_api_key:
+        ws_client = FinnhubWebSocket(finnhub_api_key)
+        ws_client.start()
+    else:
+        print("Finnhub API key is not set.")
+```
+
+---
+
+## Additional Notes and Reflections
+
+- **Improvement:** Plan to integrate real-time data visualization to enhance the analysis and presentation of stock market data.
+- **Reflection:** The work on cleaning and processing WebSocket data demonstrated the importance of preparing data for effective visualization and analysis.
+
+---
+
+## Project Milestones
+
+- **Milestone 1:** WebSocket script update for data cleaning - Completed
+- **Milestone 2:** Data visualization integration - Pending
+- **Milestone 3:** Comprehensive testing and validation - Pending
+
+---
+
+## Resource Links
+
+- [Finnhub WebSocket API Documentation](https://finnhub.io/docs/api#websocket)
+- [Plotly Documentation for Candlestick Charts](https://plotly.com/python/candlestick-charts/)
+
+---
+
+## Collaboration and Communication
+
+- **Meetings and Discussions:** No formal meetings during this session.
+- **Decisions Made:** Updated the WebSocket script to include data cleaning functionality.
+- **Action Items:** 
+  - Implement data visualization for cleaned data in the next session.
+
+---
+
+## Risk Management
+
+- **Risk:** Inconsistent data formats from WebSocket feed.
+  - **Mitigation Strategy:** Implement comprehensive data cleaning and error handling.
+
+---
+
+## Retrospective
+
+- **What Went Well:** Successfully updated the WebSocket script to handle and clean data, ready for visualization.
+- **What Could Be Improved:** Enhance error handling and validation of incoming data.
+- **Actionable Insights:** Focus on integrating data visualization to fully utilize the cleaned data.
+
+---
