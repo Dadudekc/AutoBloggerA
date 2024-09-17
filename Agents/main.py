@@ -1,6 +1,7 @@
 import sys
 import os
 import logging
+import json
 
 # Initialize logging
 log_directory = r'C:\Auto_Blogger\Logs'
@@ -43,10 +44,23 @@ def main():
     # Initialize TaskManagerAgent with the agent registry and agent creator
     task_manager = TaskManagerAgent(agent_registry, agent_creator)
     
+    # Sample journal task data in JSON format
+    journal_task_data = json.dumps({
+        "content": [
+            {"heading": "Project Update"},
+            {"paragraph": "Today we made significant progress in the project."},
+            {"unordered_list": [
+                "Implemented new features",
+                "Fixed critical bugs",
+                "Enhanced logging system"
+            ]}
+        ]
+    })
+
     # Example tasks for the system to handle
     tasks = [
         "debug traceback error in the system",
-        "journal the latest development session",
+        journal_task_data,  # Valid JSON data for the journal task
         "analyze trading strategy"
     ]
     

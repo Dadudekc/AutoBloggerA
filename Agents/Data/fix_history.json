@@ -1,0 +1,67 @@
+[
+    {
+        "error_traceback": "NameError: name 'x' is not defined",
+        "fix_applied": "Ensure the variable is defined or imported before use."
+    },
+    {
+        "error_traceback": "TypeError: unsupported operand type(s) for +: 'int' and 'str'",
+        "fix_applied": "Ensure the variables are of compatible types before performing operations. Convert types using int(), str(), or float() where necessary."
+    },
+    {
+        "error_traceback": "AttributeError: 'NoneType' object has no attribute 'some_method'",
+        "fix_applied": "Check if the object is initialized before accessing its methods or attributes."
+    },
+    {
+        "error_traceback": "IndexError: list index out of range",
+        "fix_applied": "Ensure the index is within the bounds of the list by checking its length before accessing the index."
+    },
+    {
+        "error_traceback": "KeyError: 'key_name'",
+        "fix_applied": "Ensure the key exists in the dictionary before accessing it. Use the .get() method to safely retrieve values."
+    },
+    {
+        "error_traceback": "ModuleNotFoundError: No module named 'module_name'",
+        "fix_applied": "Ensure the required module is installed. Use 'pip install module_name' to install it."
+    },
+    {
+        "error_traceback": "IndentationError: unexpected indent",
+        "fix_applied": "Check the code for proper indentation. Ensure consistent use of tabs or spaces throughout the file."
+    },
+    {
+        "error_traceback": "SyntaxError: invalid syntax",
+        "fix_applied": "Check for any syntax issues such as missing colons, parentheses, or other required symbols."
+    },
+    {
+        "error_traceback": "ZeroDivisionError: division by zero",
+        "fix_applied": "Ensure that the denominator is not zero before performing division operations."
+    },
+    {
+        "error_traceback": "FileNotFoundError: [Errno 2] No such file or directory: 'file_name'",
+        "fix_applied": "Ensure the file exists at the specified path and check for any spelling mistakes in the file name or directory."
+    },
+    {
+        "error_traceback": "TypeError: 'NoneType' object is not iterable",
+        "fix_applied": "Ensure that the object being iterated is not None before using it in a loop."
+    },
+    {
+        "error_traceback": "ImportError: cannot import name 'X' from 'module_name'",
+        "fix_applied": "Ensure the function or class is correctly named and exists in the module. Double-check the module's contents or import paths."
+    },
+    {
+        "error_traceback": "OverflowError: (34, 'Result too large')",
+        "fix_applied": "Consider alternative approaches to handle large numbers or reduce the magnitude of calculations."
+    },
+    {
+        "error_traceback": "RecursionError: maximum recursion depth exceeded",
+        "fix_applied": "Refactor the recursive function to have a proper base case, or increase the recursion limit if necessary."
+    },
+    {
+        "error_traceback": "NameError: name 'x' is not defined",
+        "generated_fix": "Ensure the variable is defined or imported before use."
+    },
+    {
+        "error_traceback": "NameError: name 'x' is not defined",
+        "generated_fix": "Ensure the variable is defined or imported before use.",
+        "success": true
+    }
+]

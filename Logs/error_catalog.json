@@ -1,0 +1,52 @@
+[
+    {
+        "error_type": "NameError",
+        "error_message": "name 'x' is not defined",
+        "suggested_fix": "Ensure the variable 'x' is defined before it's used or import the necessary module."
+    },
+    {
+        "error_type": "TypeError",
+        "error_message": "unsupported operand type(s)",
+        "suggested_fix": "Check the data types of the variables involved and ensure they support the operation being performed."
+    },
+    {
+        "error_type": "ImportError",
+        "error_message": "No module named 'nonexistent_module'",
+        "suggested_fix": "Verify that the module is installed and correctly imported. If it doesn't exist, ensure the module is spelled correctly or install it using pip."
+    },
+    {
+        "error_type": "FileNotFoundError",
+        "error_message": "[Errno 2] No such file or directory",
+        "suggested_fix": "Ensure the file path is correct, and the file exists. Double-check the path format on your operating system."
+    },
+    {
+        "error_type": "SyntaxError",
+        "error_message": "invalid syntax",
+        "suggested_fix": "Check the line of code for missing punctuation such as colons, parentheses, or indentation issues."
+    },
+    {
+        "error_type": "ZeroDivisionError",
+        "error_message": "division by zero",
+        "suggested_fix": "Check the denominator and ensure it is not zero before performing the division operation."
+    },
+    {
+        "error_type": "AttributeError",
+        "error_message": "'NoneType' object has no attribute",
+        "suggested_fix": "Ensure the object you're working with is not None before trying to access its attributes."
+    },
+    {
+        "error_type": "KeyError",
+        "error_message": "KeyError: 'key'",
+        "suggested_fix": "Ensure the key exists in the dictionary before trying to access it. Use the .get() method as a safe alternative."
+    },
+    {
+        "error_type": "IndexError",
+        "error_message": "list index out of range",
+        "suggested_fix": "Check the length of the list and ensure the index you're trying to access is within the valid range."
+    },
+    {
+        "error_type": "ValueError",
+        "error_message": "could not convert string to float",
+        "suggested_fix": "Ensure the string you're trying to convert is formatted as a number."
+    }
+]

@@ -1,0 +1,1331 @@
+2024-09-17 13:53:17,880 - INFO - Initialized agent 'OrchestratorOverseer' with role 'System Orchestrator'.
+2024-09-17 13:53:17,880 - INFO - Agent 'OrchestratorOverseer' introduction: My name is OrchestratorOverseer. I am responsible for System Orchestrator. Strategic and authoritative, overseeing all agents in the AI company and ensuring tasks are properly assigned and executed.
+2024-09-17 13:53:17,882 - WARNING - Agent 'OrchestratorOverseer' does not have a specific task function assigned.
+2024-09-17 13:56:26,677 - INFO - Initialized agent 'CodeGuardian' with role 'Debugging Expert'.
+2024-09-17 13:56:26,679 - INFO - Initialized CodeGuardian with role 'Debugging Expert'.
+2024-09-17 13:56:26,679 - INFO - Agent 'CodeGuardian' introduction: My name is CodeGuardian. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 13:56:26,680 - INFO - Agent 'CodeGuardian' performing task with input: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,680 - INFO - CodeGuardian - Attempt 1: Debugging error Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,681 - INFO - CodeGuardian - Generating fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,682 - INFO - CodeGuardian - Testing fix: Generated fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,682 - WARNING - CodeGuardian - Fix failed on attempt 1. Retrying...
+2024-09-17 13:56:26,682 - INFO - CodeGuardian - Attempt 2: Debugging error Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,683 - INFO - CodeGuardian - Generating fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,683 - INFO - CodeGuardian - Testing fix: Generated fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,683 - WARNING - CodeGuardian - Fix failed on attempt 2. Retrying...
+2024-09-17 13:56:26,684 - INFO - CodeGuardian - Attempt 3: Debugging error Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,684 - INFO - CodeGuardian - Generating fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,685 - INFO - CodeGuardian - Testing fix: Generated fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,685 - WARNING - CodeGuardian - Fix failed on attempt 3. Retrying...
+2024-09-17 13:56:26,686 - INFO - CodeGuardian - Attempt 4: Debugging error Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,688 - INFO - CodeGuardian - Generating fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,689 - INFO - CodeGuardian - Testing fix: Generated fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,689 - WARNING - CodeGuardian - Fix failed on attempt 4. Retrying...
+2024-09-17 13:56:26,689 - INFO - CodeGuardian - Attempt 5: Debugging error Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,690 - INFO - CodeGuardian - Generating fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,690 - INFO - CodeGuardian - Testing fix: Generated fix based on error: Traceback (most recent call last): NameError: name 'x' is not defined
+2024-09-17 13:56:26,690 - WARNING - CodeGuardian - Fix failed on attempt 5. Retrying...
+2024-09-17 13:56:26,690 - ERROR - CodeGuardian - Unable to fix the error after 5 attempts.
+2024-09-17 13:56:26,691 - INFO - Final result: Unable to fix the error after 5 attempts.
+2024-09-17 14:01:36,796 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:01:36,797 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:01:36,798 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'foo' is not defined
+2024-09-17 14:01:36,798 - INFO - Attempt 1: Debugging error NameError: name 'foo' is not defined
+2024-09-17 14:01:36,798 - INFO - Generating fix for error: NameError: name 'foo' is not defined - Suggested fix: Define the missing variable or import the module.
+2024-09-17 14:01:36,799 - INFO - Testing fix: Generated fix based on error: Define the missing variable or import the module.
+2024-09-17 14:01:36,799 - INFO - Error fixed on attempt 1: Generated fix based on error: Define the missing variable or import the module.
+2024-09-17 14:04:40,311 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:04:40,312 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:04:40,312 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:04:40,313 - INFO - Categorized error: NameError
+2024-09-17 14:04:40,313 - INFO - Attempt 1: Debugging error NameError
+2024-09-17 14:04:40,313 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:04:40,313 - INFO - Testing fix: Define the missing variable or import the module.
+2024-09-17 14:04:40,313 - INFO - Error fixed on attempt 1: Define the missing variable or import the module.
+2024-09-17 14:04:40,313 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:04:40,313 - INFO - Categorized error: TypeError
+2024-09-17 14:04:40,313 - INFO - Attempt 1: Debugging error TypeError
+2024-09-17 14:04:40,314 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:04:40,314 - INFO - Testing fix: Check variable types and ensure correct data types are being used.
+2024-09-17 14:04:40,314 - INFO - Error fixed on attempt 1: Check variable types and ensure correct data types are being used.
+2024-09-17 14:04:40,314 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:04:40,314 - INFO - Categorized error: ImportError
+2024-09-17 14:04:40,314 - INFO - Attempt 1: Debugging error ImportError
+2024-09-17 14:04:40,314 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:04:40,314 - INFO - Testing fix: Ensure the module is installed and properly imported.
+2024-09-17 14:04:40,314 - INFO - Error fixed on attempt 1: Ensure the module is installed and properly imported.
+2024-09-17 14:04:40,315 - INFO - Agent 'Tech Intern' performing task with input: SyntaxError: invalid syntax
+2024-09-17 14:04:40,315 - INFO - Categorized error: SyntaxError
+2024-09-17 14:04:40,315 - INFO - Attempt 1: Debugging error SyntaxError
+2024-09-17 14:04:40,315 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:04:40,315 - INFO - Testing fix: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:04:40,315 - INFO - Error fixed on attempt 1: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:06:55,177 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:06:55,178 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:06:55,178 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:06:55,178 - INFO - Categorized error: NameError
+2024-09-17 14:06:55,179 - INFO - Attempt 1: Debugging error NameError
+2024-09-17 14:06:55,179 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:06:57,896 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:06:57,896 - WARNING - Test suite failed.
+2024-09-17 14:06:57,896 - INFO - Attempt 2: Debugging error NameError
+2024-09-17 14:06:57,897 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:06:59,711 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:06:59,711 - WARNING - Test suite failed.
+2024-09-17 14:06:59,711 - INFO - Attempt 3: Debugging error NameError
+2024-09-17 14:06:59,712 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:07:01,552 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:01,553 - WARNING - Test suite failed.
+2024-09-17 14:07:01,553 - INFO - Attempt 4: Debugging error NameError
+2024-09-17 14:07:01,554 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:07:03,288 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:03,289 - WARNING - Test suite failed.
+2024-09-17 14:07:03,289 - INFO - Attempt 5: Debugging error NameError
+2024-09-17 14:07:03,289 - INFO - Generated fix for NameError: Define the missing variable or import the module.
+2024-09-17 14:07:05,021 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:05,022 - WARNING - Test suite failed.
+2024-09-17 14:07:05,022 - ERROR - Unable to fix the error after 5 attempts. Applying fallback strategy.
+2024-09-17 14:07:05,022 - INFO - Applying fallback strategy for error: NameError: name 'x' is not defined
+2024-09-17 14:07:05,023 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:07:05,023 - INFO - Categorized error: TypeError
+2024-09-17 14:07:05,023 - INFO - Attempt 1: Debugging error TypeError
+2024-09-17 14:07:05,023 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:07:06,806 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:06,806 - WARNING - Test suite failed.
+2024-09-17 14:07:06,806 - INFO - Attempt 2: Debugging error TypeError
+2024-09-17 14:07:06,807 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:07:08,496 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:08,496 - WARNING - Test suite failed.
+2024-09-17 14:07:08,496 - INFO - Attempt 3: Debugging error TypeError
+2024-09-17 14:07:08,496 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:07:10,165 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:10,166 - WARNING - Test suite failed.
+2024-09-17 14:07:10,166 - INFO - Attempt 4: Debugging error TypeError
+2024-09-17 14:07:10,166 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:07:11,910 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:11,911 - WARNING - Test suite failed.
+2024-09-17 14:07:11,911 - INFO - Attempt 5: Debugging error TypeError
+2024-09-17 14:07:11,911 - INFO - Generated fix for TypeError: Check variable types and ensure correct data types are being used.
+2024-09-17 14:07:13,659 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:13,659 - WARNING - Test suite failed.
+2024-09-17 14:07:13,659 - ERROR - Unable to fix the error after 5 attempts. Applying fallback strategy.
+2024-09-17 14:07:13,659 - INFO - Applying fallback strategy for error: TypeError: unsupported operand type(s)
+2024-09-17 14:07:13,660 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:07:13,661 - INFO - Categorized error: ImportError
+2024-09-17 14:07:13,661 - INFO - Attempt 1: Debugging error ImportError
+2024-09-17 14:07:13,661 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:07:15,312 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:15,312 - WARNING - Test suite failed.
+2024-09-17 14:07:15,312 - INFO - Attempt 2: Debugging error ImportError
+2024-09-17 14:07:15,313 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:07:16,963 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:16,963 - WARNING - Test suite failed.
+2024-09-17 14:07:16,963 - INFO - Attempt 3: Debugging error ImportError
+2024-09-17 14:07:16,963 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:07:18,741 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:18,741 - WARNING - Test suite failed.
+2024-09-17 14:07:18,741 - INFO - Attempt 4: Debugging error ImportError
+2024-09-17 14:07:18,741 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:07:20,395 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:20,395 - WARNING - Test suite failed.
+2024-09-17 14:07:20,395 - INFO - Attempt 5: Debugging error ImportError
+2024-09-17 14:07:20,396 - INFO - Generated fix for ImportError: Ensure the module is installed and properly imported.
+2024-09-17 14:07:22,039 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:22,039 - WARNING - Test suite failed.
+2024-09-17 14:07:22,039 - ERROR - Unable to fix the error after 5 attempts. Applying fallback strategy.
+2024-09-17 14:07:22,039 - INFO - Applying fallback strategy for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:07:22,040 - INFO - Agent 'Tech Intern' performing task with input: SyntaxError: invalid syntax
+2024-09-17 14:07:22,040 - INFO - Categorized error: SyntaxError
+2024-09-17 14:07:22,040 - INFO - Attempt 1: Debugging error SyntaxError
+2024-09-17 14:07:22,041 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:07:23,693 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:23,693 - WARNING - Test suite failed.
+2024-09-17 14:07:23,693 - INFO - Attempt 2: Debugging error SyntaxError
+2024-09-17 14:07:23,694 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:07:25,428 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:25,428 - WARNING - Test suite failed.
+2024-09-17 14:07:25,428 - INFO - Attempt 3: Debugging error SyntaxError
+2024-09-17 14:07:25,429 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:07:27,112 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:27,112 - WARNING - Test suite failed.
+2024-09-17 14:07:27,112 - INFO - Attempt 4: Debugging error SyntaxError
+2024-09-17 14:07:27,112 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:07:28,781 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:28,781 - WARNING - Test suite failed.
+2024-09-17 14:07:28,782 - INFO - Attempt 5: Debugging error SyntaxError
+2024-09-17 14:07:28,782 - INFO - Generated fix for SyntaxError: Check for syntax issues like missing colons, parentheses, or indentation.
+2024-09-17 14:07:30,528 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:07:30,529 - WARNING - Test suite failed.
+2024-09-17 14:07:30,529 - ERROR - Unable to fix the error after 5 attempts. Applying fallback strategy.
+2024-09-17 14:07:30,529 - INFO - Applying fallback strategy for error: SyntaxError: invalid syntax
+2024-09-17 14:08:49,476 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:08:49,476 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:08:49,477 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:08:49,477 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:08:49,477 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:08:51,295 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:08:51,295 - WARNING - Test suite failed.
+2024-09-17 14:08:51,295 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:08:51,295 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:08:51,295 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:08:52,990 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:08:52,991 - WARNING - Test suite failed.
+2024-09-17 14:08:52,991 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:08:52,992 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:08:52,992 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:08:55,275 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:08:55,275 - WARNING - Test suite failed.
+2024-09-17 14:08:55,275 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:08:55,276 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:08:55,276 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:08:57,024 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:08:57,024 - WARNING - Test suite failed.
+2024-09-17 14:08:57,024 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:08:57,024 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:08:57,025 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:08:58,807 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:08:58,807 - WARNING - Test suite failed.
+2024-09-17 14:08:58,807 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:08:58,808 - INFO - Escalating issue for error: NameError: name 'x' is not defined
+2024-09-17 14:08:58,808 - INFO - Error Report: {'Error Traceback': "NameError: name 'x' is not defined", 'Attempts Made': 5, 'Suggested Fix': 'Refactor problematic code or escalate to senior developer.'}
+2024-09-17 14:08:58,809 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:08:58,809 - INFO - Attempt 1: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:08:58,809 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:00,473 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:00,474 - WARNING - Test suite failed.
+2024-09-17 14:09:00,474 - INFO - Attempt 2: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:09:00,474 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:00,474 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:02,144 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:02,144 - WARNING - Test suite failed.
+2024-09-17 14:09:02,144 - INFO - Attempt 3: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:09:02,144 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:02,144 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:03,859 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:03,859 - WARNING - Test suite failed.
+2024-09-17 14:09:03,859 - INFO - Attempt 4: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:09:03,859 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:03,859 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:05,499 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:05,499 - WARNING - Test suite failed.
+2024-09-17 14:09:05,499 - INFO - Attempt 5: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:09:05,499 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:05,499 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:07,135 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:07,136 - WARNING - Test suite failed.
+2024-09-17 14:09:07,137 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:09:07,137 - INFO - Escalating issue for error: TypeError: unsupported operand type(s)
+2024-09-17 14:09:07,137 - INFO - Error Report: {'Error Traceback': 'TypeError: unsupported operand type(s)', 'Attempts Made': 5, 'Suggested Fix': 'Refactor problematic code or escalate to senior developer.'}
+2024-09-17 14:09:07,138 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:07,138 - INFO - Attempt 1: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:07,139 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:08,841 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:08,841 - WARNING - Test suite failed.
+2024-09-17 14:09:08,842 - INFO - Attempt 2: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:08,842 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:08,842 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:10,516 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:10,517 - WARNING - Test suite failed.
+2024-09-17 14:09:10,517 - INFO - Attempt 3: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:10,517 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:10,517 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:12,247 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:12,247 - WARNING - Test suite failed.
+2024-09-17 14:09:12,247 - INFO - Attempt 4: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:12,247 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:12,247 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:13,910 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:13,910 - WARNING - Test suite failed.
+2024-09-17 14:09:13,911 - INFO - Attempt 5: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:13,911 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:13,911 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:15,646 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:15,647 - WARNING - Test suite failed.
+2024-09-17 14:09:15,647 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:09:15,647 - INFO - Escalating issue for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:09:15,647 - INFO - Error Report: {'Error Traceback': "ImportError: No module named 'nonexistent_module'", 'Attempts Made': 5, 'Suggested Fix': 'Refactor problematic code or escalate to senior developer.'}
+2024-09-17 14:09:15,647 - INFO - Agent 'Tech Intern' performing task with input: ComplexError: Something unexpected happened
+2024-09-17 14:09:15,648 - INFO - Attempt 1: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:09:15,648 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:17,403 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:17,404 - WARNING - Test suite failed.
+2024-09-17 14:09:17,404 - INFO - Attempt 2: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:09:17,404 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:17,405 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:19,649 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:19,649 - WARNING - Test suite failed.
+2024-09-17 14:09:19,649 - INFO - Attempt 3: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:09:19,650 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:19,650 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:21,585 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:21,586 - WARNING - Test suite failed.
+2024-09-17 14:09:21,586 - INFO - Attempt 4: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:09:21,587 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:21,587 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:23,489 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:23,490 - WARNING - Test suite failed.
+2024-09-17 14:09:23,490 - INFO - Attempt 5: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:09:23,490 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:23,491 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:09:25,315 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:09:25,316 - WARNING - Test suite failed.
+2024-09-17 14:09:25,316 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:09:25,316 - INFO - Escalating issue for error: ComplexError: Something unexpected happened
+2024-09-17 14:09:25,316 - INFO - Error Report: {'Error Traceback': 'ComplexError: Something unexpected happened', 'Attempts Made': 5, 'Suggested Fix': 'Refactor problematic code or escalate to senior developer.'}
+2024-09-17 14:12:29,875 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:12:29,922 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:12:29,927 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:12:29,933 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:12:29,934 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:12:32,164 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:32,164 - WARNING - Test suite failed.
+2024-09-17 14:12:32,171 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:12:32,171 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:12:32,172 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:33,751 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:33,751 - WARNING - Test suite failed.
+2024-09-17 14:12:33,761 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:12:33,761 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:12:33,762 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:35,283 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:35,283 - WARNING - Test suite failed.
+2024-09-17 14:12:35,294 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:12:35,294 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:12:35,295 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:37,667 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:37,667 - WARNING - Test suite failed.
+2024-09-17 14:12:37,678 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:12:37,678 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:12:37,679 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:39,007 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:39,007 - WARNING - Test suite failed.
+2024-09-17 14:12:39,017 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:12:39,017 - INFO - Escalating issue for error: NameError: name 'x' is not defined
+2024-09-17 14:12:39,017 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:12:39,049 - INFO - Escalation Report: {
+    "Error Traceback": "NameError: name 'x' is not defined",
+    "Attempts Made": 5,
+    "Refactored Code": "NameError: name 'x' is not defined\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:12:39,050 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:12:39,055 - INFO - Attempt 1: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:12:39,055 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:40,600 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:40,600 - WARNING - Test suite failed.
+2024-09-17 14:12:40,609 - INFO - Attempt 2: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:12:40,610 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:40,610 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:42,828 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:42,829 - WARNING - Test suite failed.
+2024-09-17 14:12:42,842 - INFO - Attempt 3: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:12:42,842 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:42,843 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:44,908 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:44,908 - WARNING - Test suite failed.
+2024-09-17 14:12:44,917 - INFO - Attempt 4: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:12:44,917 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:44,917 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:47,214 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:47,215 - WARNING - Test suite failed.
+2024-09-17 14:12:47,224 - INFO - Attempt 5: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:12:47,225 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:47,225 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:48,922 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:48,922 - WARNING - Test suite failed.
+2024-09-17 14:12:48,929 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:12:48,929 - INFO - Escalating issue for error: TypeError: unsupported operand type(s)
+2024-09-17 14:12:48,929 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:12:48,940 - INFO - Escalation Report: {
+    "Error Traceback": "TypeError: unsupported operand type(s)",
+    "Attempts Made": 5,
+    "Refactored Code": "TypeError: unsupported operand type(s)\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:12:48,940 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:48,943 - INFO - Attempt 1: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:48,944 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:50,715 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:50,715 - WARNING - Test suite failed.
+2024-09-17 14:12:50,722 - INFO - Attempt 2: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:50,723 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:50,723 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:52,126 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:52,126 - WARNING - Test suite failed.
+2024-09-17 14:12:52,133 - INFO - Attempt 3: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:52,134 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:52,134 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:53,533 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:53,533 - WARNING - Test suite failed.
+2024-09-17 14:12:53,543 - INFO - Attempt 4: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:53,544 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:53,544 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:54,992 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:54,992 - WARNING - Test suite failed.
+2024-09-17 14:12:54,999 - INFO - Attempt 5: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:55,000 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:55,000 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:12:56,407 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:56,408 - WARNING - Test suite failed.
+2024-09-17 14:12:56,415 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:12:56,415 - INFO - Escalating issue for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:12:56,416 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:12:56,427 - INFO - Escalation Report: {
+    "Error Traceback": "ImportError: No module named 'nonexistent_module'",
+    "Attempts Made": 5,
+    "Refactored Code": "ImportError: No module named 'nonexistent_module'\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:12:56,428 - INFO - Agent 'Tech Intern' performing task with input: ComplexError: Something unexpected happened
+2024-09-17 14:12:56,430 - INFO - Attempt 1: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:12:56,431 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:12:58,516 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:12:58,516 - WARNING - Test suite failed.
+2024-09-17 14:12:58,527 - INFO - Attempt 2: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:12:58,529 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:12:58,529 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:13:00,099 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:13:00,100 - WARNING - Test suite failed.
+2024-09-17 14:13:00,111 - INFO - Attempt 3: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:13:00,112 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:13:00,112 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:13:01,602 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:13:01,602 - WARNING - Test suite failed.
+2024-09-17 14:13:01,610 - INFO - Attempt 4: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:13:01,611 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:13:01,611 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:13:02,984 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:13:02,984 - WARNING - Test suite failed.
+2024-09-17 14:13:02,995 - INFO - Attempt 5: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:13:02,995 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:13:02,995 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:13:04,367 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:13:04,368 - WARNING - Test suite failed.
+2024-09-17 14:13:04,378 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:13:04,378 - INFO - Escalating issue for error: ComplexError: Something unexpected happened
+2024-09-17 14:13:04,378 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:13:04,386 - INFO - Escalation Report: {
+    "Error Traceback": "ComplexError: Something unexpected happened",
+    "Attempts Made": 5,
+    "Refactored Code": "ComplexError: Something unexpected happened\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:20:30,272 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:20:30,275 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:20:30,276 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:20:30,277 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:20:30,278 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:20:31,663 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:31,663 - WARNING - Test suite failed.
+2024-09-17 14:20:31,671 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:20:31,672 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:20:31,672 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:33,229 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:33,229 - WARNING - Test suite failed.
+2024-09-17 14:20:33,240 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:20:33,241 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:20:33,242 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:34,663 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:34,663 - WARNING - Test suite failed.
+2024-09-17 14:20:34,673 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:20:34,674 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:20:34,674 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:35,978 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:35,978 - WARNING - Test suite failed.
+2024-09-17 14:20:35,988 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:20:35,988 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:20:35,988 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:37,357 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:37,357 - WARNING - Test suite failed.
+2024-09-17 14:20:37,365 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:20:37,365 - INFO - Escalating issue for error: NameError: name 'x' is not defined
+2024-09-17 14:20:37,365 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:20:37,392 - INFO - Escalation Report: {
+    "Error Traceback": "NameError: name 'x' is not defined",
+    "Attempts Made": 5,
+    "Refactored Code": "NameError: name 'x' is not defined\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:20:37,393 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:20:37,395 - INFO - Attempt 1: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:20:37,395 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:39,166 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:39,166 - WARNING - Test suite failed.
+2024-09-17 14:20:39,175 - INFO - Attempt 2: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:20:39,175 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:39,175 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:40,639 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:40,639 - WARNING - Test suite failed.
+2024-09-17 14:20:40,648 - INFO - Attempt 3: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:20:40,648 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:40,648 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:42,116 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:42,116 - WARNING - Test suite failed.
+2024-09-17 14:20:42,125 - INFO - Attempt 4: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:20:42,125 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:42,125 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:43,739 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:43,739 - WARNING - Test suite failed.
+2024-09-17 14:20:43,748 - INFO - Attempt 5: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:20:43,749 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:43,749 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:45,492 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:45,492 - WARNING - Test suite failed.
+2024-09-17 14:20:45,504 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:20:45,504 - INFO - Escalating issue for error: TypeError: unsupported operand type(s)
+2024-09-17 14:20:45,504 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:20:45,520 - INFO - Escalation Report: {
+    "Error Traceback": "TypeError: unsupported operand type(s)",
+    "Attempts Made": 5,
+    "Refactored Code": "TypeError: unsupported operand type(s)\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:20:45,522 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:45,525 - INFO - Attempt 1: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:45,525 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:47,424 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:47,424 - WARNING - Test suite failed.
+2024-09-17 14:20:47,430 - INFO - Attempt 2: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:47,430 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:47,430 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:49,148 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:49,148 - WARNING - Test suite failed.
+2024-09-17 14:20:49,159 - INFO - Attempt 3: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:49,160 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:49,160 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:50,764 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:50,764 - WARNING - Test suite failed.
+2024-09-17 14:20:50,776 - INFO - Attempt 4: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:50,776 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:50,777 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:52,212 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:52,212 - WARNING - Test suite failed.
+2024-09-17 14:20:52,221 - INFO - Attempt 5: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:52,222 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:52,222 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:53,818 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:53,820 - WARNING - Test suite failed.
+2024-09-17 14:20:53,830 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:20:53,830 - INFO - Escalating issue for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:20:53,831 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:20:53,843 - INFO - Escalation Report: {
+    "Error Traceback": "ImportError: No module named 'nonexistent_module'",
+    "Attempts Made": 5,
+    "Refactored Code": "ImportError: No module named 'nonexistent_module'\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:20:53,844 - INFO - Agent 'Tech Intern' performing task with input: ComplexError: Something unexpected happened
+2024-09-17 14:20:53,847 - INFO - Attempt 1: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:20:53,847 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:20:55,632 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:55,632 - WARNING - Test suite failed.
+2024-09-17 14:20:55,640 - INFO - Attempt 2: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:20:55,641 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:20:55,641 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:57,011 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:57,011 - WARNING - Test suite failed.
+2024-09-17 14:20:57,021 - INFO - Attempt 3: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:20:57,021 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:20:57,021 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:20:58,526 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:20:58,526 - WARNING - Test suite failed.
+2024-09-17 14:20:58,537 - INFO - Attempt 4: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:20:58,538 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:20:58,538 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:21:00,586 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:21:00,587 - WARNING - Test suite failed.
+2024-09-17 14:21:00,596 - INFO - Attempt 5: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:21:00,597 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:21:00,597 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:21:02,061 - INFO - Running pylint: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:21:02,061 - WARNING - Test suite failed.
+2024-09-17 14:21:02,071 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:21:02,071 - INFO - Escalating issue for error: ComplexError: Something unexpected happened
+2024-09-17 14:21:02,071 - INFO - Applying autopep8 refactoring to the code.
+2024-09-17 14:21:02,080 - INFO - Escalation Report: {
+    "Error Traceback": "ComplexError: Something unexpected happened",
+    "Attempts Made": 5,
+    "Refactored Code": "ComplexError: Something unexpected happened\n",
+    "Suggested Fix": "Review refactored code or escalate to senior developer."
+}
+2024-09-17 14:35:08,959 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:35:08,962 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:35:08,963 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:35:08,964 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:35:08,964 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:35:10,271 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:35:10,612 - INFO - Making checkers
+2024-09-17 14:35:10,613 - INFO - Finished running
+2024-09-17 14:35:10,613 - INFO - Reporting errors
+2024-09-17 14:35:10,613 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:35:10,613 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:35:10,621 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:35:10,622 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:35:10,622 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:35:11,994 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:35:12,144 - INFO - Making checkers
+2024-09-17 14:35:12,145 - INFO - Finished running
+2024-09-17 14:35:12,145 - INFO - Reporting errors
+2024-09-17 14:35:12,145 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:35:12,145 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:35:12,154 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:35:12,155 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:35:12,155 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:35:13,875 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:35:14,026 - INFO - Making checkers
+2024-09-17 14:35:14,027 - INFO - Finished running
+2024-09-17 14:35:14,027 - INFO - Reporting errors
+2024-09-17 14:35:14,027 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:35:14,027 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:35:14,033 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:35:14,034 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:35:14,034 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:35:15,366 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:35:15,554 - INFO - Making checkers
+2024-09-17 14:35:15,554 - INFO - Finished running
+2024-09-17 14:35:15,554 - INFO - Reporting errors
+2024-09-17 14:35:15,555 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:35:15,555 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:35:15,561 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:35:15,562 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:35:15,562 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:35:16,930 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:35:17,093 - INFO - Making checkers
+2024-09-17 14:35:17,093 - INFO - Finished running
+2024-09-17 14:35:17,094 - INFO - Reporting errors
+2024-09-17 14:35:17,094 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:35:17,094 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:35:17,104 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:35:17,105 - INFO - Escalating issue for error: NameError: name 'x' is not defined
+2024-09-17 14:35:17,105 - INFO - Applying black refactoring to the code.
+2024-09-17 14:37:32,466 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:37:32,470 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues and ensuring system reliability.
+2024-09-17 14:37:32,471 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:37:32,472 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:37:32,473 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:37:34,457 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:34,853 - INFO - Making checkers
+2024-09-17 14:37:34,855 - INFO - Finished running
+2024-09-17 14:37:34,855 - INFO - Reporting errors
+2024-09-17 14:37:34,856 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:34,856 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:34,862 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:37:34,863 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:37:34,863 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:36,531 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:36,808 - INFO - Making checkers
+2024-09-17 14:37:36,808 - INFO - Finished running
+2024-09-17 14:37:36,809 - INFO - Reporting errors
+2024-09-17 14:37:36,809 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:36,809 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:36,816 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:37:36,821 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:37:36,821 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:38,467 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:38,763 - INFO - Making checkers
+2024-09-17 14:37:38,763 - INFO - Finished running
+2024-09-17 14:37:38,764 - INFO - Reporting errors
+2024-09-17 14:37:38,764 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:38,764 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:38,779 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:37:38,780 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:37:38,780 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:40,325 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:40,482 - INFO - Making checkers
+2024-09-17 14:37:40,482 - INFO - Finished running
+2024-09-17 14:37:40,482 - INFO - Reporting errors
+2024-09-17 14:37:40,482 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:40,483 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:40,492 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:37:40,493 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:37:40,493 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:42,294 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:42,494 - INFO - Making checkers
+2024-09-17 14:37:42,494 - INFO - Finished running
+2024-09-17 14:37:42,494 - INFO - Reporting errors
+2024-09-17 14:37:42,494 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:42,494 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:42,503 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:37:42,503 - INFO - Escalating issue for error: NameError: name 'x' is not defined
+2024-09-17 14:37:42,504 - INFO - Applying black refactoring to the code.
+2024-09-17 14:37:42,505 - ERROR - Error during refactoring: Cannot parse: 1:16: NameError: name 'x' is not defined
+2024-09-17 14:37:42,506 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s)
+2024-09-17 14:37:42,508 - INFO - Attempt 1: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:37:42,509 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:43,956 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:44,119 - INFO - Making checkers
+2024-09-17 14:37:44,120 - INFO - Finished running
+2024-09-17 14:37:44,121 - INFO - Reporting errors
+2024-09-17 14:37:44,121 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:44,121 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:44,128 - INFO - Attempt 2: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:37:44,129 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:44,129 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:45,528 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:45,706 - INFO - Making checkers
+2024-09-17 14:37:45,706 - INFO - Finished running
+2024-09-17 14:37:45,706 - INFO - Reporting errors
+2024-09-17 14:37:45,707 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:45,707 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:45,715 - INFO - Attempt 3: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:37:45,716 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:45,716 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:47,382 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:47,565 - INFO - Making checkers
+2024-09-17 14:37:47,566 - INFO - Finished running
+2024-09-17 14:37:47,566 - INFO - Reporting errors
+2024-09-17 14:37:47,566 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:47,566 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:47,577 - INFO - Attempt 4: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:37:47,577 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:47,578 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:49,116 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:49,290 - INFO - Making checkers
+2024-09-17 14:37:49,291 - INFO - Finished running
+2024-09-17 14:37:49,291 - INFO - Reporting errors
+2024-09-17 14:37:49,291 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:49,291 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:49,299 - INFO - Attempt 5: Debugging error TypeError: unsupported operand type(s)
+2024-09-17 14:37:49,300 - INFO - Generating fix for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:49,300 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:50,827 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:51,004 - INFO - Making checkers
+2024-09-17 14:37:51,005 - INFO - Finished running
+2024-09-17 14:37:51,005 - INFO - Reporting errors
+2024-09-17 14:37:51,005 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:51,005 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:51,013 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:37:51,013 - INFO - Escalating issue for error: TypeError: unsupported operand type(s)
+2024-09-17 14:37:51,013 - INFO - Applying black refactoring to the code.
+2024-09-17 14:37:51,015 - ERROR - Error during refactoring: Cannot parse: 1:23: TypeError: unsupported operand type(s)
+2024-09-17 14:37:51,016 - INFO - Agent 'Tech Intern' performing task with input: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:51,020 - INFO - Attempt 1: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:51,021 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:52,799 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:52,985 - INFO - Making checkers
+2024-09-17 14:37:52,987 - INFO - Finished running
+2024-09-17 14:37:52,988 - INFO - Reporting errors
+2024-09-17 14:37:52,988 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:52,988 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:52,995 - INFO - Attempt 2: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:52,995 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:52,995 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:54,420 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:54,574 - INFO - Making checkers
+2024-09-17 14:37:54,574 - INFO - Finished running
+2024-09-17 14:37:54,574 - INFO - Reporting errors
+2024-09-17 14:37:54,575 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:54,575 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:54,582 - INFO - Attempt 3: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:54,583 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:54,583 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:56,066 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:56,229 - INFO - Making checkers
+2024-09-17 14:37:56,229 - INFO - Finished running
+2024-09-17 14:37:56,229 - INFO - Reporting errors
+2024-09-17 14:37:56,229 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:56,229 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:56,238 - INFO - Attempt 4: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:56,239 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:56,239 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:57,929 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:58,104 - INFO - Making checkers
+2024-09-17 14:37:58,105 - INFO - Finished running
+2024-09-17 14:37:58,105 - INFO - Reporting errors
+2024-09-17 14:37:58,105 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:58,105 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:58,114 - INFO - Attempt 5: Debugging error ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:58,114 - INFO - Generating fix for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:58,115 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:37:59,716 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:37:59,914 - INFO - Making checkers
+2024-09-17 14:37:59,914 - INFO - Finished running
+2024-09-17 14:37:59,914 - INFO - Reporting errors
+2024-09-17 14:37:59,915 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:37:59,915 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:37:59,926 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:37:59,926 - INFO - Escalating issue for error: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:59,926 - INFO - Applying black refactoring to the code.
+2024-09-17 14:37:59,927 - ERROR - Error during refactoring: Cannot parse: 1:16: ImportError: No module named 'nonexistent_module'
+2024-09-17 14:37:59,928 - INFO - Agent 'Tech Intern' performing task with input: ComplexError: Something unexpected happened
+2024-09-17 14:37:59,931 - INFO - Attempt 1: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:37:59,931 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:01,359 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:38:01,515 - INFO - Making checkers
+2024-09-17 14:38:01,515 - INFO - Finished running
+2024-09-17 14:38:01,515 - INFO - Reporting errors
+2024-09-17 14:38:01,515 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:38:01,516 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:38:01,523 - INFO - Attempt 2: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:38:01,524 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:01,524 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:38:03,335 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:38:03,493 - INFO - Making checkers
+2024-09-17 14:38:03,493 - INFO - Finished running
+2024-09-17 14:38:03,494 - INFO - Reporting errors
+2024-09-17 14:38:03,494 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:38:03,494 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:38:03,503 - INFO - Attempt 3: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:38:03,504 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:03,505 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:38:04,959 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:38:05,156 - INFO - Making checkers
+2024-09-17 14:38:05,156 - INFO - Finished running
+2024-09-17 14:38:05,157 - INFO - Reporting errors
+2024-09-17 14:38:05,157 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:38:05,157 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:38:05,165 - INFO - Attempt 4: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:38:05,166 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:05,166 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:38:08,282 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:38:09,221 - INFO - Making checkers
+2024-09-17 14:38:09,222 - INFO - Finished running
+2024-09-17 14:38:09,222 - INFO - Reporting errors
+2024-09-17 14:38:09,222 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:38:09,222 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:38:09,232 - INFO - Attempt 5: Debugging error ComplexError: Something unexpected happened
+2024-09-17 14:38:09,235 - INFO - Generating fix for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:09,235 - INFO - Feedback loop active, adjusting fix.
+2024-09-17 14:38:11,249 - INFO - pylint output: ************* Module C:/Auto_Blogger/YourProject
+C:/Auto_Blogger/YourProject:1:0: F0001: No module named C:/Auto_Blogger/YourProject (fatal)
+
+2024-09-17 14:38:11,562 - INFO - Making checkers
+2024-09-17 14:38:11,563 - INFO - Finished running
+2024-09-17 14:38:11,564 - INFO - Reporting errors
+2024-09-17 14:38:11,564 - INFO - Found a total of 1 violations and reported 1
+2024-09-17 14:38:11,564 - ERROR - Error while running the test suite: Report.get_statistics() missing 1 required positional argument: 'violation'
+2024-09-17 14:38:11,582 - ERROR - Unable to fix the error after 5 attempts. Escalating...
+2024-09-17 14:38:11,582 - INFO - Escalating issue for error: ComplexError: Something unexpected happened
+2024-09-17 14:38:11,582 - INFO - Applying black refactoring to the code.
+2024-09-17 14:38:11,583 - ERROR - Error during refactoring: Cannot parse: 1:24: ComplexError: Something unexpected happened
+2024-09-17 14:48:02,457 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:48:02,458 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 14:48:02,462 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:48:02,466 - INFO - Found a known fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,079 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:56:48,082 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 14:56:48,082 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 14:56:48,087 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:56:48,088 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:56:48,088 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,113 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,114 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,114 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:56:48,114 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,141 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,141 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,142 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:56:48,146 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,180 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,182 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,182 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:56:48,182 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,190 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,190 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,190 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:56:48,190 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:56:48,202 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,203 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:56:48,203 - WARNING - Unable to fix the error after multiple attempts. Escalating issue.
+2024-09-17 14:58:02,929 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 14:58:02,929 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 14:58:02,929 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 14:58:02,930 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 14:58:02,930 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:58:02,931 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:58:02,942 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,943 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,943 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:58:02,943 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:58:02,953 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,953 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,953 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:58:02,953 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:58:02,960 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,960 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,960 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:58:02,960 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:58:02,967 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,967 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,967 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 14:58:02,968 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 14:58:02,974 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,975 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 14:58:02,975 - WARNING - Unable to fix the error after multiple attempts. Escalating issue.
+2024-09-17 14:58:02,976 - ERROR - Invalid input for black formatting: NameError: name 'x' is not defined
+2024-09-17 15:00:35,835 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:00:35,835 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 15:00:35,835 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:00:35,836 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:00:35,836 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:00:35,836 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:00:35,844 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,844 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,844 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:00:35,844 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:00:35,852 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,852 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,852 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:00:35,852 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:00:35,861 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,861 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,862 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:00:35,862 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:00:35,869 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,869 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,869 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:00:35,869 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:00:35,876 - INFO - Generated fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,877 - INFO - Testing fix: NameError: name 'x' is not defined
+
+2024-09-17 15:00:35,877 - WARNING - Unable to fix the error after multiple attempts. Escalating issue.
+2024-09-17 15:00:35,877 - ERROR - Invalid input for black formatting or syntax error: NameError: name 'x' is not defined
+2024-09-17 15:01:57,498 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:01:57,498 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 15:01:57,499 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:01:57,499 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:01:57,500 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:01:57,500 - WARNING - Error 'NameError: name 'x' is not defined' is not valid code. Skipping formatting tools.
+2024-09-17 15:03:20,980 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:03:20,980 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 15:03:20,980 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:03:20,981 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:03:20,981 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:03:20,981 - INFO - Providing suggestion for traceback: NameError: name 'x' is not defined
+2024-09-17 15:05:22,013 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:05:22,013 - WARNING - Error catalog not found. Starting with an empty catalog.
+2024-09-17 15:05:22,013 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:05:22,014 - INFO - Agent 'Tech Intern' performing task with input: TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-09-17 15:05:22,014 - INFO - Attempt 1: Debugging error TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-09-17 15:05:22,014 - INFO - Providing suggestion for traceback: TypeError: unsupported operand type(s) for +: 'int' and 'str'
+2024-09-17 15:07:17,766 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:07:17,766 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:07:17,767 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:07:17,767 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:07:17,767 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:07:17,835 - ERROR - Fix test failed:   File "<string>", line 1
+    Suggested fix for: NameError: name 'x' is not defined
+              ^^^
+SyntaxError: invalid syntax
+
+2024-09-17 15:07:17,835 - INFO - Attempt 2: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:07:17,835 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:07:17,897 - ERROR - Fix test failed:   File "<string>", line 1
+    Suggested fix for: NameError: name 'x' is not defined
+              ^^^
+SyntaxError: invalid syntax
+
+2024-09-17 15:07:17,897 - INFO - Attempt 3: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:07:17,897 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:07:17,959 - ERROR - Fix test failed:   File "<string>", line 1
+    Suggested fix for: NameError: name 'x' is not defined
+              ^^^
+SyntaxError: invalid syntax
+
+2024-09-17 15:07:17,959 - INFO - Attempt 4: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:07:17,960 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:07:18,027 - ERROR - Fix test failed:   File "<string>", line 1
+    Suggested fix for: NameError: name 'x' is not defined
+              ^^^
+SyntaxError: invalid syntax
+
+2024-09-17 15:07:18,027 - INFO - Attempt 5: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:07:18,027 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:07:18,090 - ERROR - Fix test failed:   File "<string>", line 1
+    Suggested fix for: NameError: name 'x' is not defined
+              ^^^
+SyntaxError: invalid syntax
+
+2024-09-17 15:07:18,090 - ERROR - Unable to fix the error after 5 attempts.
+2024-09-17 15:07:18,090 - ERROR - Unable to fix error after multiple attempts. Escalating issue: NameError: name 'x' is not defined
+2024-09-17 15:09:22,015 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:09:22,016 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:09:22,016 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:09:22,016 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:09:22,016 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:15:33,145 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:15:33,145 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:15:33,146 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:15:33,146 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:15:33,146 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:15:33,146 - INFO - Testing fix: Ensure the variable is defined or imported before use.
+2024-09-17 15:15:33,146 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 15:16:25,889 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:16:25,890 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:16:25,890 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:16:25,890 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:16:25,890 - INFO - Generating fix for error: NameError: name 'x' is not defined
+2024-09-17 15:16:25,890 - INFO - Testing fix: Ensure the variable is defined or imported before use.
+2024-09-17 15:16:25,890 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 15:16:25,890 - WARNING - Fix history file was empty or corrupted. Initializing a new history.
+2024-09-17 15:16:25,891 - INFO - Saved fix for 'NameError: name 'x' is not defined' to fix history.
+2024-09-17 15:24:30,974 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:24:30,975 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:24:30,975 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:24:30,975 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:24:30,975 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:24:30,976 - INFO - Running pre-fix tests.
+2024-09-17 15:24:35,821 - INFO - Pre-test passed, applying fix.
+2024-09-17 15:24:35,821 - INFO - Running post-fix tests for validation.
+2024-09-17 15:24:39,124 - INFO - Post-fix tests passed.
+2024-09-17 15:24:39,125 - INFO - Fix saved to history for NameError: name 'x' is not defined
+2024-09-17 15:24:39,125 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 15:26:22,324 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:26:22,324 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:26:22,325 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:26:22,325 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:26:22,325 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:26:22,326 - INFO - Running pre-fix tests.
+2024-09-17 15:26:25,730 - INFO - Pre-test passed, applying fix.
+2024-09-17 15:26:25,730 - INFO - Running post-fix tests for validation.
+2024-09-17 15:26:29,093 - INFO - Post-fix tests passed.
+2024-09-17 15:26:29,094 - INFO - Fix saved to history for NameError: name 'x' is not defined
+2024-09-17 15:26:29,094 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 15:29:18,174 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:29:18,175 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:29:18,177 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:30:20,705 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:30:20,706 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:30:20,706 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:30:20,706 - INFO - Fix found in shared history: Ensure the variable is defined or imported before use.
+2024-09-17 15:32:36,005 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:32:36,006 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:32:36,007 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:32:36,007 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:32:36,007 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:36:05,693 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:36:05,694 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:36:05,697 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:36:05,697 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:36:05,697 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:38:36,360 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:38:36,361 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:38:36,361 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:38:36,361 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 15:38:36,361 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 15:38:36,361 - INFO - Testing fix: Ensure the variable is defined or imported before use.
+2024-09-17 15:38:36,364 - INFO - Fix saved to shared history for NameError: name 'x' is not defined
+2024-09-17 15:38:36,364 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 15:45:36,470 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:45:36,470 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:45:36,471 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:47:20,076 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:47:20,077 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:47:20,077 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'fix_applied': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: unsupported operand type(s) for +: 'int' and 'str'", 'fix_applied': 'Ensure the variables are of compatible types before performing operations. Convert types using int(), str(), or float() where necessary.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "AttributeError: 'NoneType' object has no attribute 'some_method'", 'fix_applied': 'Check if the object is initialized before accessing its methods or attributes.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndexError: list index out of range', 'fix_applied': 'Ensure the index is within the bounds of the list by checking its length before accessing the index.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "KeyError: 'key_name'", 'fix_applied': 'Ensure the key exists in the dictionary before accessing it. Use the .get() method to safely retrieve values.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "ModuleNotFoundError: No module named 'module_name'", 'fix_applied': "Ensure the required module is installed. Use 'pip install module_name' to install it."}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndentationError: unexpected indent', 'fix_applied': 'Check the code for proper indentation. Ensure consistent use of tabs or spaces throughout the file.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': 'SyntaxError: invalid syntax', 'fix_applied': 'Check for any syntax issues such as missing colons, parentheses, or other required symbols.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': 'ZeroDivisionError: division by zero', 'fix_applied': 'Ensure that the denominator is not zero before performing division operations.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "FileNotFoundError: [Errno 2] No such file or directory: 'file_name'", 'fix_applied': 'Ensure the file exists at the specified path and check for any spelling mistakes in the file name or directory.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: 'NoneType' object is not iterable", 'fix_applied': 'Ensure that the object being iterated is not None before using it in a loop.'}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "ImportError: cannot import name 'X' from 'module_name'", 'fix_applied': "Ensure the function or class is correctly named and exists in the module. Double-check the module's contents or import paths."}
+2024-09-17 15:47:20,078 - WARNING - Invalid entry in fix history: {'error_traceback': "OverflowError: (34, 'Result too large')", 'fix_applied': 'Consider alternative approaches to handle large numbers or reduce the magnitude of calculations.'}
+2024-09-17 15:47:20,079 - WARNING - Invalid entry in fix history: {'error_traceback': 'RecursionError: maximum recursion depth exceeded', 'fix_applied': 'Refactor the recursive function to have a proper base case, or increase the recursion limit if necessary.'}
+2024-09-17 15:47:20,079 - INFO - Fix found in shared history: Ensure the variable is defined or imported before use.
+2024-09-17 15:57:48,322 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 15:57:48,322 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 15:57:48,323 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 16:01:01,235 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 16:01:01,235 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 16:01:01,236 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 16:01:01,295 - ERROR - Failed to get response from LLM: HTTPSConnectionPool(host='api.example.com', port=443): Max retries exceeded with url: /chatgpt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022946CA1220>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2024-09-17 16:01:01,295 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'fix_applied': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: unsupported operand type(s) for +: 'int' and 'str'", 'fix_applied': 'Ensure the variables are of compatible types before performing operations. Convert types using int(), str(), or float() where necessary.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "AttributeError: 'NoneType' object has no attribute 'some_method'", 'fix_applied': 'Check if the object is initialized before accessing its methods or attributes.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndexError: list index out of range', 'fix_applied': 'Ensure the index is within the bounds of the list by checking its length before accessing the index.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "KeyError: 'key_name'", 'fix_applied': 'Ensure the key exists in the dictionary before accessing it. Use the .get() method to safely retrieve values.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "ModuleNotFoundError: No module named 'module_name'", 'fix_applied': "Ensure the required module is installed. Use 'pip install module_name' to install it."}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndentationError: unexpected indent', 'fix_applied': 'Check the code for proper indentation. Ensure consistent use of tabs or spaces throughout the file.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': 'SyntaxError: invalid syntax', 'fix_applied': 'Check for any syntax issues such as missing colons, parentheses, or other required symbols.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': 'ZeroDivisionError: division by zero', 'fix_applied': 'Ensure that the denominator is not zero before performing division operations.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "FileNotFoundError: [Errno 2] No such file or directory: 'file_name'", 'fix_applied': 'Ensure the file exists at the specified path and check for any spelling mistakes in the file name or directory.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: 'NoneType' object is not iterable", 'fix_applied': 'Ensure that the object being iterated is not None before using it in a loop.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "ImportError: cannot import name 'X' from 'module_name'", 'fix_applied': "Ensure the function or class is correctly named and exists in the module. Double-check the module's contents or import paths."}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': "OverflowError: (34, 'Result too large')", 'fix_applied': 'Consider alternative approaches to handle large numbers or reduce the magnitude of calculations.'}
+2024-09-17 16:01:01,297 - WARNING - Invalid entry in fix history: {'error_traceback': 'RecursionError: maximum recursion depth exceeded', 'fix_applied': 'Refactor the recursive function to have a proper base case, or increase the recursion limit if necessary.'}
+2024-09-17 16:02:07,339 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 16:02:07,340 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 16:02:07,340 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 16:02:07,372 - ERROR - Failed to get response from LLM: HTTPSConnectionPool(host='api.example.com', port=443): Max retries exceeded with url: /chatgpt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x00000134ACB28950>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'fix_applied': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: unsupported operand type(s) for +: 'int' and 'str'", 'fix_applied': 'Ensure the variables are of compatible types before performing operations. Convert types using int(), str(), or float() where necessary.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': "AttributeError: 'NoneType' object has no attribute 'some_method'", 'fix_applied': 'Check if the object is initialized before accessing its methods or attributes.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndexError: list index out of range', 'fix_applied': 'Ensure the index is within the bounds of the list by checking its length before accessing the index.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': "KeyError: 'key_name'", 'fix_applied': 'Ensure the key exists in the dictionary before accessing it. Use the .get() method to safely retrieve values.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': "ModuleNotFoundError: No module named 'module_name'", 'fix_applied': "Ensure the required module is installed. Use 'pip install module_name' to install it."}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndentationError: unexpected indent', 'fix_applied': 'Check the code for proper indentation. Ensure consistent use of tabs or spaces throughout the file.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': 'SyntaxError: invalid syntax', 'fix_applied': 'Check for any syntax issues such as missing colons, parentheses, or other required symbols.'}
+2024-09-17 16:02:07,373 - WARNING - Invalid entry in fix history: {'error_traceback': 'ZeroDivisionError: division by zero', 'fix_applied': 'Ensure that the denominator is not zero before performing division operations.'}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': "FileNotFoundError: [Errno 2] No such file or directory: 'file_name'", 'fix_applied': 'Ensure the file exists at the specified path and check for any spelling mistakes in the file name or directory.'}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: 'NoneType' object is not iterable", 'fix_applied': 'Ensure that the object being iterated is not None before using it in a loop.'}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': "ImportError: cannot import name 'X' from 'module_name'", 'fix_applied': "Ensure the function or class is correctly named and exists in the module. Double-check the module's contents or import paths."}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': "OverflowError: (34, 'Result too large')", 'fix_applied': 'Consider alternative approaches to handle large numbers or reduce the magnitude of calculations.'}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': 'RecursionError: maximum recursion depth exceeded', 'fix_applied': 'Refactor the recursive function to have a proper base case, or increase the recursion limit if necessary.'}
+2024-09-17 16:02:07,374 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'generated_fix': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 16:02:07,374 - INFO - Attempt 1: Debugging error NameError: name 'x' is not defined
+2024-09-17 16:02:07,374 - INFO - Fix suggestion: Ensure the variable is defined or imported before use.
+2024-09-17 16:02:07,374 - INFO - Testing fix: Ensure the variable is defined or imported before use.
+2024-09-17 16:02:07,376 - INFO - Fix successful saved for NameError: name 'x' is not defined
+2024-09-17 16:02:07,376 - INFO - Error fixed on attempt 1: Ensure the variable is defined or imported before use.
+2024-09-17 16:09:08,117 - INFO - Initialized agent 'Tech Intern' with role 'Debugging Expert'.
+2024-09-17 16:09:08,117 - INFO - Agent 'Tech Intern' introduction: My name is Tech Intern. I am responsible for Debugging Expert. A meticulous and relentless agent, focused on resolving code issues, learning from past mistakes, and ensuring system reliability.
+2024-09-17 16:09:08,117 - INFO - Agent 'Tech Intern' performing task with input: NameError: name 'x' is not defined
+2024-09-17 16:09:08,140 - ERROR - Failed to get response from LLM: HTTPSConnectionPool(host='api.example.com', port=443): Max retries exceeded with url: /chatgpt (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x000001D30F466B70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'fix_applied': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: unsupported operand type(s) for +: 'int' and 'str'", 'fix_applied': 'Ensure the variables are of compatible types before performing operations. Convert types using int(), str(), or float() where necessary.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "AttributeError: 'NoneType' object has no attribute 'some_method'", 'fix_applied': 'Check if the object is initialized before accessing its methods or attributes.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndexError: list index out of range', 'fix_applied': 'Ensure the index is within the bounds of the list by checking its length before accessing the index.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "KeyError: 'key_name'", 'fix_applied': 'Ensure the key exists in the dictionary before accessing it. Use the .get() method to safely retrieve values.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "ModuleNotFoundError: No module named 'module_name'", 'fix_applied': "Ensure the required module is installed. Use 'pip install module_name' to install it."}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': 'IndentationError: unexpected indent', 'fix_applied': 'Check the code for proper indentation. Ensure consistent use of tabs or spaces throughout the file.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': 'SyntaxError: invalid syntax', 'fix_applied': 'Check for any syntax issues such as missing colons, parentheses, or other required symbols.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': 'ZeroDivisionError: division by zero', 'fix_applied': 'Ensure that the denominator is not zero before performing division operations.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "FileNotFoundError: [Errno 2] No such file or directory: 'file_name'", 'fix_applied': 'Ensure the file exists at the specified path and check for any spelling mistakes in the file name or directory.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "TypeError: 'NoneType' object is not iterable", 'fix_applied': 'Ensure that the object being iterated is not None before using it in a loop.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "ImportError: cannot import name 'X' from 'module_name'", 'fix_applied': "Ensure the function or class is correctly named and exists in the module. Double-check the module's contents or import paths."}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "OverflowError: (34, 'Result too large')", 'fix_applied': 'Consider alternative approaches to handle large numbers or reduce the magnitude of calculations.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': 'RecursionError: maximum recursion depth exceeded', 'fix_applied': 'Refactor the recursive function to have a proper base case, or increase the recursion limit if necessary.'}
+2024-09-17 16:09:08,141 - WARNING - Invalid entry in fix history: {'error_traceback': "NameError: name 'x' is not defined", 'generated_fix': 'Ensure the variable is defined or imported before use.'}
+2024-09-17 16:09:08,141 - INFO - Fix found in shared history: Ensure the variable is defined or imported before use.

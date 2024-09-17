@@ -7,30 +7,27 @@ class TaskManagerAgent:
         logging.info("TaskManagerAgent initialized with registered agents.")
 
     def assign_task(self, task_description):
-        """
-        Assign a task to an appropriate agent based on the task description.
-        """
-        # Extract task keyword from the task description
         task_keywords = self.analyze_task(task_description)
         logging.info(f"Assigning task with keywords '{task_keywords}' based on description: {task_description}")
         
-        # Try to find an existing agent that can handle the task
         assigned_agent = self.find_agent_for_task(task_keywords)
         
         if not assigned_agent:
-            # No agent found, try to create a new agent dynamically
+            logging.warning(f"No agent found for task keyword: {task_keywords}")
             logging.warning(f"No agent found for task '{task_keywords}', attempting to create a new agent.")
+            
             assigned_agent = self.agent_creator.create_agent(task_keywords)
+            
             if assigned_agent:
                 self.agent_registry.append(assigned_agent)
                 logging.info(f"New agent '{assigned_agent.name}' created for task '{task_keywords}'.")
             else:
                 logging.error(f"Failed to create an agent for task: {task_keywords}")
                 return f"Task '{task_keywords}' could not be handled."
-
-        # Task is assigned to the found or created agent
+        
         logging.info(f"Task assigned to agent: {assigned_agent.name}")
         result = assigned_agent.perform_task(task_description)
+        
         logging.info(f"Task '{task_description}' completed by agent '{assigned_agent.name}' with result: {result}")
         return result
 
