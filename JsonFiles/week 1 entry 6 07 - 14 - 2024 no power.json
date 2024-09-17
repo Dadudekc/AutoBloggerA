@@ -1,0 +1,77 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry - July 14, 2024"
+        },
+        {
+            "paragraph": "(6pm-6:40pm)\nObjectives:\n- Ensure the data fetching system properly handles date inputs and defaults to fetching one year of data.\n- Improve file naming conventions for saved data files.\n- Implement user feedback in the GUI to inform users about the status of their data fetching requests.\n- Handle cases where Alpha Vantage is the primary data source and Polygon is used as a fallback."
+        },
+        {
+            "paragraph": "Tasks Completed:\n- Set up default dates in the GUI to one year from the current date unless the user specifies otherwise.\n- Added logic to clear the default date when the user starts typing in the date fields.\n- Implemented the functionality to fetch all available data if the \"Fetch All Data\" button is clicked.\n- Improved file naming conventions to include the symbol, data source, and date range.\n- Enhanced user feedback in the GUI to display messages about the fetching status and the names of saved files.\n- Updated data_fetch_main.py to use Alpha Vantage primarily and fall back to Polygon if necessary.\n- Committed the changes to the repository."
+        },
+        {
+            "paragraph": "Challenges Encountered:\n- Managing circular imports which initially caused import errors.\n- Ensuring that the date handling logic in the GUI correctly sets and clears default dates.\n- Implementing user feedback in a clear and informative manner.\n- Properly handling the fallback logic between Alpha Vantage and Polygon APIs."
+        },
+        {
+            "paragraph": "Lessons Learned:\n- Proper structuring of imports and dependencies is crucial to avoid circular import issues.\n- Clear default values and user input handling in the GUI significantly enhance user experience.\n- Effective file naming conventions are important for organizing and retrieving data files.\n- Providing real-time feedback to users about the status of their requests improves transparency and usability."
+        },
+        {
+            "paragraph": "Next Steps:\n- Continue refining and testing the data fetching components to ensure reliability and accuracy.\n- Ensure comprehensive test coverage for all modules to catch potential issues early.\n- Implement additional features and enhancements as required based on user feedback.\n- Update project documentation with recent changes and commit to the repository."
+        },
+        {
+            "paragraph": "Skills Applied:\n- Python programming\n- GUI development with Tkinter\n- Asynchronous programming with asyncio\n- API interaction and data fetching\n- Error handling and debugging\n- Git version control"
+        },
+        {
+            "paragraph": "Project Structure:"
+        },
+        {
+            "paragraph": "C:\\TheTradingRobotPlug\n├── data\n│   ├── alpha_vantage\n│   │   ├── archive\n│   │   │   └── AAPL_data.csv\n│   │   ├── AAPL_data_v1.csv\n│   │   └── AAPL_data.csv\n│   ├── csv\n│   │   └── AAPL_data.csv\n│   ├── polygon\n│   │   ├── archive\n│   │   │   └── AAPL_data.csv\n│   │   ├── AAPL_data_v1.csv\n│   │   └── AAPL_data.csv\n│   ├── processed\n│   │   ├── alpha_vantage\n│   │   │   ├── archive\n│   │   │   │   └── AAPL_data_20240714183612.csv\n│   │   │   ├── AAPL_data_v1.csv\n│   │   │   ├── AAPL_data_v2.csv\n│   │   │   ├── AAPL_data_v3.csv\n│   │   │   ├── AAPL_data_v4.csv\n│   │   │   ├── AAPL_data_v5.csv\n│   │   │   ├── AAPL_data_v6.csv\n│   │   │   ├── AAPL_data_v7.csv\n│   │   │   ├── AAPL_data_v8.csv\n│   │   │   ├── AAPL_data_v9.csv\n│   │   │   ├── AAPL_data_v10.csv\n│   │   │   ├── GOOG_data.csv\n│   │   │   └── MSFT_data.csv\n│   │   ├── nasdaq\n│   │   ├── polygon\n│   │   │   ├── archive\n│   │   │   │   └── AAPL_data_20240712221342.csv\n│   │   │   ├── AAPL_data_v1.csv\n│   │   │   ├── GOOG_data.csv\n│   │   │   └── MSFT_data.csv\n│   ├── raw\n│   │   ├── alpha_vantage\n│   │   │   ├── AAPL_alpha_vantage_data_2023-07-15_to_2024-07-14.csv_data.csv\n│   │   │   ├── AAPL_data.csv\n│   │   │   ├── GOOG_alpha_vantage_data_2023-07-15_to_2024-07-14.csv_data.csv\n│   │   │   ├── GOOG_data.csv\n│   │   │   ├── MSFT_alpha_vantage_data_2023-07-15_to_2024-07-14.csv_data.csv\n│   │   │   ├── MSFT_data.csv\n│   │   │   ├── sq_alpha_vantage_data_1900-01-01_to_2024-07-14.csv_data.csv\n│   │   │   ├── sq_alpha_vantage_data_2023-07-15_to_2024-07-14.csv_data.csv\n│   │   │   ├── sq_data.csv\n│   │   │   └── tsla_data.csv\n│   │   ├── nasdaq\n│   │   ├── polygon\n│   │   │   ├── archive\n│   │   │   │   └── AAPL_data_20240709165717.csv\n│   │   │   ├── AAPL_data_v1.csv\n│   │   │   ├── AAPL_data_v2.csv\n│   │   │   ├── AAPL_data_v3.csv\n│   │   │   ├── AAPL_data_v4.csv\n│   │   │   ├── AAPL_data.csv\n│   │   │   ├── GOOG_data.csv\n│   │   │   └── MSFT_data.csv\n│   └── trading_data.db\n├── Documents\n│   ├── Explanations\n│   ├── Journal\n│   │   ├── entry 1- 07-3-2024\n│   │   ├── entry 2 07-6-2024\n│   │   ├── entry 3 07-7-2024\n│   │   ├── entry 4 -07-8-2024\n│   │   ├── entry 5 07-12-2024\n│   │   └── entry 6 07-14-2024\n│   ├── Project Documentation\n│   │   └── project_documentation.md\n│   └── Resume Stuff\n│       └── data_fetch_skills\n├── logs\n│   ├── alpha_vantage.log\n│   ├── data_fetch_utils.log\n│   ├── data_store.log\n│   ├── nasdaq.log\n│   ├── polygon_data_fetcher.log\n│   └── polygon.log\n├── Scrap\n│   └── data_fetch_scrap\n├── Scripts\n│   ├── pycache\n│   ├── Data_Fetchers\n│   │   ├── pycache\n│   │   ├── data\n│   │   ├── init.py\n│   │   ├── alpha_vantage_fetcher.py\n│   │   ├── API_interaction.py\n│   │   ├── base_fetcher.py\n│   │   ├── data_fetch_main.py\n│   │   ├── data_fetcher.py\n│   │   ├── main.py\n│   │   ├── polygon_fetcher.py\n│   │   ├── real_time_fetcher.py\n│   │   └── test.py\n│   ├── GUI\n│   │   ├── pycache\n│   │   ├── base_gui.py\n│   │   ├── data_fetch_tab.py\n│   │   └── fetcher_gui.py\n│   ├── powershells\n│   │   ├── init.py\n│   │   └── quick.ps1\n│   └── Utilities\n│       ├── pycache\n│       ├── init.py\n│       ├── config_handling.py\n│       ├── data_fetch_utils.py\n│       ├── data_store.py\n│       └── DataLakeHandler.py\n├── test_log_dir\n├── Tests\n│   ├── Data_Fetch\n│   │   ├── pycache\n│   │   ├── init.py\n│   │   ├── test_alpha_vantage_fetcher.py\n│   │   ├── test_api_interaction.py\n│   │   ├── test_base_fetcher.py\n│   │   ├── test_data_fetcher.py\n│   │   ├── test_gui.py\n│   │   ├── test_nasdaq_fetcher.py\n│   │   └── test_polygon_fetcher.py"
+        },
+        {
+            "paragraph": "│   │   └── test_real_time_fetcher.py\n│   ├── GUI\n│   │   ├── test_base_gui.py\n│   │   └── test_fetcher_gui.py\n│   ├── mock_csv_dir\n│   ├── Utilities\n│   │   ├── test_config_handling.py\n│   │   ├── test_data_fetch_utils.py\n│   │   ├── test_data_store.py\n│   ├── init.py\n│   ├── app.log\n│   ├── run_tests.py\n│   ├── test_alpha_vantage_fetcher.py\n│   ├── test_polygon_fetcher.py\n│   └── test_utils.py\n├── .env\n├── .gitignore\n├── app.log\n├── config.ini\n├── metadata_alpha_vantage.csv\n└── metadata_polygon.csv"
+        },
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Date: July 14, 2024\n(6:40pm-8:30pm)\nProject: TheTradingRobotPlug"
+        },
+        {
+            "paragraph": "Summary of Work:\n- Implemented data fetching modules for Alpha Vantage and Polygon APIs.\n- Created a real-time data fetching mechanism with fallback to handle API rate limits.\n- Improved error handling and logging for better troubleshooting.\n- Ensured data fetched is saved to CSV files and a SQL database.\n- Integrated data storage with a data lake for S3 storage.\n- Developed utility functions for data storage, logging, and API interaction.\n- Ensured project structure allows for clear script and module paths.\n- Utilized environment variables for managing API keys and configuration settings."
+        },
+        {
+            "paragraph": "Key Changes Made:\n1. Implemented RealTimeDataFetcher:\n   - Fetches real-time data from Alpha Vantage API.\n   - Switches to Polygon API if the Alpha Vantage API rate limit is reached.\n   - Improved error messages for better clarity when rate limits are hit or API keys are incorrect."
+        },
+        {
+            "ordered_list": [
+                "Tested Data Fetching:",
+                "Successfully fetched and saved historical and real-time data for symbols like AAPL, MSFT, and GOOG.",
+                "\nVerified data storage in CSV and SQL database formats.\n",
+                "\nEnhanced Logging and Error Handling:\n",
+                "Added detailed debug statements for API responses.",
+                "Implemented warnings and error messages for unexpected data formats and API limits."
+            ]
+        },
+        {
+            "paragraph": "Verified data storage in CSV and SQL database formats."
+        },
+        {
+            "paragraph": "Enhanced Logging and Error Handling:"
+        },
+        {
+            "paragraph": "Skills Used/Learned:\n- Python Programming: Implemented classes and functions for data fetching and handling.\n- API Interaction: Handled responses and rate limits from Alpha Vantage and Polygon APIs.\n- Asynchronous Programming: Used asyncio and aiohttp for non-blocking data fetching.\n- Data Processing: Manipulated and stored data using Pandas.\n- Error Handling: Developed robust error handling strategies for API rate limits and invalid responses.\n- Environment Management: Managed sensitive information using environment variables.\n- Logging: Implemented detailed logging for monitoring and debugging purposes.\n- Project Organization: Structured project files and directories for clarity and maintainability."
+        },
+        {
+            "paragraph": "File Structure:\nC:\\TheTradingRobotPlug\\Scripts\\Data_Fetchers\n├── __pycache__\n├── data\n├── __init__.py\n├── alpha_vantage_fetcher.py\n├── API_interaction.py\n├── base_fetcher.py\n├── data_fetch_main.py\n├── main.py\n├── polygon_fetcher.py\n└── real_time_fetcher.py"
+        },
+        {
+            "paragraph": "Next Steps:\n- Move to the unit testing phase to validate the implemented modules.\n- Improve and refine the existing code based on test results.\n- Continue to enhance data handling and storage mechanisms."
+        },
+        {
+            "paragraph": "Notes:\nThis phase focused on ensuring the core functionalities of data fetching and handling are robust and reliable. The next phase will involve rigorous testing to ensure the system is error-free and ready for deployment."
+        },
+        {
+            "paragraph": "Git Push Confirmation:\n- Successfully pushed changes to the remote repository.\n- Commit ID: 7d1c858\n- Remote Repository: https://github.com/Dadudekc/TradingRobotPlug"
+        }
+    ]
+}

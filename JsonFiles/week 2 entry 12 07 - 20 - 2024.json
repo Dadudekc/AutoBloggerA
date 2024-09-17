@@ -1,0 +1,173 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Date: July 20, 2024"
+        },
+        {
+            "paragraph": "1. Data Preprocessing and Initial Setup\n   - Loaded the dataset tsla_data.csv from Alpha Vantage.\n   - Inspected the initial data preview and ensured the 'index' column was present, creating one if necessary.\n   - Dropped columns with more than 20% NaN values.\n   - Converted the 'date' column to datetime format and filled remaining NaNs for numeric columns.\n   - Applied label encoding to non-numeric columns except for the target column."
+        },
+        {
+            "paragraph": "2. Feature Engineering\n   - Implemented automated feature engineering using the FeatureEngineering class.\n   - Ensured unnecessary parameters (like max_depth) were not passed to the automated_feature_engineering method.\n   - Split the data into training and test sets."
+        },
+        {
+            "paragraph": "3. Hyperparameter Tuning\n   - Defined a RandomForestRegressor model and parameter grid.\n   - Utilized Optuna for hyperparameter tuning with TPESampler.\n   - Created an objective function to minimize the negative R^2 score.\n   - Performed optimization over 100 trials."
+        },
+        {
+            "paragraph": "4. Model Training and Validation\n   - Trained the best model found from hyperparameter tuning on the training set.\n   - Validated the model on a separate test set.\n   - Evaluated model performance using mean squared error (MSE) and R^2 score."
+        },
+        {
+            "paragraph": "5. Marketing Efforts\n   - Brainstormed the freemium model:\n     - Basic Plan: Ends with model predictions.\n     - Premium Plan: Includes full model deployment.\n     - Enterprise Plan: Features a custom reinforcement learning algorithm that users can train or start with a provided one."
+        },
+        {
+            "paragraph": "6. Workstation and Version Control\n   - Confirmed Git is added to the system PATH and recognized by PowerShell.\n   - Verified Git installation by running git --version.\n   - Cloned the repository:\n     sh\n     cd /path/to/your/desired/directory\n     git clone https://github.com/dadudekc/TradingRobotPlug.git"
+        },
+        {
+            "paragraph": "7. Setting Up New Work Laptop\n   - Generated a comprehensive list of installed packages using pip freeze.\n   - Created and updated requirements.txt to ensure compatibility across different environments.\n   - Resolved issues related to specific package versions by modifying requirements.txt.\n   - Explored the possibility of using Synergy software to share a single keyboard and mouse across multiple laptops.\n   - Initiated steps to download and install Synergy on both laptops.\n   - Planned the configuration of one laptop as the server and the other as the client."
+        },
+        {
+            "paragraph": "8. Enhanced Error Handling and Logging for Trading Environment\n   - Added detailed error handling and logging to the TradingEnv class.\n   - Configured logging to capture key events and exceptions.\n   - Improved methods for resetting the environment, executing steps, taking actions, and calculating rewards."
+        },
+        {
+            "paragraph": "9. Enhanced Error Handling and Logging for Model Trainer\n   - Added logging statements to capture the preprocessing of data, environment creation, and model training processes.\n   - Included try-except blocks in critical methods to catch and log exceptions.\n   - Ensured the DRLModelTrainer class logs detailed error messages for better issue diagnosis."
+        },
+        {
+            "paragraph": "10. Improved MLRobotUtils Logging Utility\n   - Added error handling to the logging initialization in the MLRobotUtils class.\n   - Included type checking for the log text widget to ensure it is a Tkinter Text widget.\n   - Provided detailed error messages for logging operations."
+        },
+        {
+            "paragraph": "11. Resolved Module Import Issue\n   - Diagnosed and provided steps to resolve the ModuleNotFoundError for the stable_baselines3 package.\n   - Guided on how to install the required package using pip."
+        },
+        {
+            "paragraph": "12. Best Model Parameters\nplaintext\n   Best trial: 9\n   Best value: 0.9998215387729971\n   Best parameters: {'n_estimators': 100, 'max_depth': 10}\n   Best Model Parameters: {'bootstrap': True, 'ccp_alpha': 0.0, 'criterion': 'squared_error', 'max_depth': 10, 'max_features': 1.0, 'max_leaf_nodes': None, 'max_samples': None, 'min_impurity_decrease': 0.0, 'min_samples_leaf': 1, 'min_samples_split': 2, 'min_weight_fraction_leaf': 0.0, 'monotonic_cst': None, 'n_estimators': 100, 'n_jobs': None, 'oob_score': False, 'random_state': None, 'verbose': 0, 'warm_start': False}"
+        },
+        {
+            "paragraph": "13. Resolved Module Import Issue\n   - Diagnosed and provided steps to resolve the ModuleNotFoundError for the Scripts.ModelTraining package.\n   - Adjusted the script to dynamically set the Python path using os and sys modules.\n   - Verified the script structure and corrected the import paths to ensure smooth execution."
+        },
+        {
+            "heading": "To-Do List"
+        },
+        {
+            "ordered_list": [
+                "Complete GUI Setup for Model Training Tab",
+                "Enhance Error Handling",
+                "Debug Mode Enhancement",
+                "Test Model Training Functionality",
+                "Implement Additional Features",
+                "Further Testing and Development",
+                "Content Marketing",
+                "Social Media Marketing",
+                "Webinars and Workshops",
+                "Email Marketing",
+                "Create the First Newsletter",
+                "Freemium Model Implementation",
+                "Identify Potential Influencers",
+                "Partnerships and Collaborations",
+                "SEO Efforts",
+                "Ensure Git is Recognized in PATH",
+                "Verify Git Installation",
+                "Clone Repository Again",
+                "Complete Synergy Setup\nFinish installing Synergy on both laptops.\nConfigure one laptop as the server and the other as the client.\nArrange the screen layout for seamless mouse cursor movement between screens.\n\n",
+                "Finish installing Synergy on both laptops.",
+                "Configure one laptop as the server and the other as the client.",
+                "Arrange the screen layout for seamless mouse cursor movement between screens.",
+                "Finalize Dependency Installation\nAddress any remaining issues with requirements.txt.\nEnsure all required packages are successfully installed on the new work laptop.\nDocument any further modifications to requirements.txt for future reference.\n\n",
+                "Address any remaining issues with requirements.txt.",
+                "Ensure all required packages are successfully installed on the new work laptop.",
+                "Document any further modifications to requirements.txt for future reference.",
+                "Acquire Additional Work Laptop\nObtain another work laptop to complete our setup.\nAvoid using the Chromebook or Linux laptop for tasks other than website updates, as they are not preferred for general use.\n\n",
+                "Obtain another work laptop to complete our setup.",
+                "Avoid using the Chromebook or Linux laptop for tasks other than website updates, as they are not preferred for general use.",
+                "Collaborate and Coordinate\nContinue working closely with Aria to troubleshoot any additional issues.\nPlan the next steps for integrating both laptops into a unified working environment.\n\n",
+                "Continue working closely with Aria to troubleshoot any additional issues.",
+                "Plan the next steps for integrating both laptops into a unified working environment.",
+                "Documentation and Testing\nDocument the process of setting up the development environment on the new work laptop.\nTest the installed packages to ensure they work as expected.\nVerify the functionality of the Synergy setup across both laptops.\n\n",
+                "Document the process of setting up the development environment on the new work laptop.",
+                "Test the installed packages to ensure they work as expected.",
+                "Verify the functionality of the Synergy setup across both laptops.",
+                "Further Debugging the objective function to ensure all parameter values are correctly specified",
+                "Investigate and resolve any remaining issues with the NoneType comparison error",
+                "Explore advanced feature engineering techniques to improve model performance",
+                "Experiment with different parameter grids and tuning strategies",
+                "Evaluate the impact of each parameter on model performance",
+                "Document the changes made and the rationale behind them"
+            ]
+        },
+        {
+            "unordered_list": [
+                "Finish installing Synergy on both laptops.",
+                "Configure one laptop as the server and the other as the client.",
+                "Arrange the screen layout for seamless mouse cursor movement between screens."
+            ]
+        },
+        {
+            "unordered_list": [
+                "Address any remaining issues with requirements.txt.",
+                "Ensure all required packages are successfully installed on the new work laptop.",
+                "Document any further modifications to requirements.txt for future reference."
+            ]
+        },
+        {
+            "unordered_list": [
+                "Obtain another work laptop to complete our setup.",
+                "Avoid using the Chromebook or Linux laptop for tasks other than website updates, as they are not preferred for general use."
+            ]
+        },
+        {
+            "unordered_list": [
+                "Continue working closely with Aria to troubleshoot any additional issues.",
+                "Plan the next steps for integrating both laptops into a unified working environment."
+            ]
+        },
+        {
+            "unordered_list": [
+                "Document the process of setting up the development environment on the new work laptop.",
+                "Test the installed packages to ensure they work as expected.",
+                "Verify the functionality of the Synergy setup across both laptops."
+            ]
+        },
+        {
+            "unordered_list": [
+                "Technical Skills:",
+                "Python Programming",
+                "GUI Design and Implementation",
+                "Error Handling and Debugging",
+                "Automated Model Selection and Hyperparameter Tuning",
+                "Software Testing and Quality Assurance",
+                "Version Control and Dependency Management",
+                "Data Cleaning and Preprocessing",
+                "Feature Engineering",
+                "SQL and Data Management",
+                "Configuration Management",
+                "\nLogging\n",
+                "\nMarketing Skills:\n",
+                "Content Creation and Marketing",
+                "Social Media Marketing",
+                "Webinar Planning and Execution",
+                "Email Marketing",
+                "SEO Optimization",
+                "\nPartnership and Collaboration Building\n",
+                "\nProject Management Skills:\n",
+                "Task Allocation and Time Management",
+                "Strategic Planning and Execution",
+                "Communication and Coordination within the Team"
+            ]
+        },
+        {
+            "paragraph": "Logging"
+        },
+        {
+            "paragraph": "Marketing Skills:"
+        },
+        {
+            "paragraph": "Partnership and Collaboration Building"
+        },
+        {
+            "paragraph": "Project Management Skills:"
+        },
+        {
+            "paragraph": "By systematically addressing each of these tasks, Aria and I have ensured a balanced and productive day, making substantial progress towards our project's goals."
+        }
+    ]
+}

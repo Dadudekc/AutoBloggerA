@@ -1,0 +1,173 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Challenge_of_Recovering_Data_from_Securely_Wiped_USB"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "\nThe main goal was to explore and apply forensic techniques to recover data from a USB drive that was securely wiped by a PowerShell script, taking it on as a self-imposed challenge.\n",
+                "\nActions Taken: \n",
+                "Reviewed the secure deletion PowerShell script to understand the mechanisms used for wiping the data.",
+                "Researched and outlined advanced forensic techniques that could potentially be used to recover data after secure deletion, such as low-level data recovery, analyzing unallocated space, and examining file system metadata.",
+                "\nConsidered the importance of creating a disk image to preserve the current state of the USB drive before attempting any recovery operations.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "The secure deletion script effectively overwrote files with random data, making traditional recovery methods less effective. The challenge lies in the complexity of the data overwriting process.",
+                "\nA breakthrough was the realization that even after secure deletion, residual data might still exist in slack space, unallocated clusters, or as fragments detectable through data carving techniques.\n",
+                "\nResults and Impact: \n",
+                "The session resulted in a comprehensive plan of action for attempting data recovery. While success is not guaranteed due to the nature of secure deletion, the process itself is valuable for developing forensic analysis skills."
+            ]
+        },
+        {
+            "paragraph": "The main goal was to explore and apply forensic techniques to recover data from a USB drive that was securely wiped by a PowerShell script, taking it on as a self-imposed challenge."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Considered the importance of creating a disk image to preserve the current state of the USB drive before attempting any recovery operations."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "A breakthrough was the realization that even after secure deletion, residual data might still exist in slack space, unallocated clusters, or as fragments detectable through data carving techniques."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Forensic Analysis: Applied forensic techniques such as data carving, slack space analysis, and metadata examination.",
+                "PowerShell Scripting: Analyzed and understood the effects of a secure deletion script.",
+                "Disk Imaging: Emphasized the importance of disk imaging as a precautionary measure in forensic analysis."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Gained a deeper understanding of the challenges posed by secure deletion and the limits of data recovery.",
+                "\nLearned about advanced forensic tools and methods that could be used to recover data, even after it has been overwritten.\n",
+                "\nUnexpected Challenges: \n",
+                "\nThe script’s thorough approach to secure deletion presented a significant barrier to data recovery, highlighting the effectiveness of such scripts in protecting sensitive data.\n",
+                "\nFuture Application: \n",
+                "These forensic techniques can be applied to future challenges involving data recovery, and the importance of disk imaging has been reinforced as a critical step before any recovery attempts."
+            ]
+        },
+        {
+            "paragraph": "Learned about advanced forensic tools and methods that could be used to recover data, even after it has been overwritten."
+        },
+        {
+            "paragraph": "Unexpected Challenges: "
+        },
+        {
+            "paragraph": "The script’s thorough approach to secure deletion presented a significant barrier to data recovery, highlighting the effectiveness of such scripts in protecting sensitive data."
+        },
+        {
+            "paragraph": "Future Application: "
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Create Disk Image: Use a tool like FTK Imager to create a forensic disk image of the USB drive.",
+                "Attempt Data Carving: Use tools like foremost or Scalpel on the disk image to search for recoverable data fragments.",
+                "Analyze Unallocated Space: Investigate the unallocated space for potential remnants of deleted files using tools like Autopsy.",
+                "File Slack Space Examination: Explore the possibility of recovering file fragments from slack space using a hex editor or specialized forensic tools."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "paragraph": "The focus of this session was on forensic analysis and did not involve the development of new code. However, the provided PowerShell script was critically analyzed:"
+        },
+        {
+            "heading": "Secure Deletion PowerShell Script"
+        },
+        {
+            "paragraph": "```powershell"
+        },
+        {
+            "heading": "Securely deletes files by overwriting them with random data and then deleting them."
+        },
+        {
+            "paragraph": "function Secure-Delete {\n    param([string]$path)\n    $files = Get-ChildItem -Path $path -Recurse -Force\n    foreach ($file in $files) {\n        # Overwrite the file with random data\n        $fileSize = (Get-Item $file.FullName).length\n        $randomData = New-Object byte[] $fileSize\n        (New-Object Random).NextBytes($randomData)\n        [System.IO.File]::WriteAllBytes($file.FullName, $randomData)\n        # Securely delete the file\n        Remove-Item -Path $file.FullName -Force\n    }\n}\n```"
+        },
+        {
+            "paragraph": "This script served as the basis for understanding the complexity of the data recovery challenge."
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: If similar challenges arise, consider setting up a controlled environment to test recovery techniques without risking data loss.",
+                "Reflection: This exercise highlights the importance of secure deletion tools for protecting sensitive information and the difficulty in recovering data after such measures are taken."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Understanding the mechanics of secure deletion - Completed",
+                "Milestone 2: Planning recovery strategy - Completed",
+                "Milestone 3: Implementing recovery techniques - Pending",
+                "Milestone 4: Evaluating the success of recovery efforts - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Foremost Data Carving Tool",
+                "Autopsy Digital Forensics",
+                "FTK Imager"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings; this was an independent challenge.",
+                "Decisions Made: Decided to proceed with advanced forensic techniques to attempt data recovery.",
+                "Action Items: Continue with the outlined recovery strategy using the disk image."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Data loss due to improper handling of the USB drive during the recovery process.",
+                "Mitigation Strategy: Use a disk image for all recovery attempts, leaving the original USB drive untouched."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Developed a thorough plan for attempting data recovery using advanced forensic techniques.",
+                "What Could Be Improved: Time management could be better, as more time could have been dedicated to experimenting with the actual recovery tools.",
+                "Actionable Insights: Prioritize creating disk images before attempting any forensic recovery to ensure the integrity of the original data."
+            ]
+        }
+    ]
+}

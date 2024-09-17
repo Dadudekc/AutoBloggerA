@@ -1,0 +1,166 @@
+{
+    "content": [
+        {
+            "heading": "Catch_Up_Entry__Troubleshooting_PowerShell_Scripts_for_USB_Organization_and_Recovery"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals:",
+                "Troubleshoot and resolve errors encountered while running a PowerShell script intended for organizing a USB drive for Tails Linux setup.",
+                "\nEnsure correct file types and extensions are used in PowerShell scripts.\n",
+                "\nActions Taken:\n",
+                "Identified the error related to PowerShell not recognizing the file type 'quick,ps1' due to an incorrect file extension.",
+                "Provided guidance on verifying and correcting file extensions to ensure compatibility with PowerShell.",
+                "\nSuggested running the script manually and adjusting PowerShell’s execution policy if needed.\n",
+                "\nChallenges and Breakthroughs:\n",
+                "Challenge: PowerShell was unable to debug the script due to incorrect file type recognition.",
+                "\nBreakthrough: Recognizing that file extensions must be correct for PowerShell to run scripts, leading to the resolution of the issue by correcting the file extension.\n",
+                "\nResults and Impact:\n",
+                "The troubleshooting process highlighted the importance of proper file naming conventions and execution policy settings in PowerShell. Ensuring these aspects are correct will streamline script execution and prevent similar issues in the future."
+            ]
+        },
+        {
+            "paragraph": "Ensure correct file types and extensions are used in PowerShell scripts."
+        },
+        {
+            "paragraph": "Actions Taken:"
+        },
+        {
+            "paragraph": "Suggested running the script manually and adjusting PowerShell’s execution policy if needed."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs:"
+        },
+        {
+            "paragraph": "Breakthrough: Recognizing that file extensions must be correct for PowerShell to run scripts, leading to the resolution of the issue by correcting the file extension."
+        },
+        {
+            "paragraph": "Results and Impact:"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "PowerShell Scripting: Used for automating tasks related to USB organization and file management.",
+                "Troubleshooting: Applied problem-solving skills to identify and resolve errors related to file type recognition in PowerShell.",
+                "File Management: Managed directories and file organization on a USB drive for secure and efficient usage with Tails Linux."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes:",
+                "Understanding the importance of correct file extensions in PowerShell scripts to ensure proper execution.",
+                "\nGained insight into the execution policy settings in PowerShell, which can impact the ability to run or debug scripts.\n",
+                "\nUnexpected Challenges:\n",
+                "\nThe error encountered due to an incorrect file extension was unexpected but quickly resolved by correcting the file naming convention.\n",
+                "\nFuture Application:\n",
+                "Moving forward, ensure all scripts have the correct file extensions and consider setting a default execution policy that supports script debugging."
+            ]
+        },
+        {
+            "paragraph": "Gained insight into the execution policy settings in PowerShell, which can impact the ability to run or debug scripts."
+        },
+        {
+            "paragraph": "Unexpected Challenges:"
+        },
+        {
+            "paragraph": "The error encountered due to an incorrect file extension was unexpected but quickly resolved by correcting the file naming convention."
+        },
+        {
+            "paragraph": "Future Application:"
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Review PowerShell Scripts: Double-check all PowerShell scripts in the project to ensure they have the correct .ps1 extension.",
+                "Set Execution Policy: Adjust the PowerShell execution policy as needed to allow for script debugging.",
+                "Continue USB Setup: Complete the organization of the USB drive for Tails Linux, ensuring all sensitive files are appropriately encrypted and scripts are correctly placed."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "paragraph": "```powershell"
+        },
+        {
+            "heading": "Example PowerShell command to create directories on a USB drive"
+        },
+        {
+            "paragraph": "New-Item -Path $tailsSetupDir -ItemType Directory -Force"
+        },
+        {
+            "heading": "Example command to move files to the appropriate directory"
+        },
+        {
+            "paragraph": "Move-Item -Path (Join-Path $usbDrive \"mlrobot extras\") -Destination $toolsDir -Force\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: Consider implementing a standard checklist for verifying file types and execution policies when creating or running PowerShell scripts in the future.",
+                "Reflection: This session reinforced the importance of meticulous attention to detail in file management and script execution, particularly when working with secure setups like Tails Linux."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: USB drive organization for Tails Linux setup - In Progress",
+                "Milestone 3: Secure encryption of sensitive files - Pending",
+                "Milestone 4: Final testing and deployment of the USB setup - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Not applicable for this session, as the focus was on internal troubleshooting and file management."
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings were held during this session.",
+                "Decisions Made: Decided to verify file extensions and execution policies for all PowerShell scripts moving forward.",
+                "Action Items: ",
+                "Self: Continue with the USB drive setup and ensure all scripts and sensitive files are correctly organized and encrypted."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Incorrect file extensions or execution policy settings could lead to script failures.",
+                "Mitigation Strategy: Implement a standard checklist for verifying these aspects before running scripts."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully identified and resolved the issue related to incorrect file extensions in PowerShell.",
+                "What Could Be Improved: Future sessions should include a pre-run checklist to prevent similar errors from occurring.",
+                "Actionable Insights: Establish a routine for checking file extensions and execution policies to ensure smooth script execution."
+            ]
+        }
+    ]
+}

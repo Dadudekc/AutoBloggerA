@@ -1,0 +1,192 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Enhancing_LSTM_Model_Training_and_Debugging_Data_Preprocessing_Issues"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "heading": "Objectives and Goals"
+        },
+        {
+            "paragraph": "The objective for this session was to enhance the LSTM model training pipeline, address issues related to data preprocessing, and ensure that the model training process runs smoothly without errors related to inconsistent sample sizes."
+        },
+        {
+            "heading": "Actions Taken"
+        },
+        {
+            "unordered_list": [
+                "Data Preprocessing Improvements:",
+                "Updated the DataHandler class to enhance logging and error handling during the preprocessing steps.",
+                "Improved the creation of lag and rolling window features, ensuring that non-numeric data is properly converted and handled.",
+                "\nImplemented more robust imputation for missing values using SimpleImputer.\n",
+                "\nLSTM Model Configuration:\n",
+                "Refined the LSTM model architecture to include additional layers such as Bidirectional LSTM, Attention, Batch Normalization, and Dropout.",
+                "\nConfigured a comprehensive set of callbacks during model training, including EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, and LearningRateScheduler.\n",
+                "\nDebugging Sample Size Inconsistencies:\n",
+                "Identified and resolved the issue causing inconsistent numbers of samples during model training by ensuring proper sequence creation and preprocessing steps."
+            ]
+        },
+        {
+            "paragraph": "Implemented more robust imputation for missing values using SimpleImputer."
+        },
+        {
+            "paragraph": "LSTM Model Configuration:"
+        },
+        {
+            "paragraph": "Configured a comprehensive set of callbacks during model training, including EarlyStopping, ReduceLROnPlateau, ModelCheckpoint, and LearningRateScheduler."
+        },
+        {
+            "paragraph": "Debugging Sample Size Inconsistencies:"
+        },
+        {
+            "heading": "Challenges and Breakthroughs"
+        },
+        {
+            "unordered_list": [
+                "Challenges:",
+                "Encountered issues with inconsistent sample sizes during model training, leading to errors that needed thorough investigation and debugging.",
+                "\nThe preprocessing step sometimes resulted in empty datasets due to excessive NaN values after creating lag and rolling window features.\n",
+                "\nBreakthroughs:\n",
+                "Successfully resolved the sample size inconsistency by adjusting the sequence creation method to ensure that the target data is correctly aligned with the input sequences.",
+                "Enhanced the robustness of the preprocessing pipeline, ensuring that it can handle a variety of edge cases, including missing or incomplete data."
+            ]
+        },
+        {
+            "paragraph": "The preprocessing step sometimes resulted in empty datasets due to excessive NaN values after creating lag and rolling window features."
+        },
+        {
+            "paragraph": "Breakthroughs:"
+        },
+        {
+            "heading": "Results and Impact"
+        },
+        {
+            "paragraph": "The enhancements made to the LSTM model training process have resulted in a more stable and reliable pipeline. The improvements in data preprocessing ensure that the model receives clean, well-prepared input, leading to better training outcomes. The project is now on track to achieve more consistent and accurate model training results."
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Utilized for scripting and refining the data preprocessing and model training pipeline.",
+                "TensorFlow and Keras: Employed for building and training the LSTM model with advanced layers and callbacks.",
+                "Data Imputation: Applied SimpleImputer to handle missing values effectively during data preprocessing.",
+                "Logging and Debugging: Improved logging within the DataHandler class to trace errors and enhance debuggability.",
+                "Model Evaluation: Used mean_squared_error and r2_score to evaluate model performance."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Handling Inconsistent Data: Learned the importance of thoroughly checking and preprocessing data to avoid issues like inconsistent sample sizes during training.",
+                "Improving Logging: Realized the value of detailed logging in complex processes like model training and data handling, which significantly aids in debugging and understanding the flow.",
+                "Flexibility in Model Architecture: Gained insights into how to structure a flexible LSTM model configuration that can be adjusted and tuned for different data scenarios."
+            ]
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Complete Model Testing: Test the newly configured LSTM model on additional datasets to ensure stability and accuracy.",
+                "Refactor Data Handling Code: Refactor the DataHandler class to further improve readability and maintainability.",
+                "Documentation Update: Update the project documentation to reflect the changes made in data preprocessing and model training.",
+                "Explore Hyperparameter Tuning: Begin exploring hyperparameter tuning techniques to optimize the LSTM model configuration."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Data Preprocessing Enhancements"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Function to create lag features in the DataHandler class"
+        },
+        {
+            "paragraph": "def create_lag_features(self, df, column_name, lag_sizes):\n    for lag_days in lag_sizes:\n        df[f'{column_name}lag{lag_days}'] = df[column_name].shift(lag_days)\n    df.fillna(method='ffill', inplace=True)\n    df.fillna(method='bfill', inplace=True)\n    self.log(f\"Lag features created for column '{column_name}' with lag sizes {lag_sizes}.\")\n    return df\n```"
+        },
+        {
+            "heading": "LSTM Model Training Configuration"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "LSTM model configuration with layers and callbacks"
+        },
+        {
+            "paragraph": "model_config = {\n    'layers': [\n        {'type': 'bidirectional_lstm', 'units': 100, 'return_sequences': True, 'kernel_regularizer': l1_l2(l1=0.01, l2=0.01)},\n        {'type': 'attention'},\n        {'type': 'batch_norm'},\n        {'type': 'dropout', 'rate': 0.3},\n        {'type': 'dense', 'units': 50, 'activation': 'relu', 'kernel_regularizer': l1_l2(l1=0.01, l2=0.01)}\n    ],\n    'optimizer': 'adam',\n    'loss': 'mean_squared_error'\n}\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement Idea: Consider implementing a caching mechanism for the processed datasets to speed up the training process when experimenting with different model configurations.",
+                "Reflection: The combination of advanced LSTM layers and careful data preprocessing is proving to be a powerful approach for this project. However, ongoing testing and validation are crucial to ensure these methods generalize well across different datasets."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Data preprocessing enhancements - Completed",
+                "Milestone 2: LSTM model configuration and training - In Progress",
+                "Milestone 3: Model evaluation and testing - Pending",
+                "Milestone 4: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "TensorFlow Keras Documentation",
+                "Scikit-learn Imputer Documentation",
+                "Optuna Documentation for Hyperparameter Tuning"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meeting Summary: Discussed the progress of the LSTM model training with team members and highlighted the challenges related to data preprocessing. Agreed to prioritize the completion of the model evaluation phase.",
+                "Decision: Decided to focus on refining the LSTM model configuration before moving on to hyperparameter tuning."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: The LSTM model may overfit to the training data, leading to poor generalization on new data.",
+                "Mitigation Strategy: Implement regularization techniques and monitor validation loss to detect signs of overfitting early.",
+                "Risk: Data preprocessing steps may remove too much data, leading to insufficient samples for training.",
+                "Mitigation Strategy: Adjust lag and rolling window sizes to minimize data loss during preprocessing."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: The detailed logging and error handling improvements made it much easier to debug and resolve issues with the data preprocessing pipeline.",
+                "What Could Be Improved: Need to focus on optimizing the LSTM model's performance by exploring different configurations and tuning hyperparameters.",
+                "Actionable Insights: Continue to iterate on the model and data handling code, using extensive testing and validation to ensure robustness."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "content": [
+        {
+            "paragraph": "Project Journal Entry\nDate: July 12, 2024"
+        },
+        {
+            "paragraph": "Title: Integration and Enhancement of Data Fetching Functionality"
+        },
+        {
+            "paragraph": "Summary:\nToday, we focused on integrating and enhancing the data fetching functionality for our trading robot application. This involved merging and refining the data fetcher modules for Alpha Vantage and Polygon.io, ensuring consistency and reliability in data operations. Key improvements included ensuring correct data conversion to pandas DataFrames, adding metadata collection, and implementing detailed logging for better traceability."
+        },
+        {
+            "paragraph": "Details:"
+        },
+        {
+            "paragraph": "Refinement of Alpha Vantage Data Fetcher:"
+        },
+        {
+            "paragraph": "Merged the two existing versions of alpha_vantage_fetcher.py.\nEnsured correct data extraction and conversion to pandas DataFrames.\nImplemented asynchronous data fetching for both historical and real-time data.\nAdded metadata collection during the data fetching process.\nEnsured detailed logging for each step in the data fetching process.\nVerified and validated data before saving.\nRefinement of Polygon.io Data Fetcher:"
+        },
+        {
+            "paragraph": "Merged the two existing versions of polygon_fetcher.py.\nEnsured correct data extraction and conversion to pandas DataFrames.\nImplemented asynchronous data fetching for both historical and real-time data.\nAdded metadata collection during the data fetching process.\nEnsured detailed logging for each step in the data fetching process.\nVerified and validated data before saving.\nEnhancement of Data Store Module:"
+        },
+        {
+            "paragraph": "Combined functionalities from different versions of the data_store.py to support various data operations.\nImplemented saving and loading data to/from CSV and SQL databases.\nAdded comprehensive logging to the data store operations for better traceability.\nImplemented metadata collection to store source URLs, timestamps of data fetches, response statuses, data sizes, fetching parameters, and storage locations.\nIncorporated data lake storage for raw and processed data, ensuring efficient data management and retrieval.\nUser Interface Enhancements:"
+        },
+        {
+            "paragraph": "Updated the GUI to include a data fetch tab with functionalities to fetch data for specific symbols and date ranges.\nImplemented real-time input validation and formatting for date fields.\nAdded functionality to display fetched data on an interactive candlestick chart using Plotly.\nIntegrated the Azure theme for a modern and consistent look and feel across the application.\nSkills Used:"
+        },
+        {
+            "paragraph": "Python (pandas, aiohttp, logging)\nAsynchronous Programming\nData Processing and Validation\nUser Interface Design (Tkinter, Plotly)\nSoftware Engineering (modular design, code integration, version control)\nData Lake Implementation\nMetadata Management"
+        }
+    ]
+}

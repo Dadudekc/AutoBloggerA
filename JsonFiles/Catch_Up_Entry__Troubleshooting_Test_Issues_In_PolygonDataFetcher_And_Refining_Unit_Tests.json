@@ -1,0 +1,180 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Troubleshooting_Test_Issues_In_PolygonDataFetcher_And_Refining_Unit_Tests"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "\nThe primary goal was to debug and refine the unit tests for the PolygonDataFetcher class, ensuring that all methods, particularly fetch_data_for_symbol and extract_results, are correctly implemented and tested.\n",
+                "\nActions Taken:\n",
+                "Debugging the Test Setup: Analyzed and corrected the PolygonDataFetcher class methods, ensuring the extract_results method was properly implemented and accessible.",
+                "Test Integration: Integrated the extract_results method within the test cases, ensuring that the test environment correctly references and utilizes the methods in the PolygonDataFetcher class.",
+                "Mocking Dependencies: Correctly mocked dependencies such as logging and fetch_data to isolate the functionality under test.",
+                "\nExecution of Tests: Ran the tests multiple times, addressing errors related to coroutine handling and method accessibility.\n",
+                "\nChallenges and Breakthroughs:\n",
+                "Challenges: \nInitial errors due to missing or incorrectly named methods in the PolygonDataFetcher class led to failed tests.\nHandling asynchronous methods in unit tests required proper configuration and mocking.\n\n",
+                "Initial errors due to missing or incorrectly named methods in the PolygonDataFetcher class led to failed tests.",
+                "Handling asynchronous methods in unit tests required proper configuration and mocking.",
+                "\nBreakthroughs: \n\nSuccessfully integrated and tested the extract_results method, ensuring that it processes API data as expected.\nResolved coroutine-related issues by ensuring proper use of async and await in test cases.\n\n",
+                "Successfully integrated and tested the extract_results method, ensuring that it processes API data as expected.",
+                "Resolved coroutine-related issues by ensuring proper use of async and await in test cases.",
+                "\nResults and Impact:\n",
+                "The successful implementation and testing of the extract_results method solidified the reliability of the PolygonDataFetcher class.",
+                "Ensured that the class can handle API responses, extract relevant data, and convert it into a pandas DataFrame for further use, which is crucial for the project's data analysis and processing pipeline."
+            ]
+        },
+        {
+            "paragraph": "The primary goal was to debug and refine the unit tests for the PolygonDataFetcher class, ensuring that all methods, particularly fetch_data_for_symbol and extract_results, are correctly implemented and tested."
+        },
+        {
+            "paragraph": "Actions Taken:"
+        },
+        {
+            "paragraph": "Execution of Tests: Ran the tests multiple times, addressing errors related to coroutine handling and method accessibility."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs:"
+        },
+        {
+            "unordered_list": [
+                "Initial errors due to missing or incorrectly named methods in the PolygonDataFetcher class led to failed tests.",
+                "Handling asynchronous methods in unit tests required proper configuration and mocking."
+            ]
+        },
+        {
+            "paragraph": "Breakthroughs: "
+        },
+        {
+            "unordered_list": [
+                "Successfully integrated and tested the extract_results method, ensuring that it processes API data as expected.",
+                "Resolved coroutine-related issues by ensuring proper use of async and await in test cases."
+            ]
+        },
+        {
+            "paragraph": "Results and Impact:"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Utilized for scripting, data manipulation, and managing asynchronous operations within the PolygonDataFetcher class.",
+                "Unit Testing: Employed unittest with unittest.mock for isolating and testing specific functionalities in the class.",
+                "Asyncio and Aiohttp: Managed asynchronous API calls and responses, crucial for real-time data fetching in a non-blocking manner.",
+                "Logging: Implemented detailed logging to monitor API calls, data processing, and error handling."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Gained a deeper understanding of handling asynchronous methods in unit tests and the importance of proper coroutine management.",
+                "Reinforced the importance of thorough debugging when methods are reported as missing or inaccessible in test cases.",
+                "Unexpected Challenges: ",
+                "Encountered issues related to coroutine handling in unittest, which required a better understanding of Python's asynchronous programming features.",
+                "Future Application: ",
+                "This experience will guide future test implementations, particularly in ensuring that all methods are properly defined and accessible before initiating tests. It also highlighted the importance of integrating robust logging for easier debugging."
+            ]
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Refine Real-Time Data Tests: Develop and implement unit tests for the fetch_real_time_data method, ensuring it handles API responses and processes data correctly.",
+                "Expand Test Coverage: Increase test coverage to include edge cases and potential failure scenarios for all methods in PolygonDataFetcher.",
+                "Documentation: Update project documentation to include details on the PolygonDataFetcher class and its integration into the data processing pipeline."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "PolygonDataFetcher Class"
+        },
+        {
+            "paragraph": "```python\nclass PolygonDataFetcher(DataFetcher):\n    # Existing code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "heading": "Test Case for Extract Results"
+        },
+        {
+            "paragraph": "python\n@patch('Scripts.Data_Fetchers.polygon_fetcher.logging')\ndef test_extract_results(self, mock_logging):\n    data = {\n        'results': [\n            {'t': 1620086400000, 'o': 100.0, 'h': 110.0, 'l': 95.0, 'c': 105.0, 'v': 1000},\n            {'t': 1620172800000, 'o': 105.0, 'h': 115.0, 'l': 100.0, 'c': 110.0, 'v': 1500}\n        ]\n    }\n    results = self.fetcher.extract_results(data)\n    self.assertEqual(len(results), 2)\n    self.assertEqual(results[0]['date'], '2021-05-04')\n    self.assertEqual(results[1]['close'], 110.0)"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: Moving forward, consider setting up an automated test runner that handles asynchronous tests more seamlessly, possibly integrating pytest-asyncio.",
+                "Reflection: This session emphasized the critical nature of method verification before testing and highlighted the importance of detailed logging in debugging complex, asynchronous systems."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Data fetch module implementation - In Progress",
+                "Milestone 3: Unit testing and validation - In Progress (expanded coverage ongoing)",
+                "Milestone 4: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Aiohttp Documentation",
+                "Python unittest Documentation",
+                "Asyncio Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings were held; discussions and debugging were performed independently.",
+                "Decisions Made: Decided to focus on refining the PolygonDataFetcher tests before moving on to real-time data fetching.",
+                "Action Items: ",
+                "Self: Continue refining and expanding test coverage for the PolygonDataFetcher class."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Potential delays in completing test coverage for asynchronous methods due to complexity.",
+                "Mitigation Strategy: Allocate additional time for learning and implementing async testing strategies, and consider using specialized test frameworks."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully debugged and integrated the extract_results method into the unit tests, ensuring accurate data extraction from API responses.",
+                "What Could Be Improved: Better initial verification of method existence and accessibility could have saved time during the testing phase.",
+                "Actionable Insights: Implement a pre-test checklist to ensure all methods are correctly defined and accessible before starting unit tests, especially in complex classes."
+            ]
+        },
+        {
+            "paragraph": "This entry documents the troubleshooting and refinement of unit tests for the PolygonDataFetcher class, providing a comprehensive overview of the session's activities and outcomes."
+        }
+    ]
+}

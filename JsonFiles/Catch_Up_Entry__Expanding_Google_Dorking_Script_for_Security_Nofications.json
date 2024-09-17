@@ -1,0 +1,225 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Catch_Up_Entry__Expanding_Google_Dorking_Script_for_Security_Notifications"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals:",
+                "\nThe goal of this session was to expand and refine the Google Dorking script to include additional queries targeting the exposure of sensitive information such as private keys, usernames, passwords, and API details. The primary objective was to enhance the script's effectiveness in identifying vulnerable sites and notifying administrators.\n",
+                "\nActions Taken:\n",
+                "Added new search queries to the script, specifically targeting:\nPrivate keys (intitle:\"index of\" /\"privatekey.txt\" OR \"private key.txt\")\nPasswords exposed in SharePoint pages (inurl:/_layouts/userdisp.aspx?id= intext:password)\nAPI directories with index listings (inurl:\"/includes/api/\" intext:\"index of /\")\n\n",
+                "Private keys (intitle:\"index of\" /\"privatekey.txt\" OR \"private key.txt\")",
+                "Passwords exposed in SharePoint pages (inurl:/_layouts/userdisp.aspx?id= intext:password)",
+                "API directories with index listings (inurl:\"/includes/api/\" intext:\"index of /\")",
+                "Expanded the search functionality to include a broader range of potentially exposed sensitive files, such as .env, .sql, .bak, .zip, and more.",
+                "\nImplemented a loop within the script to iterate through multiple search results pages, ensuring a more comprehensive search.\n",
+                "\nChallenges and Breakthroughs:\n",
+                "Challenges:\nEnsuring that the expanded queries provided relevant results without overwhelming the search with false positives.\nManaging Google API rate limits while maintaining the effectiveness of the search.\n\n",
+                "Ensuring that the expanded queries provided relevant results without overwhelming the search with false positives.",
+                "Managing Google API rate limits while maintaining the effectiveness of the search.",
+                "\nBreakthroughs:\n\nThe inclusion of targeted queries resulted in a more robust script capable of detecting a wider range of vulnerabilities, increasing the likelihood of identifying critical security issues.\n\n",
+                "The inclusion of targeted queries resulted in a more robust script capable of detecting a wider range of vulnerabilities, increasing the likelihood of identifying critical security issues.",
+                "\nResults and Impact:\n",
+                "The script was successfully enhanced to search for additional types of vulnerabilities. This expansion is expected to improve the detection of sensitive files and help notify more website administrators of potential security risks, contributing to overall web security."
+            ]
+        },
+        {
+            "paragraph": "The goal of this session was to expand and refine the Google Dorking script to include additional queries targeting the exposure of sensitive information such as private keys, usernames, passwords, and API details. The primary objective was to enhance the script's effectiveness in identifying vulnerable sites and notifying administrators."
+        },
+        {
+            "paragraph": "Actions Taken:"
+        },
+        {
+            "unordered_list": [
+                "Private keys (intitle:\"index of\" /\"privatekey.txt\" OR \"private key.txt\")",
+                "Passwords exposed in SharePoint pages (inurl:/_layouts/userdisp.aspx?id= intext:password)",
+                "API directories with index listings (inurl:\"/includes/api/\" intext:\"index of /\")"
+            ]
+        },
+        {
+            "paragraph": "Implemented a loop within the script to iterate through multiple search results pages, ensuring a more comprehensive search."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs:"
+        },
+        {
+            "unordered_list": [
+                "Ensuring that the expanded queries provided relevant results without overwhelming the search with false positives.",
+                "Managing Google API rate limits while maintaining the effectiveness of the search."
+            ]
+        },
+        {
+            "paragraph": "Breakthroughs:"
+        },
+        {
+            "unordered_list": [
+                "The inclusion of targeted queries resulted in a more robust script capable of detecting a wider range of vulnerabilities, increasing the likelihood of identifying critical security issues."
+            ]
+        },
+        {
+            "paragraph": "Results and Impact:"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Used to enhance and expand the functionality of the existing script, handling API requests, and processing search results.",
+                "Google Custom Search API: Integrated to perform targeted searches for potentially exposed sensitive files across the web.",
+                "WHOIS Lookup: Employed to retrieve contact information for domain administrators, aiding in the responsible disclosure of vulnerabilities.",
+                "Security Practices: Applied ethical hacking principles to identify vulnerabilities without exploiting them, ensuring responsible and legal actions."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes:",
+                "Gained deeper insight into the use of Google Dorking for security purposes, particularly in identifying a wider range of vulnerabilities.",
+                "\nRecognized the importance of balancing query specificity with the need to capture relevant results, avoiding unnecessary noise in search outputs.\n",
+                "\nUnexpected Challenges:\n",
+                "\nNavigating Google’s API rate limits required strategic delays in the script to avoid hitting those limits, ensuring smooth and continuous operation.\n",
+                "\nFuture Application:\n",
+                "Future improvements could include adding more sophisticated filtering mechanisms to reduce false positives and incorporating additional notification methods to ensure administrators are informed promptly."
+            ]
+        },
+        {
+            "paragraph": "Recognized the importance of balancing query specificity with the need to capture relevant results, avoiding unnecessary noise in search outputs."
+        },
+        {
+            "paragraph": "Unexpected Challenges:"
+        },
+        {
+            "paragraph": "Navigating Google’s API rate limits required strategic delays in the script to avoid hitting those limits, ensuring smooth and continuous operation."
+        },
+        {
+            "paragraph": "Future Application:"
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Test and Validate: Run extensive tests on the updated script to validate the effectiveness of the new queries and ensure accurate identification of vulnerabilities.",
+                "Error Handling: Improve error handling to manage any issues arising from API limits or unexpected results more gracefully.",
+                "Expand Notifications: Explore additional methods for notifying administrators, such as integrating with third-party services like Slack or using secure forms of communication.",
+                "Documentation: Update project documentation to reflect the changes made to the script, ensuring clear instructions for future use and development."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Updated Google Dorking Script"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Script to identify and notify administrators of potential vulnerabilities"
+        },
+        {
+            "paragraph": "import os\nimport time\nimport requests\nimport whois\nfrom googleapiclient.discovery import build"
+        },
+        {
+            "heading": "Set up your Google Custom Search API"
+        },
+        {
+            "paragraph": "API_KEY = 'YOUR_GOOGLE_API_KEY'\nCSE_ID = 'YOUR_CSE_ID'"
+        },
+        {
+            "paragraph": "def google_search(query, api_key, cse_id, start_index=1):\n    service = build(\"customsearch\", \"v1\", developerKey=api_key)\n    try:\n        res = service.cse().list(q=query, cx=cse_id, start=start_index).execute()\n        return res.get('items', [])\n    except Exception as e:\n        print(f\"Error during Google Search API call: {e}\")\n        return []"
+        },
+        {
+            "paragraph": "def find_vulnerable_sites():\n    queries = [\n        'intitle:\"index of/\" \"db.sql\"',\n        'intitle:\"index of/\" \"backup.sql\"',\n        'intitle:\"index of/\" \".sql\"',\n        'intitle:\"index of/\" \".bak\"',\n        'intitle:\"index of/\" \".zip\"',\n        'intitle:\"index of/\" \".env\"',\n        'intitle:\"index of/\" \"config.php\"',\n        'intitle:\"index of/\" \"wp-config.php\"',\n        'intitle:\"index of/\" \"credentials\"',\n        'intitle:\"index of/\" \"user.sql\"',\n        'intitle:\"index of/\" \"password.sql\"',\n        'intitle:\"index of/\" \"credentials.txt\"',\n        'intitle:\"index of/\" \"passwd\"',\n        'intitle:\"index of/\" \"shadow\"',\n        'intitle:\"index of/\" \"htpasswd\"',\n        'intitle:\"index of\" /\"privatekey.txt\" OR \"private key.txt\"',\n        'inurl:/_layouts/userdisp.aspx?id= intext:password',\n        'inurl:\"/includes/api/\" intext:\"index of /\"',\n    ]"
+        },
+        {
+            "paragraph": "def get_admin_contact(domain):\n    try:\n        w = whois.whois(domain)\n        if isinstance(w.email, list):\n            return w.email[0]\n        return w.email\n    except Exception as e:\n        print(f\"Could not retrieve WHOIS info for {domain}: {e}\")\n        return None"
+        },
+        {
+            "paragraph": "def notify_admin(url, email):\n    subject = \"Potential Security Vulnerability Found on Your Website\"\n    message = f\"\"\"\n    Dear Admin,"
+        },
+        {
+            "paragraph": "def main():\n    vulnerable_sites = find_vulnerable_sites()\n    for site in vulnerable_sites:\n        domain = site.split('/')[2]\n        email = get_admin_contact(domain)\n        if email:\n            notify_admin(site, email)\n        else:\n            print(f\"No contact info found for {domain}\")"
+        },
+        {
+            "paragraph": "if name == \"main\":\n    main()\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Feature Idea: Consider adding a database to log all found vulnerabilities and their respective notifications. This would allow tracking of repeated issues and could be used to build a more comprehensive report for website administrators.",
+                "Improvement: Add a mechanism to verify if the reported vulnerability has been resolved, and possibly send a follow-up notification to ensure the issue has been addressed.",
+                "Reflection: The project is progressing well, with the script becoming more robust. Regular updates and refinements will help maintain its effectiveness in identifying and reporting vulnerabilities."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Expansion of Google Dorking script - Completed",
+                "Milestone 3: Testing and validation of new queries - In Progress",
+                "Milestone 4: Integration with notification system - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Google Custom Search JSON API Documentation",
+                "Python WHOIS Library",
+                "WHOIS Lookup Service"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings held during this session.",
+                "Decisions Made: Decided to expand the range of search queries in the Google Dorking script to cover a wider array of potential vulnerabilities.",
+                "Action Items: ",
+                "Begin testing the script with the new queries.",
+                "Refine the notification process to ensure effective communication with website administrators."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: The expanded queries may return a high volume of false positives, reducing the script's effectiveness.",
+                "Mitigation Strategy: Implement additional filtering mechanisms to refine search results and reduce noise."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully expanded the Google Dorking script to identify a broader range of vulnerabilities, potentially increasing its effectiveness.",
+                "What Could Be Improved: Additional work is needed to refine the notification process and improve the accuracy of the search results.",
+                "Actionable Insights: Regular updates and refinement of the"
+            ]
+        },
+        {
+            "paragraph": "script will help maintain its effectiveness. Implementing a feedback loop with administrators could help verify the impact of the notifications."
+        },
+        {
+            "paragraph": "This entry provides a comprehensive overview of the session, capturing the progress made, the skills utilized, and the next steps for further development of the project."
+        }
+    ]
+}

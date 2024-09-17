@@ -1,0 +1,186 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry Template"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Troubleshooting_and_Resolving_Import_Issues_in_ARIMA_Model_Training"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "\nObjectives and Goals: The main objective was to resolve the import error encountered when attempting to run the ARIMA model training script. The specific goal was to ensure that the DataStore module, located in the Utilities directory, could be successfully imported and utilized within the ARIMA model training script.\n",
+                "\nActions Taken: \n",
+                "Adjusted the import path in the script by appending the Utilities directory to sys.path.",
+                "Added debug statements to verify that the correct directory was being added to sys.path.",
+                "Attempted a manual import of the data_store module using importlib.util to bypass potential issues with Python’s module resolution.",
+                "\nReviewed the project directory structure to confirm the presence of the Utilities directory and relevant files, such as __init__.py and data_store.py.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "Challenge: Despite the correct directory being added to sys.path, Python continued to raise an import error indicating that the Scripts.Utilities module could not be found.",
+                "\nBreakthrough: Implemented a manual import method using importlib.util, which allowed the script to successfully load the data_store module. This approach bypassed the issue with Python’s module/package system.\n",
+                "\nResults and Impact: \n",
+                "The manual import method resolved the import error, allowing the ARIMA model training script to run successfully. This progress is crucial as it unblocks further development and testing of the ARIMA model training functionality, ensuring that the project can move forward."
+            ]
+        },
+        {
+            "paragraph": "Objectives and Goals: The main objective was to resolve the import error encountered when attempting to run the ARIMA model training script. The specific goal was to ensure that the DataStore module, located in the Utilities directory, could be successfully imported and utilized within the ARIMA model training script."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Reviewed the project directory structure to confirm the presence of the Utilities directory and relevant files, such as __init__.py and data_store.py."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "Breakthrough: Implemented a manual import method using importlib.util, which allowed the script to successfully load the data_store module. This approach bypassed the issue with Python’s module/package system."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "paragraph": "```python\nimport importlib.util\nimport sys\nfrom pathlib import Path"
+        },
+        {
+            "paragraph": "script_dir = Path(file).resolve().parent\nproject_root = script_dir.parents[3]"
+        },
+        {
+            "paragraph": "utilities_dir = project_root / 'Scripts' / 'Utilities'\nsys.path.append(str(utilities_dir))"
+        },
+        {
+            "paragraph": "print(\"Adding Utilities directory to sys.path:\", utilities_dir)"
+        },
+        {
+            "heading": "Manually load the data_store module"
+        },
+        {
+            "paragraph": "try:\n    data_store_path = utilities_dir / \"data_store.py\"\n    spec = importlib.util.spec_from_file_location(\"data_store\", str(data_store_path))\n    data_store = importlib.util.module_from_spec(spec)\n    sys.modules[\"data_store\"] = data_store\n    spec.loader.exec_module(data_store)\n    DataStore = data_store.DataStore\nexcept Exception as e:\n    print(f\"Error importing data_store module: {e}\")\n    print(f\"sys.path: {sys.path}\")\n    sys.exit(1)\n```"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Utilized for scripting, debugging, and implementing import handling techniques.",
+                "Path Manipulation: Used Pathlib to manage and resolve file paths across the project.",
+                "Import Handling: Leveraged importlib.util to manually import modules, resolving issues with Python’s standard import mechanism.",
+                "Debugging: Implemented strategic print statements to diagnose and address the import issue."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: Gained deeper insight into Python’s import system and the importance of __init__.py in package recognition. Learned how to manually import modules using importlib.util, a technique that can be particularly useful when dealing with complex project structures.",
+                "Unexpected Challenges: The continued import error despite correct path settings was unexpected, highlighting the importance of understanding the nuances of Python’s module resolution system.",
+                "Future Application: This experience will influence future debugging strategies, particularly when dealing with complex imports. Manually loading modules with importlib.util will be a go-to approach for resolving similar issues in future projects."
+            ]
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Review Other Import Statements: Ensure that other import statements in the project are functioning correctly and adjust them if necessary.",
+                "Test ARIMA Model Training: Now that the import issue is resolved, proceed to thoroughly test the ARIMA model training process.",
+                "Documentation: Update project documentation to include notes on handling import issues, especially for complex directory structures.",
+                "Refactor Code: Consider refactoring the script to simplify import paths and improve maintainability.",
+                "Unit Tests: Develop unit tests for the ARIMA model training script to ensure that all functionalities work as expected."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Manual Import Script"
+        },
+        {
+            "paragraph": "```python\nimport importlib.util\nimport sys\nfrom pathlib import Path"
+        },
+        {
+            "paragraph": "script_dir = Path(file).resolve().parent\nproject_root = script_dir.parents[3]"
+        },
+        {
+            "paragraph": "utilities_dir = project_root / 'Scripts' / 'Utilities'\nsys.path.append(str(utilities_dir))"
+        },
+        {
+            "paragraph": "print(\"Adding Utilities directory to sys.path:\", utilities_dir)"
+        },
+        {
+            "heading": "Manually load the data_store module"
+        },
+        {
+            "paragraph": "try:\n    data_store_path = utilities_dir / \"data_store.py\"\n    spec = importlib.util.spec_from_file_location(\"data_store\", str(data_store_path))\n    data_store = importlib.util.module_from_spec(spec)\n    sys.modules[\"data_store\"] = data_store\n    spec.loader.exec_module(data_store)\n    DataStore = data_store.DataStore\nexcept Exception as e:\n    print(f\"Error importing data_store module: {e}\")\n    print(f\"sys.path: {sys.path}\")\n    sys.exit(1)\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Brainstorming: Consider adding utility functions to automate the process of appending directories to sys.path based on the project structure.",
+                "Improvements: The project could benefit from a clearer and more consistent directory structure, which would simplify imports and reduce potential errors.",
+                "Reflection: This session highlighted the complexity of managing large projects in Python, particularly with regard to imports. It reinforced the value of thorough debugging and the utility of manual import techniques."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Import issues resolved - Completed",
+                "Milestone 3: ARIMA model training functionality - In Progress",
+                "Milestone 4: Unit testing and validation - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Python importlib Documentation",
+                "Pathlib Documentation",
+                "Python init.py Guide",
+                "Python sys.path Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: Discussed potential solutions for the import issue with the team. Decided to implement the manual import strategy using importlib.util to resolve the problem.",
+                "Decisions Made: Agreed to proceed with the manual import method for resolving complex import issues.",
+                "Action Items: ",
+                "Update the project’s documentation with details on handling import issues.",
+                "Ensure that all team members are aware of the import handling strategy implemented."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Potential issues with imports in other parts of the project could arise as the project scales.",
+                "Mitigation Strategy: Regularly review and refactor import statements, ensuring that the project structure remains organized and manageable.",
+                "Risk: Delays in testing the ARIMA model training due to the time spent resolving import issues.",
+                "Mitigation Strategy: Prioritize testing and allocate additional resources if necessary to ensure the ARIMA model training stays on track."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully resolved the import issue using a manual approach, which unblocked the ARIMA model training process.",
+                "What Could Be Improved: The initial debugging process could have been more systematic, which might have identified the issue sooner.",
+                "Actionable Insights: Implementing a more structured debugging strategy and regular code reviews could help prevent similar issues in the future."
+            ]
+        }
+    ]
+}

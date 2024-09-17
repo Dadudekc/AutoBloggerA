@@ -1,0 +1,365 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Date: July 22, 2024"
+        },
+        {
+            "heading": "Work Completed:"
+        },
+        {
+            "ordered_list": [
+                "File Path Error Resolution:",
+                "Corrected the file path to ensure the correct location for the data file was used (C:\\TheTradingRobotPlug\\data\\alpha_vantage\\tsla_data.csv).",
+                "\nAdded functionality to browse for the data file using tkinter, setting the default directory to C:\\TheTradingRobotPlug\\data\\alpha_vantage.\n",
+                "\nIntegration of ARIMA Model Training:\n",
+                "Wrapped the ARIMA model training code into a class ARIMAModelTrainer.",
+                "Integrated ARIMAModelTrainer into the ModelTraining class to handle the training process.",
+                "\nAdded functionality to save predictions to a CSV file.\n",
+                "\nCode Refactoring:\n",
+                "Improved the structure of the main script to allow for dynamic file selection.",
+                "\nEnsured proper error handling and logging throughout the process.\n",
+                "\nData Preprocessing Enhancements:\n",
+                "Ensured the data preprocessing script handled NaN values and feature engineering efficiently.",
+                "\nModified the DataPreprocessing class as necessary to integrate seamlessly with the ARIMA model.\n",
+                "\nTraining Process:\n",
+                "\nSuccessfully executed the ARIMA model training, achieving the following steps:\n\nTraining steps from 558/566 to 565/566.\nFinal performance metrics recorded: Test MSE = 97042.73.\nResults saved to arima_predictions.csv.\nLogged information on the completion of the training process, including recommendations for better forecasting accuracy.\n\n",
+                "Training steps from 558/566 to 565/566.",
+                "Final performance metrics recorded: Test MSE = 97042.73.",
+                "Results saved to arima_predictions.csv.",
+                "Logged information on the completion of the training process, including recommendations for better forecasting accuracy.",
+                "\nModularization and Execution:\n",
+                "Modularized the code into separate files for better readability and maintainability:\ndata_preprocessing.py\nmodel_training.py\nmain.py\n\n",
+                "data_preprocessing.py",
+                "model_training.py",
+                "main.py",
+                "Successfully ran the modularized code with the following outcomes:\nData preprocessing steps handled efficiently.\nLSTM model training completed successfully with 50 epochs.\nFinal validation metrics for LSTM: MSE = 15469.76, RMSE = 124.38, R² = 0.81.\nModel saved at models/LSTM_20240722_070936.pkl.\n\n",
+                "Data preprocessing steps handled efficiently.",
+                "LSTM model training completed successfully with 50 epochs.",
+                "Final validation metrics for LSTM: MSE = 15469.76, RMSE = 124.38, R² = 0.81.",
+                "Model saved at models/LSTM_20240722_070936.pkl."
+            ]
+        },
+        {
+            "paragraph": "Added functionality to browse for the data file using tkinter, setting the default directory to C:\\TheTradingRobotPlug\\data\\alpha_vantage."
+        },
+        {
+            "paragraph": "Integration of ARIMA Model Training:"
+        },
+        {
+            "paragraph": "Added functionality to save predictions to a CSV file."
+        },
+        {
+            "paragraph": "Code Refactoring:"
+        },
+        {
+            "paragraph": "Ensured proper error handling and logging throughout the process."
+        },
+        {
+            "paragraph": "Data Preprocessing Enhancements:"
+        },
+        {
+            "paragraph": "Modified the DataPreprocessing class as necessary to integrate seamlessly with the ARIMA model."
+        },
+        {
+            "paragraph": "Training Process:"
+        },
+        {
+            "paragraph": "Successfully executed the ARIMA model training, achieving the following steps:"
+        },
+        {
+            "unordered_list": [
+                "Training steps from 558/566 to 565/566.",
+                "Final performance metrics recorded: Test MSE = 97042.73.",
+                "Results saved to arima_predictions.csv.",
+                "Logged information on the completion of the training process, including recommendations for better forecasting accuracy."
+            ]
+        },
+        {
+            "paragraph": "Modularization and Execution:"
+        },
+        {
+            "unordered_list": [
+                "data_preprocessing.py",
+                "model_training.py",
+                "main.py"
+            ]
+        },
+        {
+            "unordered_list": [
+                "Data preprocessing steps handled efficiently.",
+                "LSTM model training completed successfully with 50 epochs.",
+                "Final validation metrics for LSTM: MSE = 15469.76, RMSE = 124.38, R² = 0.81.",
+                "Model saved at models/LSTM_20240722_070936.pkl."
+            ]
+        },
+        {
+            "heading": "Skills Used:"
+        },
+        {
+            "unordered_list": [
+                "Python Programming:",
+                "Writing and refactoring Python scripts.",
+                "\nHandling file paths and dynamic imports using os and sys.\n",
+                "\nData Handling:\n",
+                "Reading and preprocessing data using pandas.",
+                "\nFeature engineering and handling missing values.\n",
+                "\nMachine Learning:\n",
+                "Implementing and training ARIMA models.",
+                "\nIntegrating ARIMA model training into a larger training pipeline.\n",
+                "\nError Handling and Logging:\n",
+                "Using the logging module to track script progress and errors.",
+                "\nImplementing try-except blocks to catch and handle exceptions.\n",
+                "\nGUI Development:\n",
+                "\nUsing tkinter to create a file browsing dialog for selecting data files.\n",
+                "\nDocumentation:\n",
+                "Organizing and documenting project progress.",
+                "Structuring and presenting information clearly and consistently."
+            ]
+        },
+        {
+            "paragraph": "Handling file paths and dynamic imports using os and sys."
+        },
+        {
+            "paragraph": "Data Handling:"
+        },
+        {
+            "paragraph": "Feature engineering and handling missing values."
+        },
+        {
+            "paragraph": "Machine Learning:"
+        },
+        {
+            "paragraph": "Integrating ARIMA model training into a larger training pipeline."
+        },
+        {
+            "paragraph": "Error Handling and Logging:"
+        },
+        {
+            "paragraph": "Implementing try-except blocks to catch and handle exceptions."
+        },
+        {
+            "paragraph": "GUI Development:"
+        },
+        {
+            "paragraph": "Using tkinter to create a file browsing dialog for selecting data files."
+        },
+        {
+            "paragraph": "Documentation:"
+        },
+        {
+            "heading": "Lessons Learned:"
+        },
+        {
+            "ordered_list": [
+                "Dynamic File Handling:",
+                "\nUsing tkinter for file browsing enhances user experience and flexibility in selecting input files.\n",
+                "\nModular Code Design:\n",
+                "Wrapping functionalities into classes (ARIMAModelTrainer, DataPreprocessing, ModelTraining) improves code maintainability and readability.",
+                "\nEnsuring proper integration between different parts of the codebase is crucial for seamless functionality.\n",
+                "\nError Handling:\n",
+                "Robust error handling and logging are essential for identifying and resolving issues quickly.",
+                "\nEnsuring that all possible error points are covered helps in making the script more resilient.\n",
+                "\nData Preprocessing:\n",
+                "Handling missing values and creating new features are critical steps that can significantly impact the performance of machine learning models."
+            ]
+        },
+        {
+            "paragraph": "Using tkinter for file browsing enhances user experience and flexibility in selecting input files."
+        },
+        {
+            "paragraph": "Modular Code Design:"
+        },
+        {
+            "paragraph": "Ensuring proper integration between different parts of the codebase is crucial for seamless functionality."
+        },
+        {
+            "paragraph": "Error Handling:"
+        },
+        {
+            "paragraph": "Ensuring that all possible error points are covered helps in making the script more resilient."
+        },
+        {
+            "paragraph": "Data Preprocessing:"
+        },
+        {
+            "heading": "To-Do:"
+        },
+        {
+            "ordered_list": [
+                "Improve ARIMA Model Accuracy:",
+                "Experiment with different ARIMA parameters to improve forecasting accuracy.",
+                "\nConsider integrating other time series forecasting models.\n",
+                "\nEnhance Data Preprocessing:\n",
+                "Implement additional feature engineering techniques.",
+                "\nOptimize the handling of missing values.\n",
+                "\nExtend Model Training Pipeline:\n",
+                "Integrate more machine learning models for comparison.",
+                "\nImplement hyperparameter tuning for all models.\n",
+                "\nUser Interface Improvements:\n",
+                "Enhance the file browsing interface to be more intuitive.",
+                "\nAdd more options for user inputs and configurations.\n",
+                "\nDocumentation and Testing:\n",
+                "Document the changes and new functionalities.",
+                "Write and execute tests to ensure code reliability and accuracy."
+            ]
+        },
+        {
+            "paragraph": "Consider integrating other time series forecasting models."
+        },
+        {
+            "paragraph": "Enhance Data Preprocessing:"
+        },
+        {
+            "paragraph": "Optimize the handling of missing values."
+        },
+        {
+            "paragraph": "Extend Model Training Pipeline:"
+        },
+        {
+            "paragraph": "Implement hyperparameter tuning for all models."
+        },
+        {
+            "paragraph": "User Interface Improvements:"
+        },
+        {
+            "paragraph": "Add more options for user inputs and configurations."
+        },
+        {
+            "paragraph": "Documentation and Testing:"
+        },
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Date: July 23, 2024"
+        },
+        {
+            "heading": "Accomplishments:"
+        },
+        {
+            "ordered_list": [
+                "LSTM Model Training:",
+                "Successfully trained the LSTM model multiple times, ensuring the training process is robust and stable.",
+                "\nAchieved the following metrics:\n\nValidation MSE: 0.08, RMSE: 0.29, R²: -0.00\nTest MSE: 0.09, RMSE: 0.30, R²: -0.25\n\n",
+                "Validation MSE: 0.08, RMSE: 0.29, R²: -0.00",
+                "Test MSE: 0.09, RMSE: 0.30, R²: -0.25",
+                "\nIdentified Next Steps for Model Improvement:\n",
+                "Focus on refining hyperparameters.",
+                "Experiment with different model architectures.",
+                "Implement learning rate scheduling."
+            ]
+        },
+        {
+            "paragraph": "Achieved the following metrics:"
+        },
+        {
+            "unordered_list": [
+                "Validation MSE: 0.08, RMSE: 0.29, R²: -0.00",
+                "Test MSE: 0.09, RMSE: 0.30, R²: -0.25"
+            ]
+        },
+        {
+            "paragraph": "Identified Next Steps for Model Improvement:"
+        },
+        {
+            "heading": "Lessons Learned:"
+        },
+        {
+            "ordered_list": [
+                "Hyperparameter Tuning:",
+                "Importance of systematically optimizing hyperparameters to improve model performance.",
+                "\nUtilization of tools like Optuna can automate and streamline the hyperparameter tuning process.\n",
+                "\nModel Architecture:\n",
+                "Exploring different architectures, such as adding more layers, using GRU layers, or Bidirectional LSTM, can potentially lead to performance improvements.",
+                "\nKeeping the architecture flexible allows for iterative experimentation and fine-tuning.\n",
+                "\nLearning Rate Scheduling:\n",
+                "Dynamic adjustment of the learning rate during training can help achieve better convergence and prevent overfitting.",
+                "Implementing schedulers like ReduceLROnPlateau can automatically adjust the learning rate based on validation performance."
+            ]
+        },
+        {
+            "paragraph": "Utilization of tools like Optuna can automate and streamline the hyperparameter tuning process."
+        },
+        {
+            "paragraph": "Model Architecture:"
+        },
+        {
+            "paragraph": "Keeping the architecture flexible allows for iterative experimentation and fine-tuning."
+        },
+        {
+            "paragraph": "Learning Rate Scheduling:"
+        },
+        {
+            "heading": "To-Do List:"
+        },
+        {
+            "ordered_list": [
+                "Refine Hyperparameters:",
+                "Integrate Optuna for automated hyperparameter optimization.",
+                "Define the search space for key hyperparameters (e.g., learning rate, number of LSTM units, batch size, number of layers).",
+                "\nRun Optuna to find the optimal hyperparameters.\n",
+                "\nExperiment with Model Architectures:\n",
+                "Modify the current model architecture to include different configurations (e.g., additional LSTM layers, GRU layers, Bidirectional LSTM).",
+                "\nEvaluate the performance of each modified architecture to identify the best-performing model.\n",
+                "\nImplement Learning Rate Scheduling:\n",
+                "Choose a suitable learning rate scheduler (e.g., ReduceLROnPlateau).",
+                "\nIntegrate the scheduler into the training process and monitor its impact on model performance.\n",
+                "\nMonitor and Iterate:\n",
+                "Continuously monitor the performance metrics (MSE, RMSE, R²) during training and validation.",
+                "Make necessary adjustments based on the results and iterate on the model architecture and hyperparameters."
+            ]
+        },
+        {
+            "paragraph": "Run Optuna to find the optimal hyperparameters."
+        },
+        {
+            "paragraph": "Experiment with Model Architectures:"
+        },
+        {
+            "paragraph": "Evaluate the performance of each modified architecture to identify the best-performing model."
+        },
+        {
+            "paragraph": "Implement Learning Rate Scheduling:"
+        },
+        {
+            "paragraph": "Integrate the scheduler into the training process and monitor its impact on model performance."
+        },
+        {
+            "paragraph": "Monitor and Iterate:"
+        },
+        {
+            "heading": "Action Plan:"
+        },
+        {
+            "ordered_list": [
+                "Update the Training Script:",
+                "Integrate hyperparameter optimization using Optuna.",
+                "\nExperiment with different model architectures and learning rate scheduling.\n",
+                "\nRun Experiments:\n",
+                "Conduct multiple training sessions with different configurations.",
+                "\nRecord and analyze the results to determine the best approach.\n",
+                "\nDocument Findings:\n",
+                "Keep detailed notes on the performance of each model configuration.",
+                "Document any challenges encountered and how they were addressed."
+            ]
+        },
+        {
+            "paragraph": "Experiment with different model architectures and learning rate scheduling."
+        },
+        {
+            "paragraph": "Run Experiments:"
+        },
+        {
+            "paragraph": "Record and analyze the results to determine the best approach."
+        },
+        {
+            "paragraph": "Document Findings:"
+        },
+        {
+            "paragraph": "By following this structured approach, we aim to improve the LSTM model's performance and achieve better predictive accuracy. This iterative process will help refine our model and optimize its parameters for the best results."
+        }
+    ]
+}

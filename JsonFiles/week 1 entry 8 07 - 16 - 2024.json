@@ -1,0 +1,152 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry: 2024-07-16"
+        },
+        {
+            "paragraph": "1:30 am - 2:30 am\nObjective: Refactor and modularize the trading robot project's codebase for improved organization, maintainability, and functionality."
+        },
+        {
+            "paragraph": "Tasks Completed:"
+        },
+        {
+            "ordered_list": [
+                "Creation and Organization of Indicator Modules:",
+                "\nStructured the project to have dedicated files for different types of technical indicators:\n\nC:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\custom_indicators.py\nC:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\momentum_indicators.py\nC:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\trend_indicators.py\nC:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volatility_indicators.py\nC:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volume_indicators.py\n\n",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\custom_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\momentum_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\trend_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volatility_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volume_indicators.py",
+                "\nIsolated Momentum Indicators:\n",
+                "\nMoved the MomentumIndicators class and its methods to momentum_indicators.py.\n     ```python\n     import pandas as pd\n     from ta.momentum import StochasticOscillator, RSIIndicator, WilliamsRIndicator, ROCIndicator\nclass MomentumIndicators:\n     @staticmethod\n     def add_stochastic_oscillator(df, window_size=14, user_defined_window=None):\n         # Method code...\n @staticmethod\n def add_relative_strength_index(df, window=14, user_defined_window=None, calculation_type=\"default\"):\n     # Method code...\n\n @staticmethod\n def add_williams_r(df, window=14, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_rate_of_change(df, window=10, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_trix(df, span=15, signal_line_span=9):\n     # Method code...\n\n```\n",
+                "\nIsolated Volatility Indicators:\n",
+                "\nMoved the VolatilityIndicators class and its methods to volatility_indicators.py.\n     ```python\n     import pandas as pd\n     from ta.volatility import BollingerBands, KeltnerChannel\n     import numpy as np\nclass VolatilityIndicators:\n     @staticmethod\n     def add_bollinger_bands(df, window_size=10, std_multiplier=2, user_defined_window=None):\n         # Method code...\n @staticmethod\n def add_standard_deviation(df, window_size=20, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_historical_volatility(df, window=20, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_chandelier_exit(df, window=22, multiplier=3, user_defined_window=None, user_defined_multiplier=None):\n     # Method code...\n\n @staticmethod\n def add_keltner_channel(df, window=20, multiplier=2, user_defined_window=None, user_defined_multiplier=None):\n     # Method code...\n\n @staticmethod\n def add_moving_average_envelope(df, window_size=10, percentage=0.025, user_defined_window=None, user_defined_percentage=None):\n     # Method code...\n\n```\n",
+                "\nIsolated Trend Indicators:\n",
+                "\nCreated trend_indicators.py for trend-related indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     from ta.trend import ADXIndicator, SMAIndicator, IchimokuIndicator, MACD, TRIXIndicator, PSARIndicator\nclass TrendIndicators:\n     @staticmethod\n     def add_moving_average(df, window_size=10, user_defined_window=None, column='close', ma_type='SMA'):\n         # Method code...\n @staticmethod\n def add_exponential_moving_average(df, column='close', window_size=10):\n     # Method code...\n\n @staticmethod\n def calculate_macd_components(df, fast_period=12, slow_period=26, signal_period=9, price_column='close'):\n     # Method code...\n\n @staticmethod\n def add_adx(df, window=14, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_ichimoku_cloud(df, user_defined_values=None):\n     # Method code...\n\n @staticmethod\n def add_parabolic_sar(df, step=0.02, max_step=0.2):\n     # Method code...\n\n```\n",
+                "\nIsolated Volume Indicators:\n",
+                "\nCreated volume_indicators.py for volume-related indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     import numpy as np\n     import talib\nclass VolumeIndicators:\n     @staticmethod\n     def add_on_balance_volume(df, user_defined_window=None):\n         # Method code...\n @staticmethod\n def add_vwap(df, user_defined_window=None, price_type='typical', adjust_for_splits=False):\n     # Method code...\n\n @staticmethod\n def add_accumulation_distribution_line(df, user_defined_window=None):\n     # Method code...\n\n @staticmethod   \n def add_chaikin_money_flow(df, user_defined_window=None):\n     # Method code...\n\n @staticmethod\n def add_volume_oscillator(df, short_window=12, long_window=26):\n     # Method code...\n\n```\n",
+                "\nIsolated Custom Indicators:\n",
+                "\nCreated custom_indicators.py for custom indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     import numpy as np\nclass CustomIndicators:\n     @staticmethod\n     def add_custom_indicator(df, indicator_name, indicator_function, args, *kwargs):\n         # Method code...\n @staticmethod\n def add_fibonacci_retracement_levels(df, lookback_period=120):\n     # Method code...\n\n @staticmethod\n def add_awesome_oscillator(df, short_window=5, long_window=34):\n     # Method code...\n\n @staticmethod\n def add_zigzag_indicator(df, lookback=5, dynamic_threshold=True, fixed_threshold=2.0, vol_window=20):\n     # Method code...\n\n```\n",
+                "\nUpdated Imports in the Original File:\n",
+                "\nUpdated technical_indicators.py to import the necessary classes from the new modules.\n     python\n     from momentum_indicators import MomentumIndicators\n     from trend_indicators import TrendIndicators\n     from volatility_indicators import VolatilityIndicators\n     from volume_indicators import VolumeIndicators\n     from custom_indicators import CustomIndicators\n",
+                "\nEnsured Code Integrity:\n",
+                "Verified that all methods are correctly moved and referenced in their respective files.",
+                "Checked for any missing imports or dependencies in the new files.",
+                "\nConfirmed that the refactored code runs without errors.\n",
+                "\nEnhancement of Existing Classes and Methods:\n",
+                "Improved error handling and added detailed docstrings for better clarity.",
+                "Ensured that methods handle edge cases and provide meaningful error messages.",
+                "\nStreamlined method parameters to allow for user-defined values, enhancing flexibility.\n",
+                "\nDocumentation:\n\nDocumented the new structure and provided clear guidelines on how to use the refactored modules.\nUpdated the project journal to reflect the changes made and the rationale behind them.\n\n",
+                "Documented the new structure and provided clear guidelines on how to use the refactored modules.",
+                "Updated the project journal to reflect the changes made and the rationale behind them."
+            ]
+        },
+        {
+            "paragraph": "Structured the project to have dedicated files for different types of technical indicators:"
+        },
+        {
+            "unordered_list": [
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\custom_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\momentum_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\trend_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volatility_indicators.py",
+                "C:\\TheTradingRobotPlug\\Scripts\\Data_Processing\\Technical_indicators\\volume_indicators.py"
+            ]
+        },
+        {
+            "paragraph": "Isolated Momentum Indicators:"
+        },
+        {
+            "paragraph": "Moved the MomentumIndicators class and its methods to momentum_indicators.py.\n     ```python\n     import pandas as pd\n     from ta.momentum import StochasticOscillator, RSIIndicator, WilliamsRIndicator, ROCIndicator"
+        },
+        {
+            "paragraph": "class MomentumIndicators:\n     @staticmethod\n     def add_stochastic_oscillator(df, window_size=14, user_defined_window=None):\n         # Method code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "paragraph": "Isolated Volatility Indicators:"
+        },
+        {
+            "paragraph": "Moved the VolatilityIndicators class and its methods to volatility_indicators.py.\n     ```python\n     import pandas as pd\n     from ta.volatility import BollingerBands, KeltnerChannel\n     import numpy as np"
+        },
+        {
+            "paragraph": "class VolatilityIndicators:\n     @staticmethod\n     def add_bollinger_bands(df, window_size=10, std_multiplier=2, user_defined_window=None):\n         # Method code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "paragraph": "Isolated Trend Indicators:"
+        },
+        {
+            "paragraph": "Created trend_indicators.py for trend-related indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     from ta.trend import ADXIndicator, SMAIndicator, IchimokuIndicator, MACD, TRIXIndicator, PSARIndicator"
+        },
+        {
+            "paragraph": "class TrendIndicators:\n     @staticmethod\n     def add_moving_average(df, window_size=10, user_defined_window=None, column='close', ma_type='SMA'):\n         # Method code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "paragraph": "Isolated Volume Indicators:"
+        },
+        {
+            "paragraph": "Created volume_indicators.py for volume-related indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     import numpy as np\n     import talib"
+        },
+        {
+            "paragraph": "class VolumeIndicators:\n     @staticmethod\n     def add_on_balance_volume(df, user_defined_window=None):\n         # Method code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "paragraph": "Isolated Custom Indicators:"
+        },
+        {
+            "paragraph": "Created custom_indicators.py for custom indicators and moved relevant methods.\n     ```python\n     import pandas as pd\n     import numpy as np"
+        },
+        {
+            "paragraph": "class CustomIndicators:\n     @staticmethod\n     def add_custom_indicator(df, indicator_name, indicator_function, args, *kwargs):\n         # Method code..."
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "paragraph": "Updated Imports in the Original File:"
+        },
+        {
+            "paragraph": "Updated technical_indicators.py to import the necessary classes from the new modules.\n     python\n     from momentum_indicators import MomentumIndicators\n     from trend_indicators import TrendIndicators\n     from volatility_indicators import VolatilityIndicators\n     from volume_indicators import VolumeIndicators\n     from custom_indicators import CustomIndicators"
+        },
+        {
+            "paragraph": "Ensured Code Integrity:"
+        },
+        {
+            "paragraph": "Confirmed that the refactored code runs without errors."
+        },
+        {
+            "paragraph": "Enhancement of Existing Classes and Methods:"
+        },
+        {
+            "paragraph": "Streamlined method parameters to allow for user-defined values, enhancing flexibility."
+        },
+        {
+            "paragraph": "Documentation:"
+        },
+        {
+            "unordered_list": [
+                "Documented the new structure and provided clear guidelines on how to use the refactored modules.",
+                "Updated the project journal to reflect the changes made and the rationale behind them."
+            ]
+        },
+        {
+            "paragraph": "Summary:"
+        },
+        {
+            "paragraph": "this session focused on refactoring and modularizing the trading robot project's codebase for better organization and maintainability. The various technical indicators were successfully isolated into dedicated files based on their type, improving the project's structure. This change was reflected in the original file by updating the imports. Detailed documentation and error handling were added to ensure the robustness of the refactored code. The project is now more organized, with a clear separation of concerns, making it easier to manage and extend in the future."
+        }
+    ]
+}

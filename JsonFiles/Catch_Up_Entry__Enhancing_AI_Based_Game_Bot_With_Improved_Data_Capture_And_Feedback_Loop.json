@@ -1,0 +1,193 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Enhancing_AI_Based_Game_Bot_With_Improved_Data_Capture_And_Feedback_Loop"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals:",
+                "Expand the current system for capturing in-game data and improve the feedback loop.",
+                "Implement additional data points from OSRS for the AI to learn from and enhance decision-making capabilities.",
+                "\nDesign a feedback loop to drive iterative improvements to the AI’s performance using test-driven development (TDD).\n",
+                "\nActions Taken:\n",
+                "Expanded Data Collection: Modified the existing RuneLite plugin to capture more detailed data, such as inventory status, combat statistics, enemy health, and location coordinates.",
+                "Screen Capture and Image Recognition: Integrated OpenCV for screen capture and image recognition to extract on-screen elements like combat statuses or inventory items.",
+                "API Integration: Set up external data collection through APIs to pull live market prices and other contextual data to provide additional information for AI decision-making.",
+                "Feedback Loop Setup: Established a feedback loop involving testing, data analysis, and iterative improvement of the AI model, ensuring that the AI continuously improves through real-world testing.",
+                "\nTDD Implementation: Applied test-driven development practices by creating unit tests for key components, such as data synchronization, model training, and data collection.\n",
+                "\nChallenges and Breakthroughs:\n",
+                "Challenges: Initially, there were issues synchronizing video frames with in-game data. Timestamps between the video and data did not align perfectly, which affected the training process.",
+                "\nBreakthroughs: Introducing detailed logs and using a continuous feedback loop helped diagnose the synchronization issue. Additionally, we expanded the data points captured in-game, leading to more informed AI decisions.\n",
+                "\nResults and Impact:\n",
+                "The system now captures significantly more data points from OSRS, providing the AI with a richer dataset to learn from.",
+                "The feedback loop, combined with TDD, ensures continuous improvement in the AI's gameplay performance. Initial tests showed a noticeable improvement in combat decision-making after incorporating enemy health and combat status into the dataset."
+            ]
+        },
+        {
+            "paragraph": "Design a feedback loop to drive iterative improvements to the AI’s performance using test-driven development (TDD)."
+        },
+        {
+            "paragraph": "Actions Taken:"
+        },
+        {
+            "paragraph": "TDD Implementation: Applied test-driven development practices by creating unit tests for key components, such as data synchronization, model training, and data collection."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs:"
+        },
+        {
+            "paragraph": "Breakthroughs: Introducing detailed logs and using a continuous feedback loop helped diagnose the synchronization issue. Additionally, we expanded the data points captured in-game, leading to more informed AI decisions."
+        },
+        {
+            "paragraph": "Results and Impact:"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Used extensively for scripting, data handling, and AI model training.",
+                "PyQt for Overlay: Developed a PyQt-based overlay to display and record real-time data without obstructing gameplay.",
+                "OpenCV and Pytesseract: Employed OpenCV for screen capture and image processing, and Pytesseract for text extraction (e.g., reading chat or inventory labels).",
+                "RuneLite Plugin Development (Java): Expanded the existing RuneLite plugin to capture additional game metrics such as combat stats and location data.",
+                "API Integration: Integrated OSRS external APIs to pull market prices and real-time data for dynamic decision-making.",
+                "Test-Driven Development (TDD): Implemented unit tests and continuous testing for data capture, model training, and synchronization processes."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes:",
+                "The importance of a robust feedback loop in continuously improving AI models. Iterative improvements, based on test results and real-world data, led to a marked increase in the AI’s accuracy and decision-making.",
+                "Synchronizing video frames with in-game data is critical. Proper timestamp alignment ensures the AI can learn correctly from both visual and numerical data.",
+                "\nExpanding the dataset with more contextual information (e.g., inventory, enemy health, market prices) improved the AI’s overall decision-making process.\n",
+                "\nUnexpected Challenges:\n",
+                "\nEncountered some issues with data synchronization between video frames and in-game data, which caused inconsistencies in training. This was resolved by improving timestamp precision and refining the data synchronization process.\n",
+                "\nFuture Application:\n",
+                "Moving forward, the use of more external data sources, such as player stats and market data, can further improve the AI's decision-making.",
+                "Implementing more advanced image recognition techniques will allow the AI to \"see\" and understand the visual elements of the game, providing another layer of contextual awareness."
+            ]
+        },
+        {
+            "paragraph": "Expanding the dataset with more contextual information (e.g., inventory, enemy health, market prices) improved the AI’s overall decision-making process."
+        },
+        {
+            "paragraph": "Unexpected Challenges:"
+        },
+        {
+            "paragraph": "Encountered some issues with data synchronization between video frames and in-game data, which caused inconsistencies in training. This was resolved by improving timestamp precision and refining the data synchronization process."
+        },
+        {
+            "paragraph": "Future Application:"
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Improve Data Synchronization: Refine the timestamping system to ensure perfect synchronization between game data and video frames.",
+                "Enhance Feedback Loop: Implement more detailed logging and monitoring to quickly identify areas where the AI struggles.",
+                "Add More Data Points: Continue expanding the in-game data captured, such as enemy attack patterns, cooldown timers, and environment factors.",
+                "Deploy AI for Real Testing: Deploy the AI to more complex gameplay scenarios (e.g., PvP combat) to evaluate its performance and gather feedback.",
+                "Refine Image Recognition: Further integrate OpenCV for object detection in specific gameplay scenarios (e.g., recognizing items in the inventory, detecting low health indicators)."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Expanded RuneLite Plugin for Detailed Data Capture"
+        },
+        {
+            "paragraph": "```java\n// Expanded RuneLite Plugin to Capture More Data\npublic void onGameTick(GameTick tick) {\n    int hp = client.getBoostedSkillLevel(Skill.HITPOINTS);\n    int prayer = client.getBoostedSkillLevel(Skill.PRAYER);\n    int attackLevel = client.getBoostedSkillLevel(Skill.ATTACK);\n    String location = client.getLocalPlayer().getWorldLocation().toString();\n    Item[] inventoryItems = client.getItemContainer(InventoryID.INVENTORY).getItems();"
+        },
+        {
+            "paragraph": "}\n```"
+        },
+        {
+            "heading": "Data Synchronization and Screen Capture with OpenCV"
+        },
+        {
+            "paragraph": "```python\nimport cv2\nimport pandas as pd\nimport numpy as np"
+        },
+        {
+            "paragraph": "def sync_video_with_data(video_file, data_file, output_file):\n    video = cv2.VideoCapture(video_file)\n    data = pd.read_csv(data_file)\n    fps = video.get(cv2.CAP_PROP_FPS)\n    frame_count = 0\n    sync_data = []"
+        },
+        {
+            "paragraph": "sync_video_with_data('gameplay.mp4', 'synced_data.csv', 'synced_gameplay_data.pkl')\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvements: Consider implementing advanced reinforcement learning techniques to help the AI learn in real-time and adapt to different scenarios dynamically.",
+                "Reflection: The expanded data collection has greatly improved the AI’s understanding of the game world, but continuous refinement is necessary. The addition of real-time market data will be the next major step forward in improving AI decision-making for trading and resource management in-game.",
+                "New Ideas: Explore multi-agent learning where the AI can interact with other AI players to simulate more complex gameplay environments."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial data collection and screen recording setup - Completed",
+                "Milestone 2: Expanded data collection via RuneLite plugin and API integration - Completed",
+                "Milestone 3: AI model training with new data points - In Progress",
+                "Milestone 4: Real-world testing and feedback loop deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "OpenCV Documentation",
+                "PyQt5 Documentation",
+                "OSRS API Documentation",
+                "TensorFlow Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: Regular check-ins with the team to review AI performance and gather feedback on new data points and model improvements.",
+                "Decisions Made: Decided to focus on expanding combat-related data points to improve the AI’s decision-making in fights.",
+                "Action Items: ",
+                "Team: Integrate new data points into the training pipeline and test their impact on the AI's performance.",
+                "Self: Refine the model architecture to better handle new data inputs from combat scenarios."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Data synchronization errors could lead to incorrect AI training.",
+                "Mitigation Strategy: Refine timestamping and ensure thorough testing of the synchronization process.",
+                "Risk: The AI might be detected by anti-botting measures if it becomes too efficient.",
+                "Mitigation Strategy: Program the AI to mimic human behavior, including making occasional mistakes and taking breaks."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully expanded the data collection to include more detailed game statistics and integrated external data sources (market prices, etc.).",
+                "What Could Be Improved: Real-time data synchronization still needs further testing and refinement, especially with more complex combat scenarios.",
+                "Actionable Insights: Continue refining the feedback loop with additional real-world testing to identify areas where the AI’s decision-making can be improved."
+            ]
+        }
+    ]
+}

@@ -1,0 +1,189 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Addressing_Module_Import_Issues_And_Test_Execution_Failures"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals:",
+                "\nResolve module import errors and successfully execute unit tests for the DataFetcher module.\n",
+                "\nActions Taken:\n",
+                "Identified and corrected module import paths to match the project structure.",
+                "Adjusted the test script to ensure correct importing of the DataFetcher module.",
+                "\nRan multiple tests (test_data_fetcher.py, test_polygon_fetcher.py, etc.) to verify the correct functionality of the code.\n",
+                "\nChallenges and Breakthroughs:\n",
+                "Challenges: Encountered repeated ModuleNotFoundError issues when attempting to import the data_fetcher module.",
+                "\nBreakthroughs: Realized that the import paths were incorrect due to mismatches between actual directory names and the import statements. Corrected the import paths, which resolved the errors.\n",
+                "\nResults and Impact:\n",
+                "Successfully executed the test_data_fetcher.py script after resolving import issues. This allowed for validation of the DataFetcher module’s functionality.",
+                "Identified further issues with test failures related to data processing logic, particularly in handling expected versus actual data formats."
+            ]
+        },
+        {
+            "paragraph": "Resolve module import errors and successfully execute unit tests for the DataFetcher module."
+        },
+        {
+            "paragraph": "Actions Taken:"
+        },
+        {
+            "paragraph": "Ran multiple tests (test_data_fetcher.py, test_polygon_fetcher.py, etc.) to verify the correct functionality of the code."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs:"
+        },
+        {
+            "paragraph": "Breakthroughs: Realized that the import paths were incorrect due to mismatches between actual directory names and the import statements. Corrected the import paths, which resolved the errors."
+        },
+        {
+            "paragraph": "Results and Impact:"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Applied skills in Python to troubleshoot and correct import errors, ensuring the proper structure and execution of test scripts.",
+                "Unit Testing: Employed unit testing to validate code correctness and functionality across various modules.",
+                "Error Handling: Improved error handling in the test scripts to capture and address issues related to data processing and API integration.",
+                "Path Management: Utilized Python's sys.path to dynamically adjust import paths based on project structure."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes:",
+                "Importance of verifying file paths and import statements, especially in complex projects with multiple modules and directories.",
+                "\nRealized the need for consistent naming conventions across directories to avoid import errors.\n",
+                "\nUnexpected Challenges:\n",
+                "\nEncountered discrepancies in expected data formats during test execution, leading to failed assertions. Addressed by improving the understanding of the data pipeline and refining test cases.\n",
+                "\nFuture Application:\n",
+                "Ensure that all project directories follow a consistent naming convention and that import statements are regularly validated when new modules are added.",
+                "Refine unit tests to include more detailed checks for data format validation, ensuring that data processing logic is thoroughly tested."
+            ]
+        },
+        {
+            "paragraph": "Realized the need for consistent naming conventions across directories to avoid import errors."
+        },
+        {
+            "paragraph": "Unexpected Challenges:"
+        },
+        {
+            "paragraph": "Encountered discrepancies in expected data formats during test execution, leading to failed assertions. Addressed by improving the understanding of the data pipeline and refining test cases."
+        },
+        {
+            "paragraph": "Future Application:"
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Fix Test Failures: Investigate and resolve the test failure in test_polygon_fetcher.py related to the empty DataFrame issue.",
+                "Review Data Processing Logic: Revisit the DataFetcher module’s data processing logic to ensure compatibility with all expected data formats.",
+                "Complete Unit Tests: Finalize the remaining unit tests for other data fetcher modules by [specific date].",
+                "Enhance Error Handling: Implement more robust error handling in the DataFetcher module to gracefully handle unexpected data formats or API errors."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Test Case for Data Fetching"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Test for the fetch_data method in DataFetcher"
+        },
+        {
+            "paragraph": "@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher._async_fetch_data', new_callable=AsyncMock)\n@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher.process_data', autospec=True)\n@patch('Scripts.Data_Fetchers.data_fetcher.DataFetcher.store_data', autospec=True)\ndef test_fetch_data(self, mock_store_data, mock_process_data, mock_async_fetch_data):\n    # Mock the async fetch data to return a sample dictionary\n    mock_async_fetch_data.return_value = {\"Time Series (Daily)\": {\"2024-01-01\": {\"close\": 150}}}\n    mock_process_data.return_value = pd.DataFrame({\"close\": [150]})"
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "heading": "Test Case for Polygon Fetcher"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Test for fetching data for a single symbol in PolygonDataFetcher"
+        },
+        {
+            "paragraph": "@patch('Scripts.Data_Fetchers.polygon_fetcher.PolygonDataFetcher.fetch_data', new_callable=AsyncMock)\ndef test_fetch_data_for_symbol(self, mock_fetch_data):\n    # Test fetching data for a single symbol\n    symbol = \"AAPL\"\n    start_date = \"2023-01-01\"\n    end_date = \"2023-12-31\"\n    mock_fetch_data.return_value = {\n        'results': [\n            {'t': 1672531199000, 'o': 150, 'h': 155, 'l': 149, 'c': 152, 'v': 1000000}\n        ]\n    }"
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: Consider implementing more comprehensive data validation checks within the data processing pipeline to prevent issues related to unexpected data formats.",
+                "Reflection: The exercise highlighted the importance of consistent naming conventions and the need for thorough testing, particularly when dealing with external APIs and varying data sources."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Data fetch module implementation - In Progress",
+                "Milestone 3: Unit testing and validation - Ongoing, with some issues identified",
+                "Milestone 4: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Python Path Configuration: Python sys.path Documentation",
+                "Pandas DataFrame Documentation: Pandas Documentation",
+                "Unit Testing in Python: unittest Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: None during this session.",
+                "Decisions Made: Decided to focus on resolving test failures and enhancing data validation in the next work session.",
+                "Action Items:",
+                "Self: Address test failures in test_polygon_fetcher.py and review data processing logic for potential improvements."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Inconsistent data formats could lead to failed assertions in tests.",
+                "Mitigation Strategy: Implement more robust data validation checks in the data fetch and processing modules."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully resolved module import issues and made significant progress in executing unit tests.",
+                "What Could Be Improved: Need to improve handling of unexpected data formats and enhance error reporting in the data fetcher modules.",
+                "Actionable Insights: Implement routine checks for import paths and improve data validation mechanisms in the codebase."
+            ]
+        }
+    ]
+}

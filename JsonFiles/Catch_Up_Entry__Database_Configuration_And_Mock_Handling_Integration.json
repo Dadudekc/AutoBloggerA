@@ -1,0 +1,181 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Database_Configuration_And_Mock_Handling_Integration"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "Ensure correct MySQL database configuration and table structure for data storage.",
+                "\nReplace mock implementations with actual modules for seamless script integration.\n",
+                "\nActions Taken: \n",
+                "Updated MySQL database credentials in the alpha_vantage_fetcher.py script to match the local environment.",
+                "Verified that the stocks table exists in the database with the correct schema.",
+                "Implemented logic to handle conditional imports based on the availability of modules in the environment.",
+                "Provided guidance on running the script to test database connection and data insertion.",
+                "\nOutlined steps for replacing mock imports with actual implementations when available.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "\nNo major challenges were encountered. The key breakthrough was the realization that setting up a robust fallback mechanism with mocks allows for smoother development and testing phases, especially in environments where certain dependencies might not be available.\n",
+                "\nResults and Impact: \n",
+                "The script is now fully integrated with the MySQL database, capable of inserting stock data into the stocks table. The fallback mechanism ensures the script remains functional even in incomplete environments, which is crucial for ongoing development and testing."
+            ]
+        },
+        {
+            "paragraph": "Replace mock implementations with actual modules for seamless script integration."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Outlined steps for replacing mock imports with actual implementations when available."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "No major challenges were encountered. The key breakthrough was the realization that setting up a robust fallback mechanism with mocks allows for smoother development and testing phases, especially in environments where certain dependencies might not be available."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Used for script development, including API integration and data manipulation.",
+                "MySQL Database Management: Configured database connections and ensured the correct schema for data insertion.",
+                "Asyncio for Python: Leveraged for asynchronous data fetching from the Alpha Vantage API.",
+                "Logging: Implemented logging to track script execution and troubleshoot issues.",
+                "Mocking: Utilized Python’s unittest.mock to handle missing imports during development and testing."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Gained insights into the importance of validating database connections and schema before data insertion.",
+                "\nLearned the benefits of using mocks in a development environment to simulate unavailable modules.\n",
+                "\nUnexpected Challenges: \n",
+                "\nNo significant challenges were encountered during this session.\n",
+                "\nFuture Application: \n",
+                "Future work will focus on enhancing the script's error handling mechanisms, particularly for database interactions. Regular database schema validation should be part of the integration process to avoid potential mismatches."
+            ]
+        },
+        {
+            "paragraph": "Learned the benefits of using mocks in a development environment to simulate unavailable modules."
+        },
+        {
+            "paragraph": "Unexpected Challenges: "
+        },
+        {
+            "paragraph": "No significant challenges were encountered during this session."
+        },
+        {
+            "paragraph": "Future Application: "
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Database Validation: Implement a function to check the schema of the stocks table before inserting data.",
+                "Refine Error Handling: Improve error handling in the script to better manage exceptions during database interactions.",
+                "Real Imports: Replace mock imports with actual implementations in environments where the necessary modules are available.",
+                "Logging Enhancements: Enhance logging to include more detailed error messages and execution flow information."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Database Connection and Data Insertion"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Establish MySQL database connection"
+        },
+        {
+            "paragraph": "def create_connection():\n    try:\n        connection = mysql.connector.connect(\n            host=\"localhost\",\n            user=\"root\",\n            passwd=\"your_password\",  # Update with actual MySQL password\n            database=\"trading_data\"\n        )\n        logger.info(\"Connection to MySQL DB successful\")\n        return connection\n    except Error as e:\n        logger.error(f\"The error '{e}' occurred\")\n        return None"
+        },
+        {
+            "heading": "Insert fetched stock data into the database"
+        },
+        {
+            "paragraph": "def insert_stock_data(connection, stock_data):\n    cursor = connection.cursor()\n    for index, row in stock_data.iterrows():\n        query = \"\"\"\n        INSERT INTO stocks (symbol, date, open, high, low, close, volume)\n        VALUES (%s, %s, %s, %s, %s, %s, %s)\n        \"\"\"\n        cursor.execute(query, (row['symbol'], row['date'], row['open'], row['high'], row['low'], row['close'], row['volume']))\n    connection.commit()\n    logger.info(\"Stock data inserted into the database\")\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: Consider adding a schema validation step before inserting data into the database to catch potential mismatches early.",
+                "Reflection: The use of mocks during development has proven to be a valuable approach, allowing for flexible testing and iteration without being fully dependent on the availability of all modules."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Data fetch module implementation - In Progress",
+                "Milestone 3: Unit testing and validation - Pending",
+                "Milestone 4: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "MySQL Connector Python Documentation",
+                "Alpha Vantage API Documentation",
+                "Python asyncio Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings were held during this session.",
+                "Decisions Made: Decided to implement schema validation for the stocks table to ensure data consistency.",
+                "Action Items: ",
+                "Self: Implement the schema validation function and improve error handling in the next session."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Potential mismatch between the expected and actual database schema could lead to data insertion failures.",
+                "Mitigation Strategy: Implement schema validation before data insertion to ensure compatibility."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully configured the MySQL database connection and ensured data insertion works as intended.",
+                "What Could Be Improved: Further refine error handling and consider adding additional validation steps for database operations.",
+                "Actionable Insights: Schema validation is crucial for preventing data insertion errors and should be integrated into the data handling workflow."
+            ]
+        },
+        {
+            "paragraph": "This journal entry provides a comprehensive overview of the session, documenting key actions, results, and future steps. It serves as a valuable record for project management and progress tracking."
+        }
+    ]
+}

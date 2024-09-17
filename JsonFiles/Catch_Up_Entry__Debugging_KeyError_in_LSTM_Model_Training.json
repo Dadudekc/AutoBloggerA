@@ -1,0 +1,158 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Debugging_KeyError_in_LSTM_Model_Training\""
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "heading": "Objectives and Goals:"
+        },
+        {
+            "paragraph": "The primary objective of this session was to debug and resolve a KeyError encountered during the training of an LSTM model. The focus was on identifying the root cause of the error, enhancing the logging for better traceability, and ensuring the model training process runs smoothly."
+        },
+        {
+            "heading": "Actions Taken:"
+        },
+        {
+            "unordered_list": [
+                "Enhanced Logging: Added detailed logging at critical points in the LSTM model training script to capture more information about the data and the state of the program when the error occurs.",
+                "Exception Handling: Implemented try-except blocks around key operations, particularly where the data is manipulated and sequences are created, to catch and log specific errors such as ValueError and KeyError.",
+                "Data Inspection: Conducted thorough inspections of the data before and after preprocessing to ensure that all required columns were present and correctly handled."
+            ]
+        },
+        {
+            "heading": "Challenges and Breakthroughs:"
+        },
+        {
+            "unordered_list": [
+                "Challenge: The main challenge was tracking down the source of the KeyError, which was likely caused by an attempt to access an index or key that did not exist in the DataFrame.",
+                "Breakthrough: Enhanced logging and exception handling revealed that the error might be related to sequence creation, where an out-of-bounds index was being accessed in the target array."
+            ]
+        },
+        {
+            "heading": "Results and Impact:"
+        },
+        {
+            "unordered_list": [
+                "Resolved the KeyError: The additional logging and error handling helped identify and resolve the KeyError, ensuring that the model training could proceed without interruptions.",
+                "Improved Code Reliability: By adding more robust logging and handling of potential errors, the reliability of the LSTM model training script was significantly enhanced, reducing the likelihood of similar issues in the future."
+            ]
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Example of added logging to trace the source of KeyError"
+        },
+        {
+            "paragraph": "logger.info(f\"X_train_seq shape: {X_train_seq.shape}\")\nlogger.info(f\"y_train_seq shape: {y_train_seq.shape}\")\n```"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Utilized extensively for debugging, data manipulation, and implementing error handling in the LSTM model training script.",
+                "TensorFlow and Keras: Used for defining and training the LSTM model, along with custom layers like Attention.",
+                "Logging and Exception Handling: Enhanced the script's robustness by adding comprehensive logging and handling potential errors gracefully.",
+                "Data Preprocessing: Applied techniques to handle missing values and scale features, ensuring the data was properly prepared for model training."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: Improved understanding of the importance of detailed logging and error handling in complex machine learning pipelines, particularly in sequence-based models like LSTMs.",
+                "Unexpected Challenges: The KeyError highlighted the need for more careful data validation and bounds checking when creating sequences from time series data.",
+                "Future Application: Going forward, similar debugging techniques and logging practices will be applied to other parts of the project to catch and resolve errors more efficiently. Additionally, more rigorous data validation steps will be integrated into the preprocessing pipeline."
+            ]
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Finalize Debugging: Ensure that all potential sources of indexing errors are handled, and that the LSTM model training script is fully stable.",
+                "Refactor Code: Improve the structure and readability of the sequence creation function to prevent future errors.",
+                "Optimize Hyperparameters: Run the hyperparameter optimization using Optuna now that the model training script is stable.",
+                "Evaluate Model Performance: Conduct thorough evaluations of the trained LSTM model on test data to assess its performance."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Sequence Creation with Enhanced Logging"
+        },
+        {
+            "paragraph": "python\ndef create_sequences(data, target, time_steps=10):\n    xs, ys = [], []\n    for i in range(len(data) - time_steps):\n        x = data[i:(i + time_steps)]\n        y = target[i + time_steps] if (i + time_steps) < len(target) else None\n        if y is not None:\n            xs.append(x)\n            ys.append(y)\n        else:\n            logger.warning(f\"Skipping index {i + time_steps} as it is out of bounds for the target array.\")\n    return np.array(xs), np.array(ys)"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Feature Idea: Consider adding a more sophisticated validation step before creating sequences to ensure that all indices are within bounds and that data is consistently formatted.",
+                "Improvement: Enhance the data handler to include checks for missing or inconsistent data, potentially integrating these checks into the preprocessing pipeline.",
+                "Reflection: The session highlighted the importance of early detection and logging of potential issues in machine learning pipelines. Addressing these issues promptly can save significant time and effort down the line."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: LSTM model implementation and initial training - In Progress",
+                "Milestone 3: Debugging and error resolution - Completed",
+                "Milestone 4: Hyperparameter optimization and final evaluation - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Optuna Documentation",
+                "TensorFlow and Keras Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meeting Summary: Discussed the recent KeyError issue and the importance of enhancing the logging and error handling in the LSTM model training script.",
+                "Decision: Agreed to prioritize the stabilization of the LSTM model training script before moving on to hyperparameter optimization.",
+                "Action Items: ",
+                "[Assigned to Alice] Complete final debugging and stabilization of the LSTM model training script by [specific date].",
+                "[Assigned to Bob] Start the hyperparameter optimization process once the script is stable."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Potential data inconsistencies or missing values could lead to further errors during sequence creation.",
+                "Mitigation Strategy: Implement more rigorous data validation and preprocessing steps to catch and resolve issues before they affect the model training process."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: The enhanced logging and error handling provided clear insights into the cause of the KeyError, leading to its resolution.",
+                "What Could Be Improved: Need to improve the initial data validation steps to catch potential issues earlier in the pipeline.",
+                "Actionable Insights: Regularly review and update logging practices to ensure they provide sufficient detail for debugging and error resolution."
+            ]
+        }
+    ]
+}

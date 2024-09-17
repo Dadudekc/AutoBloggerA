@@ -1,0 +1,200 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Addressing_File_Path_Issues_And_Model_Training_Execution"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "Resolve file path issues in the model_training_utils.py script.",
+                "\nSuccessfully execute the model training process and ensure correct configurations and environment setup.\n",
+                "\nActions Taken: \n",
+                "Corrected the project root path and updated the system path (sys.path) to ensure that all necessary directories are included.",
+                "Ensured that the configuration settings were loaded successfully, confirming that the correct API keys, file paths, and other critical settings were in place.",
+                "Addressed issues related to invalid file paths by correcting references in the script.",
+                "\nRan the model training script multiple times to verify that the process was working correctly, resolving errors related to missing file paths.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "Encountered several errors related to incorrect file paths during the execution of the model_training_utils.py script.",
+                "\nA significant breakthrough was successfully correcting these file paths, which allowed the script to run without errors, confirming that the environment was set up correctly.\n",
+                "\nResults and Impact: \n",
+                "The successful execution of the model_training_utils.py script marked a significant step forward in the project, ensuring that model training can proceed as planned. This will positively impact the overall progress of the TradingRobotPlug project, particularly in the areas of model development and testing."
+            ]
+        },
+        {
+            "paragraph": "Successfully execute the model training process and ensure correct configurations and environment setup."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Ran the model training script multiple times to verify that the process was working correctly, resolving errors related to missing file paths."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "A significant breakthrough was successfully correcting these file paths, which allowed the script to run without errors, confirming that the environment was set up correctly."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Utilized for scripting, data manipulation, and ensuring the correct file paths and configurations.",
+                "TensorFlow: Employed for running model training operations with oneDNN custom operations enabled.",
+                "Logging: Leveraged logging techniques to track the script's progress and identify issues, facilitating easier debugging.",
+                "File Path Management: Focused on ensuring that all file paths in the script were correctly resolved, particularly in a Windows environment."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Gained a deeper understanding of how file paths need to be managed in Python scripts, particularly in complex project structures.",
+                "\nLearned the importance of thoroughly verifying configuration settings before running scripts to avoid runtime errors.\n",
+                "\nUnexpected Challenges: \n",
+                "\nThe primary challenge was the recurring issue with file paths, which required careful review and correction.\n",
+                "\nFuture Application: \n",
+                "This experience will inform future practices in managing and verifying file paths across different environments, ensuring smoother execution of scripts and avoiding similar issues."
+            ]
+        },
+        {
+            "paragraph": "Learned the importance of thoroughly verifying configuration settings before running scripts to avoid runtime errors."
+        },
+        {
+            "paragraph": "Unexpected Challenges: "
+        },
+        {
+            "paragraph": "The primary challenge was the recurring issue with file paths, which required careful review and correction."
+        },
+        {
+            "paragraph": "Future Application: "
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Refactor Script: Continue refining the model_training_utils.py script to handle different model types more robustly.",
+                "Testing and Validation: Implement unit tests to ensure the robustness of the script and validate the successful execution of model training processes.",
+                "Documentation: Update project documentation to reflect the changes made to the file paths and configuration settings.",
+                "Model Training: Proceed with training the models using the corrected script and evaluate the results."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Updating sys.path for Correct File Imports"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Example of updating sys.path to include necessary directories"
+        },
+        {
+            "heading": "Setup paths"
+        },
+        {
+            "paragraph": "script_dir = Path(file).resolve().parent\nproject_root = script_dir.parent.parent  # Adjusted to reach the project root\nutilities_dir = project_root / 'Scripts' / 'Utilities'"
+        },
+        {
+            "heading": "Add the Utilities directory to sys.path"
+        },
+        {
+            "paragraph": "if utilities_dir.exists() and str(utilities_dir) not in sys.path:\n    sys.path.append(str(utilities_dir))"
+        },
+        {
+            "heading": "Print sys.path for debugging"
+        },
+        {
+            "paragraph": "print(\"Updated sys.path:\")\nfor p in sys.path:\n    print(p)\n```"
+        },
+        {
+            "heading": "Handling FileNotFoundError"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Example of error handling when a file path is incorrect"
+        },
+        {
+            "paragraph": "try:\n    data = pd.read_csv(file_path)\nexcept FileNotFoundError:\n    error_message = f\"No such file or directory: '{file_path}'\"\n    logger.error(error_message)\n    return None\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Reflection: The process of resolving these file path issues has reinforced the importance of meticulous attention to detail in configuration and file management. This is particularly critical in projects with complex directory structures.",
+                "Improvement: Consider implementing automated checks or validations for file paths before executing scripts to catch these errors early.",
+                "Feedback: The corrections made today have been positively validated by the successful execution of the script, which is a significant milestone for the project."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Data fetch module implementation - In Progress",
+                "Milestone 3: Unit testing and validation - Pending",
+                "Milestone 4: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Not applicable for this session, as the focus was on resolving internal project issues."
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings were held during this session.",
+                "Decisions Made: Decided to prioritize fixing file path issues to ensure the model training script could execute without errors.",
+                "Action Items: ",
+                "Self: Continue testing and refining the model training script, focusing on edge cases related to file paths and configurations."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: The potential for ongoing file path issues could delay the project.",
+                "Mitigation Strategy: Implement thorough checks and validations for file paths before running scripts to ensure all dependencies are correctly referenced."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully resolved file path issues that were preventing the script from running correctly.",
+                "What Could Be Improved: Need to establish a more robust system for managing file paths and configurations across different environments.",
+                "Actionable Insights: Implement pre-run checks for file paths and configurations to avoid similar issues in the future."
+            ]
+        },
+        {
+            "paragraph": "This entry provides a comprehensive overview of the work completed during the session, highlighting the successful resolution of file path issues and the continuation of the model training process."
+        }
+    ]
+}

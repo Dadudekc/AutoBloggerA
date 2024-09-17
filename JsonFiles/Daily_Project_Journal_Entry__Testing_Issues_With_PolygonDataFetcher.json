@@ -1,0 +1,115 @@
+{
+    "content": [
+        {
+            "paragraph": "Certainly! Here's how you might structure the project journal entry based on the conversation about the PolygonDataFetcher testing issues:"
+        },
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Daily_Project_Journal_Entry__Testing_Issues_With_PolygonDataFetcher"
+        },
+        {
+            "heading": "Session Prompt"
+        },
+        {
+            "paragraph": "Prompt: \n\"Use this conversation to make a project journal entry following the standards and guides of the template below. Base the title of the entry off of the conversation.\""
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "\nDiagnose and address the issues with PolygonDataFetcher unit tests that were failing during execution.\n",
+                "\nActions Taken: \n",
+                "Reviewed test failures in the test_polygon_fetcher.py file.",
+                "Identified problems with date formatting in the test_extract_results test case.",
+                "Investigated the fetch_data_for_symbol method to determine why the DataFrame returned was empty.",
+                "\nAdded debugging logs to better understand API responses and data extraction.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "Challenge: The primary issue was with mismatched date formats in test cases and an empty DataFrame return.",
+                "\nBreakthrough: By adding detailed debugging logs, I was able to trace and confirm that the API responses were correctly formatted, which pinpointed issues in data extraction and date filtering.\n",
+                "\nResults and Impact: \n",
+                "Improved the extract_results method to match the expected date format and adjusted the fetch_data_for_symbol method to handle empty DataFrames more effectively.",
+                "These changes are expected to ensure that the unit tests pass successfully and improve the reliability of the data fetching and processing methods."
+            ]
+        },
+        {
+            "paragraph": "Diagnose and address the issues with PolygonDataFetcher unit tests that were failing during execution."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Added debugging logs to better understand API responses and data extraction."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "Breakthrough: By adding detailed debugging logs, I was able to trace and confirm that the API responses were correctly formatted, which pinpointed issues in data extraction and date filtering."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Unit Testing: Applied unit testing principles to diagnose and fix issues in the PolygonDataFetcher class.",
+                "Debugging: Utilized debugging techniques to track and resolve issues with data processing and API interactions.",
+                "Asynchronous Programming: Worked with asynchronous functions and mock objects to simulate and test API data fetching."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Understanding the importance of aligning test cases with the actual data format used in the application.",
+                "\nGained insight into effective debugging practices for asynchronous data fetching and processing.\n",
+                "\nUnexpected Challenges: \n",
+                "\nEncountered issues with empty DataFrames and mismatched date formats, which were resolved through targeted debugging and method adjustments.\n",
+                "\nFuture Application: \n",
+                "Apply the debugging insights and methods to other parts of the project where similar data processing and testing issues might arise."
+            ]
+        },
+        {
+            "paragraph": "Gained insight into effective debugging practices for asynchronous data fetching and processing."
+        },
+        {
+            "paragraph": "Unexpected Challenges: "
+        },
+        {
+            "paragraph": "Encountered issues with empty DataFrames and mismatched date formats, which were resolved through targeted debugging and method adjustments."
+        },
+        {
+            "paragraph": "Future Application: "
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Test Adjustments: Finalize the adjustments to the extract_results method and re-run tests to ensure they pass.",
+                "Documentation: Update the documentation for PolygonDataFetcher to reflect changes made during debugging.",
+                "Additional Testing: Conduct additional tests for other symbols and date ranges to verify robustness of the data fetching methods."
+            ]
+        },
+        {
+            "heading": "Code Snippets"
+        },
+        {
+            "paragraph": "Example Adjusted extract_results Method:\npython\ndef extract_results(self, data):\n    results = []\n    for entry in data.get('results', []):\n        result = {\n            'date': pd.to_datetime(entry['t'], unit='ms').date().strftime('%Y-%m-%d'),\n            'open': entry['o'],\n            'high': entry['h'],\n            'low': entry['l'],\n            'close': entry['c'],\n            'volume': entry['v']\n        }\n        results.append(result)\n    return results"
+        },
+        {
+            "paragraph": "Example Debugging Log Addition:\npython\nasync def fetch_data(self, url, session):\n    async with session.get(url) as response:\n        data = await response.json()\n        self.utils.debug(f\"API response data: {data}\")  # Debug log\n        return data"
+        },
+        {
+            "paragraph": "This entry captures the key aspects of the session, including the challenges faced, actions taken, and plans for future improvements."
+        }
+    ]
+}

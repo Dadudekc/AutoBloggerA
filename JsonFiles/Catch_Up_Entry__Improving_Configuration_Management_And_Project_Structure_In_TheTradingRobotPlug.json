@@ -1,0 +1,208 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Improving_Configuration_Management_And_Project_Structure_In_TheTradingRobotPlug"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "Enhance the configuration management system within the TheTradingRobotPlug project to dynamically load settings from multiple sources (config.yaml, config.ini, .env) and prompt the user for inputs through a setup wizard only if necessary.",
+                "\nDevelop a comprehensive plan for structuring the Utilities directory to better organize the project’s configuration, logging, and data processing functionalities.\n",
+                "\nActions Taken: \n",
+                "Implemented a dynamic configuration loading system that checks for configuration files (config.yaml, config.ini, .env) in both the config directory and the project root. If no files are found, the system falls back to a setup wizard for user input.",
+                "Identified and corrected issues where default values were being incorrectly loaded instead of actual configuration values.",
+                "Created a config.yaml file based on an existing config.ini, ensuring it met the project's requirements.",
+                "\nDrafted a detailed plan for organizing the Utilities directory, laying out the responsibilities of each module and ensuring a clear structure for future development.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "Challenge: Encountered discrepancies in the configuration values being loaded, with incorrect values appearing in logs.",
+                "\nBreakthrough: Through debugging, traced the issue to the order of file loading and the handling of default values, allowing for a solution that correctly prioritizes actual configuration values.\n",
+                "\nResults and Impact: \n",
+                "The updated configuration management system enhances the project’s flexibility, allowing it to adapt seamlessly to different environments by using the most readily available configuration files. ",
+                "The structured plan for the Utilities directory sets a clear path for future development, improving maintainability and scalability.",
+                "These improvements are expected to make the project more robust, user-friendly, and easier to maintain as it evolves."
+            ]
+        },
+        {
+            "paragraph": "Develop a comprehensive plan for structuring the Utilities directory to better organize the project’s configuration, logging, and data processing functionalities."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Drafted a detailed plan for organizing the Utilities directory, laying out the responsibilities of each module and ensuring a clear structure for future development."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "Breakthrough: Through debugging, traced the issue to the order of file loading and the handling of default values, allowing for a solution that correctly prioritizes actual configuration values."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Applied advanced Python techniques to refactor and enhance the configuration management system.",
+                "Configuration Management: Developed a flexible and dynamic system capable of loading settings from multiple configuration file formats.",
+                "Logging: Improved logging practices to ensure accurate tracking of configuration sources and values.",
+                "Project Management: Organized the Utilities directory for better project clarity and maintenance.",
+                "File I/O: Managed file operations for reading configuration settings across different formats."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes:",
+                "Recognized the importance of a robust configuration management system that can dynamically adapt to various environments and user needs.",
+                "Learned to use debug logging effectively to trace and resolve issues in complex systems.",
+                "\nGained insight into the benefits of having a well-organized project structure for maintaining clarity and facilitating future development.\n",
+                "\nUnexpected Challenges:\n",
+                "\nDiscovered issues with how configuration values were being prioritized, which required rethinking the loading order and handling of default values.\n",
+                "\nFuture Application:\n",
+                "Apply the techniques learned in this session to other aspects of the project, ensuring consistency and reliability across all modules.",
+                "Continue refining the configuration management system, potentially exploring dynamic reloading capabilities."
+            ]
+        },
+        {
+            "paragraph": "Gained insight into the benefits of having a well-organized project structure for maintaining clarity and facilitating future development."
+        },
+        {
+            "paragraph": "Unexpected Challenges:"
+        },
+        {
+            "paragraph": "Discovered issues with how configuration values were being prioritized, which required rethinking the loading order and handling of default values."
+        },
+        {
+            "paragraph": "Future Application:"
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Implement Utility Directory Plan: Begin implementing the structured plan for the Utilities directory, starting with the configuration and logging modules.",
+                "Complete Testing: Develop unit tests for the configuration management system to ensure it behaves as expected in various scenarios.",
+                "Update Documentation: Document the new configuration management process and the directory structure plan to guide future development.",
+                "Review and Optimize: Review the overall system for any additional improvements or optimizations, particularly in error handling and user feedback."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Dynamic Configuration Loading"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "Function to retrieve configuration values with debugging and fallback"
+        },
+        {
+            "paragraph": "def get_config_value(key, config, yaml_config=None, section=None, skip_wizard=False):\n    value = config.get(section, key) if section else config.get(key)\n    if not value and yaml_config:\n        value = yaml_config.get(section, {}).get(key) if section else yaml_config.get(key)\n    if not value and not skip_wizard:\n        value = input(f\"Please enter a value for {key}: \")\n    return value"
+        },
+        {
+            "heading": "Example usage"
+        },
+        {
+            "paragraph": "loading_path = get_config_value('loading_path', config, yaml_config, skip_wizard=skip_wizard)\nprint(f\"DEBUG: Loading Path = {loading_path}\")\n```"
+        },
+        {
+            "heading": "Example config.yaml"
+        },
+        {
+            "paragraph": "```yaml\nPaths:\n  data_folder: C:/TheTradingRobotPlug/data\n  loading_path: C:/TheTradingRobotPlug/data\n  saving_path: C:/TheTradingRobotPlug/data\n  logs: C:/TheTradingRobotPlug/logs"
+        },
+        {
+            "paragraph": "API:\n  alphavantage_api_key: C6AG9NZX6QIPYTX4\n  polygonio_api_key: ruqNOBWgLAXuiUM0ugL5WmxbkIdlELp4\n  nasdaq_api_key: 5hSXmst5GSPX2F2VauxN\n  finnhub_api_key: ckuqs6pr01qmtr8lh750ckuqs6pr01qmtr8lh75g\n  fred_api_key: 7e597dfc16d17cf4cac13ce7901de50d\n  base_url: https://www.alphavantage.co/query\n  timeout: 30"
+        },
+        {
+            "paragraph": "DATABASE:\n  db_name: default_db\n  db_user: default_user\n  db_password: Falcons#1247\n  db_path: C:/TheTradingRobotPlug/data/trading_data.db"
+        },
+        {
+            "paragraph": "stocks:\n  symbols:\n    - TSLA\n    - AAPL\n    - AMZN\n  thresholds:\n    - 100\n    - 100\n    - 100"
+        },
+        {
+            "paragraph": "Logging:\n  alpha_log_file: C:/TheTradingRobotPlug/logs/alpha_vantage.log\n  nasdaq_log_file: C:/TheTradingRobotPlug/logs/nasdaq.log\n  polygon_log_file: C:/TheTradingRobotPlug/logs/polygon_data_fetcher.log"
+        },
+        {
+            "paragraph": "Data:\n  data_path: C:/TheTradingRobotPlug/data/alpha_vantage/tsla_data.csv\n  features: \n    - date\n    - open\n    - high\n    - low\n    - close\n    - volume\n    - symbol\n    - Stochastic\n    - Stochastic_Signal\n    - RSI\n    - Williams_R\n    - ROC\n    - TRIX\n    - TRIX_signal\n    - SMA_10\n    - EMA_10\n    - MACD\n    - MACD_Signal\n    - MACD_Hist\n    - MACD_Hist_Signal\n    - ADX\n    - Ichimoku_Conversion_Line\n    - Ichimoku_Base_Line\n    - Ichimoku_Leading_Span_A\n    - Ichimoku_Leading_Span_B\n    - Ichimoku_Lagging_Span\n    - PSAR\n    - Bollinger_High\n    - Bollinger_Low\n    - Bollinger_Mid\n    - Standard_Deviation\n    - Historical_Volatility\n    - Chandelier_Exit_Long\n    - Keltner_Channel_High\n    - Keltner_Channel_Low\n    - Keltner_Channel_Mid\n    - MAE_Upper\n    - MAE_Lower\n    - MFI\n    - OBV\n    - VWAP\n    - ADL\n    - CMF\n    - Volume_Oscillator\n```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: Consider adding support for reloading configuration files during runtime to allow for dynamic updates without restarting the application.",
+                "Reflection: This session reinforced the importance of having a flexible and robust configuration system, particularly in complex projects that need to adapt to various environments and user needs."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Utility directory structure and plan - Completed",
+                "Milestone 3: Dynamic configuration management - In Progress",
+                "Milestone 4: Unit testing and validation - Pending",
+                "Milestone 5: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "YAML Configuration Best Practices",
+                "Python ConfigParser Documentation",
+                "Logging in Python"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: No formal meetings were held during this session.",
+                "Decisions Made: Prioritized the development of a dynamic configuration management system and structured the Utilities directory.",
+                "Action Items: ",
+                "Begin implementing the structured plan for the Utilities directory.",
+                "Finalize the configuration management system and ensure that it integrates smoothly with other modules."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Misconfiguration or missing configuration files could cause the application to fail.",
+                "Mitigation Strategy: Implement thorough testing and validation of the configuration loading process, and ensure clear logging of any issues encountered during configuration loading."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: The comprehensive planning for the Utilities directory provided a clear roadmap for future development, which will help maintain project organization and scalability.",
+                "What Could Be Improved: The initial handling of configuration values had some inconsistencies; these were resolved with debugging, but more proactive testing could have identified these issues earlier.",
+                "Actionable Insights: Future sessions should include detailed unit tests and integration tests as soon as new configurations or modules are introduced to ensure consistency and prevent discrepancies."
+            ]
+        },
+        {
+            "paragraph": "This journal entry captures the key aspects of the session, providing a clear and detailed account of"
+        }
+    ]
+}

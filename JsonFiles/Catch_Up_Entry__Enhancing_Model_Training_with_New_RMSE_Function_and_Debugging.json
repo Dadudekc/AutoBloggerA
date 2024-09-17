@@ -1,0 +1,249 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Catch_Up_Entry__Enhancing_Model_Training_with_New_RMSE_Function_and_Debugging"
+        },
+        {
+            "heading": "Work Completed"
+        },
+        {
+            "unordered_list": [
+                "Objectives and Goals: ",
+                "Update the Linear Regression model script to use the new root_mean_squared_error function for calculating RMSE.",
+                "Ensure compatibility with the latest versions of scikit-learn.",
+                "\nAddress and fix any encountered issues to ensure the script runs smoothly.\n",
+                "\nActions Taken: \n",
+                "Reviewed the existing linear_regression.py script to identify areas that required updates due to deprecated functions.",
+                "Updated the RMSE calculation to use root_mean_squared_error.",
+                "Tested the script to ensure all functionalities are working as expected and addressed any runtime errors.",
+                "Ensured logging is correctly configured for better debugging and monitoring.",
+                "\nVerified the integration with the data loading and preprocessing utilities.\n",
+                "\nChallenges and Breakthroughs: \n",
+                "Encountered a deprecation warning related to RMSE calculation using mean_squared_error with squared=False.",
+                "Resolved the issue by updating the script to use the new root_mean_squared_error function from scikit-learn.",
+                "\nEnsured that all instances of RMSE calculation were correctly updated and validated through comprehensive testing.\n",
+                "\nResults and Impact: \n",
+                "Successfully updated the script to use the new RMSE calculation method, ensuring compatibility with the latest library versions.",
+                "Improved the robustness and reliability of the model training process.",
+                "Enhanced logging for better monitoring and debugging, leading to quicker identification and resolution of issues."
+            ]
+        },
+        {
+            "paragraph": "Address and fix any encountered issues to ensure the script runs smoothly."
+        },
+        {
+            "paragraph": "Actions Taken: "
+        },
+        {
+            "paragraph": "Verified the integration with the data loading and preprocessing utilities."
+        },
+        {
+            "paragraph": "Challenges and Breakthroughs: "
+        },
+        {
+            "paragraph": "Ensured that all instances of RMSE calculation were correctly updated and validated through comprehensive testing."
+        },
+        {
+            "paragraph": "Results and Impact: "
+        },
+        {
+            "paragraph": "Code Snippet:\n```python"
+        },
+        {
+            "heading": "Predict and calculate metrics on transformed validation data"
+        },
+        {
+            "paragraph": "y_pred_val = self.best_model.predict(X_val_selected)\nif self.logger:\n    self.logger.info(f\"Predicted y_val shape: {y_pred_val.shape}\")"
+        },
+        {
+            "paragraph": "mse = mean_squared_error(y_val, y_pred_val)\nrmse = root_mean_squared_error(y_val, y_pred_val)  # Updated to use the new function\nmae = mean_absolute_error(y_val, y_pred_val)\nr2 = r2_score(y_val, y_pred_val)"
+        },
+        {
+            "paragraph": "if self.logger:\n    self.logger.info(f\"Validation Metrics - MSE: {mse:.2f}, RMSE: {rmse:.2f}, MAE: {mae:.2f}, R²: {r2:.2f}\")\n    best_alpha = randomized_search.best_params_['ridge__alpha']\n    self.logger.info(f\"Best regularization strength (alpha): {best_alpha:.4f}. Consider using this as a starting point for your next training session.\")\n```"
+        },
+        {
+            "heading": "Skills and Technologies Used"
+        },
+        {
+            "unordered_list": [
+                "Python Programming: Used for scripting, data manipulation, and machine learning model development.",
+                "Scikit-learn: Employed for model training, hyperparameter tuning, and feature selection.",
+                "Logging: Configured detailed logging for debugging and monitoring the training process.",
+                "Data Analysis: Utilized data preprocessing and transformation techniques for effective model training.",
+                "Git: Managed version control to track changes and maintain codebase integrity."
+            ]
+        },
+        {
+            "heading": "Lessons Learned"
+        },
+        {
+            "unordered_list": [
+                "Learning Outcomes: ",
+                "Gained a deeper understanding of handling deprecations in third-party libraries and updating code accordingly.",
+                "\nImproved skills in debugging and enhancing logging for better issue resolution.\n",
+                "\nUnexpected Challenges: \n",
+                "Encountered deprecation warnings that required immediate attention to ensure future compatibility.",
+                "\nAddressed issues with real-time predictions and model training efficiently through improved logging and debugging techniques.\n",
+                "\nFuture Application: \n",
+                "The lessons learned will help in maintaining compatibility with evolving libraries and ensuring robust code.",
+                "Enhanced logging practices will be applied to other parts of the project to improve debugging and monitoring."
+            ]
+        },
+        {
+            "paragraph": "Improved skills in debugging and enhancing logging for better issue resolution."
+        },
+        {
+            "paragraph": "Unexpected Challenges: "
+        },
+        {
+            "paragraph": "Addressed issues with real-time predictions and model training efficiently through improved logging and debugging techniques."
+        },
+        {
+            "paragraph": "Future Application: "
+        },
+        {
+            "heading": "To-Do"
+        },
+        {
+            "unordered_list": [
+                "Complete Unit Tests: Finalize the remaining unit tests for the linear_regression.py script by [specific date].",
+                "Refactor Code: Improve the structure and readability of the data fetching module to enhance maintainability.",
+                "Documentation: Update project documentation to reflect recent changes and improvements.",
+                "Code Review: Schedule a code review session to ensure code quality and consistency.",
+                "Feature Implementation: Start working on the caching mechanism for API responses."
+            ]
+        },
+        {
+            "heading": "Code Snippets and Context"
+        },
+        {
+            "heading": "Updated Linear Regression Model Script"
+        },
+        {
+            "paragraph": "```python"
+        },
+        {
+            "heading": "File: linear_regression.py"
+        },
+        {
+            "heading": "Location: Scripts/ModelTraining/model_training/models"
+        },
+        {
+            "heading": "Description: Contains a Linear Regression model class with training, explainability, and streaming capabilities."
+        },
+        {
+            "paragraph": "import os\nimport sys\nimport logging\nimport matplotlib.pyplot as plt"
+        },
+        {
+            "heading": "Dynamic Root Path Setup"
+        },
+        {
+            "paragraph": "script_dir = os.path.dirname(os.path.abspath(file))\nproject_root = os.path.abspath(os.path.join(script_dir, os.pardir, os.pardir, os.pardir, os.pardir))\nsys.path.append(project_root)"
+        },
+        {
+            "heading": "Resource and Log Directory Setup"
+        },
+        {
+            "paragraph": "resources_path = os.path.join(project_root, 'resources')\nlog_path = os.path.join(project_root, 'logs')"
+        },
+        {
+            "heading": "Ensure the directories exist"
+        },
+        {
+            "paragraph": "os.makedirs(resources_path, exist_ok=True)\nos.makedirs(log_path, exist_ok=True)"
+        },
+        {
+            "heading": "Logging Configuration"
+        },
+        {
+            "paragraph": "log_file = os.path.join(log_path, 'application.log')\nlogging.basicConfig(\n    filename=log_file,\n    level=logging.DEBUG,\n    format='%(asctime)s - %(levelname)s - %(message)s'\n)\nlogger = logging.getLogger(name)"
+        },
+        {
+            "heading": "Conditional Imports Based on Execution Context"
+        },
+        {
+            "paragraph": "try:\n    from some_production_module import ProductionClass\nexcept ImportError:\n    logger.warning(\"Production module not found; using mock for testing.\")\n    from unittest.mock import Mock as ProductionClass"
+        },
+        {
+            "paragraph": "import numpy as np\nimport pandas as pd\nfrom sklearn.linear_model import Ridge\nfrom sklearn.model_selection import RandomizedSearchCV, cross_val_score\nfrom sklearn.feature_selection import SelectFromModel\nfrom sklearn.preprocessing import StandardScaler\nfrom sklearn.pipeline import Pipeline\nfrom sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error, root_mean_squared_error\nimport shap\nimport lime\nfrom lime.lime_tabular import LimeTabularExplainer\nfrom tpot import TPOTRegressor\nfrom kafka import KafkaConsumer\nimport json"
+        },
+        {
+            "paragraph": "from Scripts.Utilities.model_training_utils import DataLoader, DataPreprocessor, LoggerHandler, ConfigManager"
+        },
+        {
+            "paragraph": "class LinearRegressionModel:\n    def init(self, logger=None):\n        self.logger = logger\n        self.best_model = None\n        self.selector = None"
+        },
+        {
+            "paragraph": "```"
+        },
+        {
+            "heading": "Additional Notes and Reflections"
+        },
+        {
+            "unordered_list": [
+                "Improvement: The project's codebase will benefit from regular updates and refactoring to maintain compatibility with the latest library versions and best practices.",
+                "Reflection: This session reinforced the importance of keeping up with library updates and ensuring that the project code remains compatible and efficient.",
+                "Feedback: Positive feedback received on the improved logging and debugging capabilities, which will streamline future troubleshooting and development efforts."
+            ]
+        },
+        {
+            "heading": "Project Milestones"
+        },
+        {
+            "unordered_list": [
+                "Milestone 1: Initial setup and configuration - Completed",
+                "Milestone 2: Data fetch module implementation - In Progress",
+                "Milestone 3: Model training and validation - Completed",
+                "Milestone 4: Integration of explainability and streaming capabilities - Pending",
+                "Milestone 5: Final integration and deployment - Pending"
+            ]
+        },
+        {
+            "heading": "Resource Links"
+        },
+        {
+            "unordered_list": [
+                "Scikit-learn Documentation",
+                "Python Logging Documentation",
+                "SHAP Documentation",
+                "LIME Documentation"
+            ]
+        },
+        {
+            "heading": "Collaboration and Communication"
+        },
+        {
+            "unordered_list": [
+                "Meetings and Discussions: Discussed the necessity of updating the model training script to avoid potential issues with deprecated functions.",
+                "Decisions Made: Agreed to prioritize updating and refactoring the codebase to maintain compatibility with the latest libraries.",
+                "Action Items: ",
+                "Update all scripts to ensure compatibility with the latest versions of scikit-learn and other dependencies by [specific date].",
+                "Review and enhance logging across the project for better monitoring and debugging."
+            ]
+        },
+        {
+            "heading": "Risk Management"
+        },
+        {
+            "unordered_list": [
+                "Risk: Potential compatibility issues with future updates of third-party libraries.",
+                "Mitigation Strategy: Regularly review and update the project dependencies, and refactor code to maintain compatibility.",
+                "Risk: Delays in addressing deprecated functions could lead to runtime errors.",
+                "Mitigation Strategy: Implement automated tests to detect and alert for deprecated functions and methods."
+            ]
+        },
+        {
+            "heading": "Retrospective"
+        },
+        {
+            "unordered_list": [
+                "What Went Well: Successfully updated the script to use the new RMSE function, ensuring compatibility with the latest scikit-learn version.",
+                "What Could Be Improved: Better anticipation of deprecations and proactive updates to the codebase.",
+                "Actionable Insights: Regularly schedule time for codebase maintenance to keep up with evolving best practices and library updates."
+            ]
+        }
+    ]
+}

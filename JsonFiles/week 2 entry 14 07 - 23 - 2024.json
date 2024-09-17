@@ -1,0 +1,226 @@
+{
+    "content": [
+        {
+            "heading": "Project Journal Entry"
+        },
+        {
+            "paragraph": "Date: July 23, 2024"
+        },
+        {
+            "ordered_list": [
+                "LSTM Model Training:",
+                "Successfully trained the LSTM model multiple times, ensuring the training process is robust and stable.",
+                "\nAchieved the following metrics:\n\nValidation MSE: 0.08, RMSE: 0.29, R²: -0.00\nTest MSE: 0.09, RMSE: 0.30, R²: -0.25\n\n",
+                "Validation MSE: 0.08, RMSE: 0.29, R²: -0.00",
+                "Test MSE: 0.09, RMSE: 0.30, R²: -0.25",
+                "\nGit Repository Management:\n",
+                "Pulled updates from the remote repository and resolved merge conflicts.",
+                "Updated local files and ensured synchronization with the remote repository.",
+                "\nSuccessfully pushed local changes to the remote repository.\n",
+                "\nCode Improvement and Integration:\n",
+                "Improved code for handling model training and file management.",
+                "\nEnsured that code changes are properly tracked and synchronized with the repository.\n",
+                "\nData Preprocessing for Neural Network Training:\n",
+                "Added a preprocessing step to convert date columns to numerical values and drop any non-numerical columns.",
+                "\nEnsured data is correctly formatted for TensorFlow tensor conversion, resolving the ValueError related to Timestamp.\n",
+                "\nDebugging TensorFlow Model Training:\n",
+                "Enhanced the DataHandler class to preprocess data, ensuring all columns used in training are numeric.",
+                "Implemented logging to track and debug the types of data being passed to the TensorFlow model.",
+                "\nAddressed the ValueError issue by converting non-numeric data to numeric and dropping non-numeric columns before training.\n",
+                "\nNeural Network Model Training and Explainability:\n",
+                "Built and trained a neural network model using TensorFlow with a MirroredStrategy for distributed training.",
+                "\nSuccessfully integrated SHAP for model explainability, using KernelExplainer to analyze feature importance.\n",
+                "\nImproving Neural Network Training Script:\n",
+                "Corrected the optimizer configuration by removing the unrecognized 'type' key.",
+                "Added regularization and dropout for better generalization.",
+                "Incorporated learning rate scheduler and model checkpointing.",
+                "Normalized input data before training.",
+                "Improved logging for better tracking."
+            ]
+        },
+        {
+            "paragraph": "Achieved the following metrics:"
+        },
+        {
+            "unordered_list": [
+                "Validation MSE: 0.08, RMSE: 0.29, R²: -0.00",
+                "Test MSE: 0.09, RMSE: 0.30, R²: -0.25"
+            ]
+        },
+        {
+            "paragraph": "Git Repository Management:"
+        },
+        {
+            "paragraph": "Successfully pushed local changes to the remote repository."
+        },
+        {
+            "paragraph": "Code Improvement and Integration:"
+        },
+        {
+            "paragraph": "Ensured that code changes are properly tracked and synchronized with the repository."
+        },
+        {
+            "paragraph": "Data Preprocessing for Neural Network Training:"
+        },
+        {
+            "paragraph": "Ensured data is correctly formatted for TensorFlow tensor conversion, resolving the ValueError related to Timestamp."
+        },
+        {
+            "paragraph": "Debugging TensorFlow Model Training:"
+        },
+        {
+            "paragraph": "Addressed the ValueError issue by converting non-numeric data to numeric and dropping non-numeric columns before training."
+        },
+        {
+            "paragraph": "Neural Network Model Training and Explainability:"
+        },
+        {
+            "paragraph": "Successfully integrated SHAP for model explainability, using KernelExplainer to analyze feature importance."
+        },
+        {
+            "paragraph": "Improving Neural Network Training Script:"
+        },
+        {
+            "ordered_list": [
+                "Hyperparameter Tuning:",
+                "Importance of systematically optimizing hyperparameters to improve model performance.",
+                "\nUtilization of tools like Optuna can automate and streamline the hyperparameter tuning process.\n",
+                "\nModel Architecture:\n",
+                "Exploring different architectures, such as adding more layers, using GRU layers, or Bidirectional LSTM, can potentially lead to performance improvements.",
+                "\nKeeping the architecture flexible allows for iterative experimentation and fine-tuning.\n",
+                "\nLearning Rate Scheduling:\n",
+                "Dynamic adjustment of the learning rate during training can help achieve better convergence and prevent overfitting.",
+                "\nImplementing schedulers like ReduceLROnPlateau can automatically adjust the learning rate based on validation performance.\n",
+                "\nGit Workflow:\n",
+                "Need to regularly pull changes from the remote repository to avoid conflicts.",
+                "\nUnderstanding the merge process and resolving conflicts are essential for maintaining a clean and synchronized codebase.\n",
+                "\nData Preprocessing:\n",
+                "Ensuring all input features are numerical is crucial for TensorFlow compatibility.",
+                "\nProperly handling Timestamp objects and other non-numerical data types is necessary for seamless model training.\n",
+                "\nModel Checkpointing:\n",
+                "The importance of using the correct file extensions for model checkpointing in TensorFlow/Keras.",
+                "Adapting to new changes in libraries and frameworks ensures smooth functionality."
+            ]
+        },
+        {
+            "paragraph": "Utilization of tools like Optuna can automate and streamline the hyperparameter tuning process."
+        },
+        {
+            "paragraph": "Model Architecture:"
+        },
+        {
+            "paragraph": "Keeping the architecture flexible allows for iterative experimentation and fine-tuning."
+        },
+        {
+            "paragraph": "Learning Rate Scheduling:"
+        },
+        {
+            "paragraph": "Implementing schedulers like ReduceLROnPlateau can automatically adjust the learning rate based on validation performance."
+        },
+        {
+            "paragraph": "Git Workflow:"
+        },
+        {
+            "paragraph": "Understanding the merge process and resolving conflicts are essential for maintaining a clean and synchronized codebase."
+        },
+        {
+            "paragraph": "Data Preprocessing:"
+        },
+        {
+            "paragraph": "Properly handling Timestamp objects and other non-numerical data types is necessary for seamless model training."
+        },
+        {
+            "paragraph": "Model Checkpointing:"
+        },
+        {
+            "ordered_list": [
+                "Refine Hyperparameters:",
+                "Integrate Optuna for automated hyperparameter optimization.",
+                "Define the search space for key hyperparameters (e.g., learning rate, number of LSTM units, batch size, number of layers).",
+                "\nRun Optuna to find the optimal hyperparameters.\n",
+                "\nExperiment with Model Architectures:\n",
+                "Modify the current model architecture to include different configurations (e.g., additional LSTM layers, GRU layers, Bidirectional LSTM).",
+                "\nEvaluate the performance of each modified architecture to identify the best-performing model.\n",
+                "\nImplement Learning Rate Scheduling:\n",
+                "Choose a suitable learning rate scheduler (e.g., ReduceLROnPlateau).",
+                "\nIntegrate the scheduler into the training process and monitor its impact on model performance.\n",
+                "\nMonitor and Iterate:\n",
+                "Continuously monitor the performance metrics (MSE, RMSE, R²) during training and validation.",
+                "\nMake necessary adjustments based on the results and iterate on the model architecture and hyperparameters.\n",
+                "\nUpdate the Repository:\n",
+                "Ensure that all recent changes are committed and pushed to the remote repository.",
+                "\nRegularly check for any updates from the remote repository to avoid conflicts.\n",
+                "\nDocument Findings:\n",
+                "Keep detailed notes on the performance of each model configuration.",
+                "\nDocument any challenges encountered and how they were addressed.\n",
+                "\nPreprocess Data:\n",
+                "Ensure that all features used for training are numerical.",
+                "Implement a robust data preprocessing pipeline that handles timestamps and other non-numerical data types."
+            ]
+        },
+        {
+            "paragraph": "Run Optuna to find the optimal hyperparameters."
+        },
+        {
+            "paragraph": "Experiment with Model Architectures:"
+        },
+        {
+            "paragraph": "Evaluate the performance of each modified architecture to identify the best-performing model."
+        },
+        {
+            "paragraph": "Implement Learning Rate Scheduling:"
+        },
+        {
+            "paragraph": "Integrate the scheduler into the training process and monitor its impact on model performance."
+        },
+        {
+            "paragraph": "Monitor and Iterate:"
+        },
+        {
+            "paragraph": "Make necessary adjustments based on the results and iterate on the model architecture and hyperparameters."
+        },
+        {
+            "paragraph": "Update the Repository:"
+        },
+        {
+            "paragraph": "Regularly check for any updates from the remote repository to avoid conflicts."
+        },
+        {
+            "paragraph": "Document Findings:"
+        },
+        {
+            "paragraph": "Document any challenges encountered and how they were addressed."
+        },
+        {
+            "paragraph": "Preprocess Data:"
+        },
+        {
+            "ordered_list": [
+                "Update the Training Script:",
+                "Integrate hyperparameter optimization using Optuna.",
+                "\nExperiment with different model architectures and learning rate scheduling.\n",
+                "\nRun Experiments:\n",
+                "Conduct multiple training sessions with different configurations.",
+                "\nRecord and analyze the results to determine the best approach.\n",
+                "\nDocument Findings:\n",
+                "Keep detailed notes on the performance of each model configuration.",
+                "Document any challenges encountered and how they were addressed."
+            ]
+        },
+        {
+            "paragraph": "Experiment with different model architectures and learning rate scheduling."
+        },
+        {
+            "paragraph": "Run Experiments:"
+        },
+        {
+            "paragraph": "Record and analyze the results to determine the best approach."
+        },
+        {
+            "paragraph": "Document Findings:"
+        },
+        {
+            "paragraph": "By following this structured approach, we aim to improve the LSTM and neural network models' performance and achieve better predictive accuracy. This iterative process will help refine our models and optimize their parameters for the best results. Additionally, maintaining an updated and synchronized codebase will facilitate smooth collaboration and continuous development."
+        }
+    ]
+}
