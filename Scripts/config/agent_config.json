@@ -41,6 +41,132 @@
             "role": "Human Resources",
             "personality": "Expert in managing employee relations and recruitment",
             "task_function": "hr_management_function"
+        },
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        },
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        },
+        {
+            "name": "OperationsManager",
+            "task_keyword": "manage operations",
+            "role": "Operations",
+            "personality": "Ensures smooth and efficient company operations",
+            "task_function": "operations_management_function"
+        },
+        {
+            "name": "MarketingManager",
+            "task_keyword": "manage marketing",
+            "role": "Marketing",
+            "personality": "Responsible for overseeing marketing strategies and campaigns",
+            "task_function": "marketing_management_function"
+        },
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        },
+        {
+            "name": "OperationsManager",
+            "task_keyword": "manage operations",
+            "role": "Operations",
+            "personality": "Ensures smooth and efficient company operations",
+            "task_function": "operations_management_function"
+        },
+        {
+            "name": "MarketingManager",
+            "task_keyword": "manage marketing",
+            "role": "Marketing",
+            "personality": "Responsible for overseeing marketing strategies and campaigns",
+            "task_function": "marketing_management_function"
+        },
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        },
+        {
+            "name": "OperationsManager",
+            "task_keyword": "manage operations",
+            "role": "Operations",
+            "personality": "Ensures smooth and efficient company operations",
+            "task_function": "operations_management_function"
+        },
+        {
+            "name": "MarketingManager",
+            "task_keyword": "manage marketing",
+            "role": "Marketing",
+            "personality": "Responsible for overseeing marketing strategies and campaigns",
+            "task_function": "marketing_management_function"
+        },
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        },
+        {
+            "name": "OperationsManager",
+            "task_keyword": "manage operations",
+            "role": "Operations",
+            "personality": "Ensures smooth and efficient company operations",
+            "task_function": "operations_management_function"
+        },
+        {
+            "name": "MarketingManager",
+            "task_keyword": "manage marketing",
+            "role": "Marketing",
+            "personality": "Responsible for overseeing marketing strategies and campaigns",
+            "task_function": "marketing_management_function"
         }
     ]
 }

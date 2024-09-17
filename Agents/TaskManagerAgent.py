@@ -2,11 +2,6 @@ import logging
 
 class TaskManagerAgent:
     def __init__(self, agent_registry, agent_creator):
-        """
-        Initialize the TaskManagerAgent with a list of agents and an agent creator.
-        :param agent_registry: A list of registered agents that can handle tasks.
-        :param agent_creator: The agent creator responsible for generating new agents.
-        """
         self.agent_registry = agent_registry
         self.agent_creator = agent_creator
         logging.info("TaskManagerAgent initialized with registered agents.")
@@ -14,8 +9,6 @@ class TaskManagerAgent:
     def assign_task(self, task_description):
         """
         Assign a task to an appropriate agent based on the task description.
-        :param task_description: A string describing the task to be performed.
-        :return: The result of the task execution.
         """
         # Extract task keyword from the task description
         task_keywords = self.analyze_task(task_description)
@@ -44,22 +37,26 @@ class TaskManagerAgent:
     def analyze_task(self, task_description):
         """
         Analyze the task description and extract a keyword that can be used to assign the task.
-        :param task_description: A string containing the task description.
-        :return: A task keyword to match against agents.
         """
-        # Use simple keyword matching for now, but this can be expanded with NLP in the future
-        keywords = {
-            "finance": ["finance", "budget", "expense", "accounting"],
-            "hr": ["hr", "recruit", "employee", "payroll"],
-            "operations": ["operations", "logistics", "supply chain", "project"],
-            "marketing": ["marketing", "campaign", "social media", "brand strategy"]
-        }
+        # Add more detailed keyword matching for common tasks
+        if "debug" in task_description.lower():
+            return "debug"
+        if "journal" in task_description.lower():
+            return "journal"
+        if "strategy" in task_description.lower():
+            return "strategy"
+        if "finance" in task_description.lower():
+            return "finance"
+        if "hr" in task_description.lower() or "recruit" in task_description.lower():
+            return "hr"  # Map HR-related tasks
+        if "operations" in task_description.lower():
+            return "operations"
+        if "marketing" in task_description.lower():
+            return "marketing"
+        return "generic"  # Catch-all for tasks that don't match
+
         
-        for keyword, synonyms in keywords.items():
-            if any(word in task_description.lower() for word in synonyms):
-                return keyword
-        
-        # Fallback to generic if no match is found
+        # Default to generic if no specific match
         logging.info(f"No specific keyword found in task description, defaulting to 'generic'.")
         return "generic"
 

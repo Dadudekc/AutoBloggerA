@@ -3,15 +3,35 @@ import os
 import importlib
 import logging
 import json
+import configparser
+import openai
 
 # Initialize logging
-logging.basicConfig(filename='/Auto_Blogger/Logs/agent_victor_errors.log', level=logging.ERROR)
+log_directory = r'C:\Auto_Blogger\Logs'
+if not os.path.exists(log_directory):
+    os.makedirs(log_directory)
 
-# Dynamically add the Agents directory to sys.path
+log_file_path = os.path.join(log_directory, 'agent_victor_errors.log')
+logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+# Set up dynamic path for the Agents directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
 agents_dir = os.path.join(current_dir, 'Agents')
 if agents_dir not in sys.path:
     sys.path.append(agents_dir)
+
+# Load configuration from config.ini
+config = configparser.ConfigParser()
+config.read(os.path.join(current_dir, '../Scripts/config/config.ini'))
+
+# Load API keys and WordPress credentials from config.ini
+openai_api_key = config['openai']['api_key']
+wordpress_username = config['wordpress']['username']
+wordpress_password = config['wordpress']['password']
+wordpress_api_url = config['wordpress']['api_url']
+
+# Set up OpenAI API key from config
+openai.api_key = openai_api_key
 
 # Import necessary classes
 from GPT4Agent import GPT4Agent
@@ -23,7 +43,7 @@ class AgentVictor(GPT4Agent):
     def __init__(self):
         super().__init__(
             name="AgentVictor",
-            role="King",
+            role="CEO",
             personality="Efficient, authoritative, and solution-oriented. I take responsibility for tasks, "
                         "but delegate where necessary and always expect results.",
             task_function=self.handle_task
@@ -33,7 +53,6 @@ class AgentVictor(GPT4Agent):
 
         # Explicitly set the correct path to the agent_config.json file
         self.config_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../Scripts/config/agent_config.json')
-        
         self.log_file = "/Auto_Blogger/Logs/agent_dialogue_log.txt"
 
     def add_subordinate(self, subordinate):
@@ -96,11 +115,65 @@ class AgentVictor(GPT4Agent):
         return f"Model {new_agent['name']} created and added to the configuration."
 
     def debug_task(self, error_traceback):
-        print(f"AgentVictor is fixing error: {error_traceback}")
-        return f"Victor fixed the error: {error_traceback}"
+        """
+        Debug task where we use ChatGPT to suggest fixes for the error traceback.
+        """
+        logging.info(f"AgentVictor is fixing error: {error_traceback}")
+        chatgpt_suggestion = self.ask_chatgpt_for_fix(error_traceback)
+        return f"Victor fixed the error with the suggestion: {chatgpt_suggestion}"
 
     def journal_task(self, input_data):
-        return f"Victor is writing a journal entry: {input_data}"
+        """
+        Write a journal entry using ChatGPT to generate text.
+        """
+        logging.info("AgentVictor is generating journal content.")
+        journal_entry = self.ask_chatgpt_for_journal(input_data)
+        return f"Victor wrote the journal entry: {journal_entry}"
+
+    def ask_chatgpt_for_fix(self, error_traceback):
+        """
+        Ask ChatGPT for a fix based on an error traceback.
+        """
+        try:
+            response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt=f"Fix the following error: {error_traceback}",
+                max_tokens=150
+            )
+            return response.choices[0].text.strip()
+        except Exception as e:
+            logging.error(f"Failed to get a fix from ChatGPT: {e}")
+            return "Unable to generate a fix."
+
+    def ask_chatgpt_for_journal(self, topic):
+        """
+        Use ChatGPT to generate a journal entry based on the given topic.
+        """
+        try:
+            response = openai.Completion.create(
+                engine="text-davinci-003",
+                prompt=f"Write a journal entry about: {topic}",
+                max_tokens=200
+            )
+            return response.choices[0].text.strip()
+        except Exception as e:
+            logging.error(f"Failed to generate journal entry from ChatGPT: {e}")
+            return "Unable to generate journal entry."
+
+    def self_heal(self, error):
+        """
+        Attempt to self-heal by asking ChatGPT for suggestions.
+        """
+        error_type = type(error).__name__
+        logging.error(f"Attempting to self-heal error: {error_type} - {error}")
+        if error_type == "NameError":
+            suggestion = self.ask_chatgpt_for_fix(f"NameError: {error}")
+            logging.info(f"Suggested fix for NameError: {suggestion}")
+        elif error_type == "ImportError":
+            suggestion = self.ask_chatgpt_for_fix(f"ImportError: {error}")
+            logging.info(f"Suggested fix for ImportError: {suggestion}")
+        else:
+            logging.info("Encountered an unhandled error. Logging for further review.")
 
     def command_agents(self, task_keywords, task_description):
         assigned_agent = self.find_agent_for_task(task_keywords)
@@ -132,6 +205,7 @@ class AgentVictor(GPT4Agent):
             if task_keyword in agent.role.lower():
                 return agent
         return None
+
 
 def main():
     """
@@ -198,6 +272,7 @@ def main():
     for task in tasks:
         result = task_manager.assign_task(task)
         print(f"Task result: {result}")
+
 
 if __name__ == "__main__":
     main()

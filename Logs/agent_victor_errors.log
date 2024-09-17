@@ -1,0 +1,65 @@
+2024-09-17 13:29:56,430 - INFO - TaskManagerAgent initialized with registered agents.
+2024-09-17 13:29:56,431 - INFO - Assigning task with keywords 'finance' based on description: manage finances for the company
+2024-09-17 13:29:56,431 - WARNING - No agent found for task keyword: finance
+2024-09-17 13:29:56,431 - WARNING - No agent found for task 'finance', attempting to create a new agent.
+2024-09-17 13:30:30,702 - INFO - TaskManagerAgent initialized with registered agents.
+2024-09-17 13:30:30,703 - INFO - Assigning task with keywords 'finance' based on description: manage finances for the company
+2024-09-17 13:30:30,704 - WARNING - No agent found for task keyword: finance
+2024-09-17 13:30:30,704 - WARNING - No agent found for task 'finance', attempting to create a new agent.
+2024-09-17 13:33:24,900 - INFO - TaskManagerAgent initialized with registered agents.
+2024-09-17 13:33:24,900 - INFO - Assigning task with keywords 'finance' based on description: manage finances for the company
+2024-09-17 13:33:24,900 - WARNING - No agent found for task keyword: finance
+2024-09-17 13:33:24,900 - WARNING - No agent found for task 'finance', attempting to create a new agent.
+2024-09-17 13:33:24,901 - INFO - New agent 'FinanceManager' created for task 'finance'.
+2024-09-17 13:33:24,901 - INFO - Task assigned to agent: FinanceManager
+2024-09-17 13:33:24,901 - INFO - Handling general financial task.
+2024-09-17 13:33:24,901 - INFO - Task 'manage finances for the company' completed by agent 'FinanceManager' with result: FinanceManager: Handling financial task: manage finances for the company
+2024-09-17 13:33:24,902 - INFO - No specific keyword found in task description, defaulting to 'generic'.
+2024-09-17 13:33:24,903 - INFO - Assigning task with keywords 'generic' based on description: recruit and manage employees
+2024-09-17 13:33:24,904 - WARNING - No agent found for task keyword: generic
+2024-09-17 13:33:24,907 - WARNING - No agent found for task 'generic', attempting to create a new agent.
+2024-09-17 13:33:24,908 - ERROR - No matching agent found for task keyword: generic
+2024-09-17 13:33:24,908 - ERROR - Failed to create an agent for task: generic
+2024-09-17 13:33:24,909 - INFO - Assigning task with keywords 'operations' based on description: oversee company operations
+2024-09-17 13:33:24,910 - WARNING - No agent found for task keyword: operations
+2024-09-17 13:33:24,910 - WARNING - No agent found for task 'operations', attempting to create a new agent.
+2024-09-17 13:33:24,911 - INFO - New agent 'OperationsManager' created for task 'operations'.
+2024-09-17 13:33:24,911 - INFO - Task assigned to agent: OperationsManager
+2024-09-17 13:33:24,911 - INFO - Handling general operations task.
+2024-09-17 13:33:24,912 - INFO - Task 'oversee company operations' completed by agent 'OperationsManager' with result: OperationsManager: Handling operations task: oversee company operations
+2024-09-17 13:33:24,912 - INFO - Assigning task with keywords 'marketing' based on description: launch marketing campaign
+2024-09-17 13:33:24,913 - WARNING - No agent found for task keyword: marketing
+2024-09-17 13:33:24,913 - WARNING - No agent found for task 'marketing', attempting to create a new agent.
+2024-09-17 13:33:24,913 - INFO - New agent 'MarketingManager' created for task 'marketing'.
+2024-09-17 13:33:24,913 - INFO - Task assigned to agent: MarketingManager
+2024-09-17 13:33:24,913 - INFO - Launching marketing campaign...
+2024-09-17 13:33:24,914 - INFO - Task 'launch marketing campaign' completed by agent 'MarketingManager' with result: MarketingManager: Launching campaign for launch marketing campaign
+2024-09-17 13:35:30,172 - INFO - TaskManagerAgent initialized with registered agents.
+2024-09-17 13:35:30,172 - INFO - Assigning task with keywords 'finance' based on description: manage finances for the company
+2024-09-17 13:35:30,172 - WARNING - No agent found for task keyword: finance
+2024-09-17 13:35:30,172 - WARNING - No agent found for task 'finance', attempting to create a new agent.
+2024-09-17 13:35:30,172 - INFO - New agent 'FinanceManager' created for task 'finance'.
+2024-09-17 13:35:30,172 - INFO - Task assigned to agent: FinanceManager
+2024-09-17 13:35:30,172 - INFO - Handling general financial task.
+2024-09-17 13:35:30,173 - INFO - Task 'manage finances for the company' completed by agent 'FinanceManager' with result: FinanceManager: Handling financial task: manage finances for the company
+2024-09-17 13:35:30,174 - INFO - Assigning task with keywords 'hr' based on description: recruit and manage employees
+2024-09-17 13:35:30,174 - WARNING - No agent found for task keyword: hr
+2024-09-17 13:35:30,174 - WARNING - No agent found for task 'hr', attempting to create a new agent.
+2024-09-17 13:35:30,174 - INFO - New agent 'HRManager' created for task 'hr'.
+2024-09-17 13:35:30,174 - INFO - Task assigned to agent: HRManager
+2024-09-17 13:35:30,175 - INFO - Recruiting new employees...
+2024-09-17 13:35:30,175 - INFO - Task 'recruit and manage employees' completed by agent 'HRManager' with result: HRManager: Recruiting employees for recruit and manage employees
+2024-09-17 13:35:30,176 - INFO - Assigning task with keywords 'operations' based on description: oversee company operations
+2024-09-17 13:35:30,176 - WARNING - No agent found for task keyword: operations
+2024-09-17 13:35:30,177 - WARNING - No agent found for task 'operations', attempting to create a new agent.
+2024-09-17 13:35:30,177 - INFO - New agent 'OperationsManager' created for task 'operations'.
+2024-09-17 13:35:30,177 - INFO - Task assigned to agent: OperationsManager
+2024-09-17 13:35:30,177 - INFO - Handling general operations task.
+2024-09-17 13:35:30,177 - INFO - Task 'oversee company operations' completed by agent 'OperationsManager' with result: OperationsManager: Handling operations task: oversee company operations
+2024-09-17 13:35:30,178 - INFO - Assigning task with keywords 'marketing' based on description: launch marketing campaign
+2024-09-17 13:35:30,179 - WARNING - No agent found for task keyword: marketing
+2024-09-17 13:35:30,179 - WARNING - No agent found for task 'marketing', attempting to create a new agent.
+2024-09-17 13:35:30,179 - INFO - New agent 'MarketingManager' created for task 'marketing'.
+2024-09-17 13:35:30,179 - INFO - Task assigned to agent: MarketingManager
+2024-09-17 13:35:30,179 - INFO - Launching marketing campaign...
+2024-09-17 13:35:30,179 - INFO - Task 'launch marketing campaign' completed by agent 'MarketingManager' with result: MarketingManager: Launching campaign for launch marketing campaign
