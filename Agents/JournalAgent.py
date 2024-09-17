@@ -1,3 +1,7 @@
+
+# Try importing GPT4Agent after dynamically adjusting sys.path
+from GPT4Agent import GPT4Agent  # Import the GPT4Agent class
+
 class JournalAgent(GPT4Agent):
     def __init__(self):
         super().__init__(

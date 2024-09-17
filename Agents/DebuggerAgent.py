@@ -1,3 +1,7 @@
+
+# Try importing GPT4Agent after dynamically adjusting sys.path
+from GPT4Agent import GPT4Agent  # Import the GPT4Agent class
+
 class DebuggerAgent(GPT4Agent):
     def __init__(self):
         super().__init__(name="Debugger", role="Debugging", personality="You are a debugging expert that can handle traceback errors.", task_function=self.debug_task_function)
