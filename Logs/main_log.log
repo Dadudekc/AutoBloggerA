@@ -1,0 +1,26 @@
+2024-09-17 13:23:13,008 - INFO - TaskManagerAgent initialized with registered agents.
+2024-09-17 13:23:13,009 - INFO - Assigning task: debug traceback error in the system
+2024-09-17 13:23:13,009 - INFO - No specific keyword found in task description, defaulting to 'generic'.
+2024-09-17 13:23:13,009 - INFO - Assigning task with keywords 'generic' based on description: debug traceback error in the system
+2024-09-17 13:23:13,009 - WARNING - No agent found for task keyword: generic
+2024-09-17 13:23:13,010 - WARNING - No agent found for task 'generic', attempting to create a new agent.
+2024-09-17 13:23:13,010 - ERROR - Failed to create an agent for task: generic
+2024-09-17 13:23:13,010 - INFO - Result: Task 'generic' could not be handled.
+2024-09-17 13:23:13,011 - INFO - Assigning task: journal the latest development session
+2024-09-17 13:23:13,011 - INFO - No specific keyword found in task description, defaulting to 'generic'.
+2024-09-17 13:23:13,011 - INFO - Assigning task with keywords 'generic' based on description: journal the latest development session
+2024-09-17 13:23:13,011 - WARNING - No agent found for task keyword: generic
+2024-09-17 13:23:13,011 - WARNING - No agent found for task 'generic', attempting to create a new agent.
+2024-09-17 13:23:13,011 - ERROR - Failed to create an agent for task: generic
+2024-09-17 13:23:13,011 - INFO - Result: Task 'generic' could not be handled.
+2024-09-17 13:23:13,012 - INFO - Assigning task: analyze trading strategy
+2024-09-17 13:23:13,012 - INFO - No specific keyword found in task description, defaulting to 'generic'.
+2024-09-17 13:23:13,012 - INFO - Assigning task with keywords 'generic' based on description: analyze trading strategy
+2024-09-17 13:23:13,012 - WARNING - No agent found for task keyword: generic
+2024-09-17 13:23:13,012 - WARNING - No agent found for task 'generic', attempting to create a new agent.
+2024-09-17 13:23:13,012 - ERROR - Failed to create an agent for task: generic
+2024-09-17 13:23:13,012 - INFO - Result: Task 'generic' could not be handled.
+2024-09-17 13:23:13,012 - INFO - Creating subordinate: FinanceManager
+2024-09-17 13:23:13,014 - INFO - Subordinate FinanceManager added.
+2024-09-17 13:23:13,015 - INFO - Creating subordinate: HRManager
+2024-09-17 13:23:13,028 - INFO - Subordinate HRManager added.

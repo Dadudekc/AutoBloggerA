@@ -3,7 +3,12 @@ import os
 import logging
 
 # Initialize logging
-logging.basicConfig(filename='/Auto_Blogger/Logs/main_log.log', level=logging.INFO)
+log_directory = r'C:\Auto_Blogger\Logs'
+if not os.path.exists(log_directory):
+    os.makedirs(log_directory)
+
+log_file_path = os.path.join(log_directory, 'main_log.log')
+logging.basicConfig(filename=log_file_path, level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Set up dynamic path for the Agents directory
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -11,6 +16,7 @@ agents_dir = os.path.join(current_dir, 'Agents')
 if agents_dir not in sys.path:
     sys.path.append(agents_dir)
 
+# Import agents and TaskManager
 from TaskManagerAgent import TaskManagerAgent
 from AgentCreator import AgentCreator
 from AgentVictor import AgentVictor
@@ -19,7 +25,7 @@ from JournalAgent import JournalAgent
 
 def main():
     """
-    Main function to initialize the system and tie all agents together.
+    Main function to initialize the system, agents, and assign tasks.
     """
     # Path to the configuration file for AgentCreator
     config_file = os.path.join(current_dir, 'config', 'agent_config.json')
@@ -27,7 +33,7 @@ def main():
     # Initialize AgentCreator to dynamically create agents from the config file
     agent_creator = AgentCreator(json_config_file=config_file)
     
-    # Create a list of agents (add AgentVictor, DebuggerAgent, and JournalAgent manually)
+    # Create a list of agents (adding AgentVictor, DebuggerAgent, and JournalAgent manually)
     agent_registry = [
         AgentVictor(),
         DebuggerAgent(),
@@ -44,23 +50,39 @@ def main():
         "analyze trading strategy"
     ]
     
-    # Assign tasks to the TaskManagerAgent
+    # Assign tasks to the TaskManagerAgent and log results
     for task in tasks:
         logging.info(f"Assigning task: {task}")
         result = task_manager.assign_task(task)
         logging.info(f"Result: {result}")
         print(f"Result: {result}")
-
-def main():
-    """
-    Example usage of AgentVictor to populate general subordinates needed to run a company.
-    """
-    # Correct the configuration path to point to the actual location of agent_config.json
-    config_file = os.path.join(current_dir, '../Scripts/config/agent_config.json')
     
-    # Initialize AgentCreator with the json config file
-    agent_creator = AgentCreator(json_config_file=config_file)
-    
-    # Initialize AgentVictor and the rest of the code here...
+    # Add subordinate agents using AgentVictor
+    subordinates = [
+        {
+            "name": "FinanceManager",
+            "task_keyword": "manage finances",
+            "role": "Finance",
+            "personality": "Expert in managing company finances efficiently",
+            "task_function": "finance_management_function"
+        },
+        {
+            "name": "HRManager",
+            "task_keyword": "manage hr",
+            "role": "Human Resources",
+            "personality": "Expert in managing employee relations and recruitment",
+            "task_function": "hr_management_function"
+        }
+        # Add more subordinates as needed
+    ]
 
+    # Get the instance of AgentVictor to add subordinates
+    agent_victor = agent_registry[0]  # Assuming AgentVictor is the first agent in the list
+    
+    for subordinate in subordinates:
+        logging.info(f"Creating subordinate: {subordinate['name']}")
+        agent_victor.add_subordinate(subordinate)
+        logging.info(f"Subordinate {subordinate['name']} added.")
+
+if __name__ == "__main__":
     main()
